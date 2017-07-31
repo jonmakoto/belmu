@@ -1,0 +1,48 @@
+{
+  "name": "belmu",
+  "version": "1.0.0",
+  "description": "B.E.L.M.U npm module",
+  "scripts": {
+    "postcss": "postcss css/app.css -o css/dist/belmu.css --no-map -c ./config/ --watch",
+    "svg-optimize": "svgo -f src/img/_svg && svgo -f src/img/_svg/stroked",
+    "svgsprites": "rm -f src/img/sprites* && svg-join -s 'src/img/_svg/*.svg' -o -n src/img/sprites && svg-join -s 'src/img/_svg/stroked/*.svg' -o -n src/img/sprites-stroked",
+    "start": "npm run postcss | browser-sync start 'localhost:8888' --files './'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.vocus.net:npm-modules/one-ui.git"
+  },
+  "keywords": [
+    "css",
+    "postcss",
+    "vocus-ui",
+    "one-ui"
+  ],
+  "author": "Tim Clulow",
+  "license": "MIT",
+  "devDependencies": {
+    "express": "^4.13.4",
+    "node-cmd": "^1.1.1",
+    "nodemon": "^1.11.0",
+    "postcss-math": "0.0.8",
+    "svg-join": "^1.1.1"
+  },
+  "dependencies": {
+    "autoprefixer": "^6.3.1",
+    "browser-sync": "^2.18.12",
+    "postcss-calc-function": "^1.1.0",
+    "postcss-cli": "^3.0.0",
+    "postcss-cssnext": "^3.0.0",
+    "postcss-custom-media": "^5.0.0",
+    "postcss-each": "^0.9.3",
+    "postcss-media-minmax": "^2.1.1",
+    "postcss-mixins": "^5.4.1",
+    "postcss-modules": "^0.6.3",
+    "postcss-partial-import": "^4.1.0",
+    "postcss-secmodify": "^1.0.1",
+    "postcss-style-guide": "^0.13.0",
+    "postcss-svg": "^2.1.0",
+    "stylelint": "^7.7.1",
+    "stylelint-config-barebones": "^0.1.2"
+  }
+}

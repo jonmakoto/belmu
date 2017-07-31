@@ -1,0 +1,81 @@
+<!doctype html>
+<html class="psg-theme" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= projectName %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Zilla+Slab:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="/css/dist/belmu.css" />
+  <style><%- codeStyle %><%- tmplStyle %></style>
+</head>
+<body>  
+  <div class="wrapper -p-x-2 -p-top-4">
+    <nav class="nav -fixed -top-0 -left-0 -w-100">
+     
+      <ul class="flex">
+        
+        <% if (Array.isArray(colorPalette) && colorPalette.length !== 0) { %>
+          <li class="item">
+            <a href="#color-palette">Base</a>
+          </li>
+        <% } %>
+        <% maps.forEach(function (map) { %>
+        <% if (map.link.title !== null) { %>
+          <li class="item">
+            <a href="#<%= map.link.id %>">
+            <%= map.link.title %>
+            </a>
+          </li> 
+        <% } %>
+        <% }) %>
+        
+        <li class="item"><a href="/components.html">Components</a></li>
+      </ul>
+    </nav>
+     <img src="img/belmu.svg" class="belmu" />  
+
+    <div class="main"> 
+      <% if (Array.isArray(colorPalette) && colorPalette.length !== 0) { %>
+      <section>
+        <h2 id="color-palette" class="psg-h2 -boldweight">Base Colours</h2>
+        <p class="small">You can use background prefixing bg-your-colour-name</p>
+        <div class="contents">
+          <div class="colours flex">
+            <% colorPalette.forEach(function (palette) { %>
+            <div class="item colourbox" onclick="copyToClipboard('<%= palette.name %>')">
+              <div class="colourbox-sample" style="background-color: <%= palette.color %>">
+              </div>
+              <div class="colourbox-name" id="<%= palette.name %>">
+                <%= palette.name %>
+              </div>
+            </div>
+            <% }) %>
+          </div>
+        </div>
+      </section>
+      <% } %>
+
+      <% maps.forEach(function (map) { %>
+      <section>
+
+        <h2 id="<%= map.link.id %>" class="psg-h2 -boldweight"><%= map.link.title %></h2>
+
+        <div class="contents">
+          <% if (!showCode) { %> 
+          <%- map.html %>
+          <% } %>
+        </div>
+
+      </section>
+      <% }) %>
+        
+     
+    </div>
+  </div>
+
+
+<script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='http://HOST:3002/browser-sync/browser-sync-client.js?v=2.18.13'><\/script>".replace("HOST", location.hostname));
+//]]></script>
+</body>
+</html>

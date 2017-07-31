@@ -1,0 +1,22 @@
+.nav{
+  background: rgba(0,0,0,0.9);
+  z-index: 9;
+}
+.nav .flex .item{
+  text-align: center;
+}
+
+.nav a{
+  color: var(--white);
+  text-decoration: none;
+}
+
+.belmu{
+  max-width: 250px;
+  margin-bottom: 1.3em;
+}
+
+.colourbox-sample{
+  width: 100%;
+  height: 6px;
+}

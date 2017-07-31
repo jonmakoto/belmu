@@ -1,0 +1,19 @@
+/* MESSAGING Progress
+   ––––––––––––––––––
+   written by:
+   tim.clulow@vocus.co.nz */
+
+.o-progress{
+  height: 4px;
+  position: relative;
+  background: var(--blue);
+  transition: var(--transition-all);
+}
+.o-progress:hover{
+  background: var(--cyan);
+}
+
+/* SHAME */
+o-progress .helpertext{
+  bottom: 250%;
+}

@@ -1,0 +1,116 @@
+/* -- Colours (HSL Colours are good)
+   ––––––––––––––––––––––––––––––––– */
+
+:root{
+  --core-white:     0, 100%;
+  --core-black:     0, 0%;
+  --core-grey:      220, 2%;
+  --core-lime:      65, 77%;
+  --core-cyan:      200, 48%;
+  --core-pink:      349, 57%;
+
+
+  --white:          hsl( var(--core-white),     100% );
+  --black:          hsl( var(--core-black),     0%   );
+
+  --lime:	          hsl( var(--core-lime),      46%  );
+  --cyan:	          hsl( var(--core-cyan),      53%  );
+  --pink:			      hsl( var(--core-pink),      58%  );
+
+  --grey:			      hsl( var(--core-grey),      28%  );
+  --grey-900:	      hsl( var(--core-grey),      30%  );
+  --grey-800:	      hsl( var(--core-grey),      40%  );
+  --grey-700:			  hsl( var(--core-grey),      50%  );
+  --grey-600:			  hsl( var(--core-grey),      60%  );
+  --grey-500:			  hsl( var(--core-grey),      70%  );
+  --grey-400:			  hsl( var(--core-grey),      80%  );
+  --grey-300:			  hsl( var(--core-grey),      90%  );
+  --grey-200:			  hsl( var(--core-grey),      95%  );
+  --grey-100:			  hsl( var(--core-grey),      98%  );
+
+  --black:			    hsl( var(--core-black),     0%   );
+  --black-900:	    hsl( var(--core-black),     10%  );
+  --black-800:	    hsl( var(--core-black),     20%  );
+  --black-700:			hsl( var(--core-black),     30%  );
+  --black-600:			hsl( var(--core-black),     40%  );
+  --black-500:			hsl( var(--core-black),     50%  );
+  --black-400:			hsl( var(--core-black),     60%  );
+  --black-300:			hsl( var(--core-black),     70%  );
+  --black-200:			hsl( var(--core-black),     80%  );
+  --black-100:			hsl( var(--core-black),     90%  );
+
+  --black-900a:     hsla( var(--core-black), 0%, 0.9 );
+  --black-800a:     hsla( var(--core-black), 0%, 0.8 );
+  --black-700a:     hsla( var(--core-black), 0%, 0.7 );
+  --black-600a:     hsla( var(--core-black), 0%, 0.6 );
+  --black-500a:     hsla( var(--core-black), 0%, 0.5 );
+  --black-400a:     hsla( var(--core-black), 0%, 0.4 );
+  --black-300a:     hsla( var(--core-black), 0%, 0.3 );
+  --black-200a:     hsla( var(--core-black), 0%, 0.2 );
+  --black-100a:     hsla( var(--core-black), 0%, 0.1 );
+  
+  --white-900a:     hsla( var(--core-white), 100%, 0.9 );
+  --white-800a:     hsla( var(--core-white), 100%, 0.8 );
+  --white-700a:     hsla( var(--core-white), 100%, 0.7 );
+  --white-600a:     hsla( var(--core-white), 100%, 0.6 );
+  --white-500a:     hsla( var(--core-white), 100%, 0.5 );
+  --white-400a:     hsla( var(--core-white), 100%, 0.4 );
+  --white-300a:     hsla( var(--core-white), 100%, 0.3 );
+  --white-200a:     hsla( var(--core-white), 100%, 0.2 );
+  --white-100a:     hsla( var(--core-white), 100%, 0.1 );
+
+  --lime-900:	      hsl( var(--core-lime),      20%  );
+  --lime-800:	      hsl( var(--core-lime),      30%  );
+  --lime-700:			  hsl( var(--core-lime),      40%  );
+  --lime-600:			  hsl( var(--core-lime),      50%  );
+  --lime-500:			  hsl( var(--core-lime),      60%  );
+  --lime-400:			  hsl( var(--core-lime),      70%  );
+  --lime-300:			  hsl( var(--core-lime),      80%  );
+  --lime-200:			  hsl( var(--core-lime),      90%  );
+  --lime-100:			  hsl( var(--core-lime),      95%  );
+
+  --cyan-900:	      hsl( var(--core-cyan),      50%  );
+  --cyan-800:	      hsl( var(--core-cyan),      55%  );
+  --cyan-700:			  hsl( var(--core-cyan),      60%  );
+  --cyan-600:			  hsl( var(--core-cyan),      65%  );
+  --cyan-500:			  hsl( var(--core-cyan),      70%  );
+  --cyan-400:			  hsl( var(--core-cyan),      75%  );
+  --cyan-300:			  hsl( var(--core-cyan),      80%  );
+  --cyan-200:			  hsl( var(--core-cyan),      85%  );
+  --cyan-100:			  hsl( var(--core-cyan),      90%  );
+
+  --pink-900:	      hsl( var(--core-pink),      32%  );
+  --pink-800:	      hsl( var(--core-pink),      40%  );
+  --pink-700:			  hsl( var(--core-pink),      48%  );
+  --pink-600:			  hsl( var(--core-pink),      56%  );
+  --pink-500:			  hsl( var(--core-pink),      62%  );
+  --pink-400:			  hsl( var(--core-pink),      70%  );
+  --pink-300:			  hsl( var(--core-pink),      78%  );
+  --pink-200:			  hsl( var(--core-pink),      86%  );
+  --pink-100:			  hsl( var(--core-pink),      92%  );
+
+  --borders-dark:   hsla(var(--black), 0.1);
+  --borders-light:  hsla(var(--white), 0.1);
+
+  /* FILTERS (Experimental) */
+  --filterwhite: grayscale(100%) brightness(10);
+}
+
+/*Post-css styleguide starts================================================*/
+
+/* TODO: figure out how to set colour pallette options without outputting to code */
+/* @start color */
+.----colours { 
+  black:		      #131834;
+  white:	        #093f78;
+  grey:	          #9C9C9C;
+  lime:			      #BFCE1B;
+  cyan:	          #4D9BC1;
+  pink:		        #D1566D;
+
+  grey:			      #9C9C9C;
+  grey-500:	      #b2b2b2;
+  grey-300:	      #d9d9dc;
+  grey-100:			  #f7f7f7;
+} 
+/* @end color */

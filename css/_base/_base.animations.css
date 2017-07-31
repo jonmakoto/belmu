@@ -1,0 +1,48 @@
+/* -- Animations
+   ––––––––––––– */
+
+.barloader{
+  background: var(--grey-100);
+  
+  height: 10px;
+  position: absolute;
+  top: 54px;
+  left: 0;
+
+  animation: 5s barloader forwards;
+  transition: 0.3s all;
+}
+.barloader.bye{
+  opacity: 0;
+  height: 0;
+}
+
+@keyframes barloader{
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 100%;
+  }
+}
+
+
+@keyframes showme{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+
+@keyframes hideme{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+

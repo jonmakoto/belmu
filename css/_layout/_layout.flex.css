@@ -1,0 +1,20 @@
+/* -- Flex
+   ––––––– */
+
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+  /*padding-top: 1px;*/
+  &.gutterless .item{
+    padding: 0;
+  }
+
+  & .item{
+    flex-grow: 1;
+    align-self: stretch;
+    padding: calc(var(--spacing) * 0.5);
+    &.gutterless{
+      padding: 0;
+    }
+  }
+} 

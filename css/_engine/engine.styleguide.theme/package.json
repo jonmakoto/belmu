@@ -1,0 +1,64 @@
+{
+  "name": "psg-theme-default",
+  "version": "1.0.1",
+  "description": "Default theme of postcss-style-guide",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/morishitter/psg-theme-default/git"
+  },
+  "keywords": [
+    "psg-theme",
+    "style-guide",
+    "postcss"
+  ],
+  "author": {
+    "name": "Masaaki Morishita"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "suitcss-base": "^1.0.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.1",
+    "cssnano": "^3.4.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-postcss": "^6.1.0",
+    "postcss-custom-properties": "^5.0.0",
+    "postcss-flexbugs-fixes": "^2.0.0",
+    "postcss-import": "^8.0.2",
+    "postcss-style-guide": "^0.12.1",
+    "tape": "^4.0.0"
+  },
+  "gitHead": "53c18f6abb5a2c54443c7f4ce8aae5e0be5e19d8",
+  "_id": "psg-theme-default@1.0.1",
+  "_shasum": "f613da70af7571e52978709d7efd29dfb15b046b",
+  "_from": "psg-theme-default@>=1.0.0 <2.0.0",
+  "_npmVersion": "2.14.7",
+  "_nodeVersion": "4.2.3",
+  "_npmUser": {
+    "name": "morishitter",
+    "email": "morishitter@gmail.com"
+  },
+  "dist": {
+    "shasum": "f613da70af7571e52978709d7efd29dfb15b046b",
+    "tarball": "https://registry.npmjs.org/psg-theme-default/-/psg-theme-default-1.0.1.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "morishitter",
+      "email": "morishitter@gmail.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-6-west.internal.npmjs.com",
+    "tmp": "tmp/psg-theme-default-1.0.1.tgz_1455101248923_0.9757575378753245"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/psg-theme-default/-/psg-theme-default-1.0.1.tgz",
+  "readme": "ERROR: No README data found!"
+}

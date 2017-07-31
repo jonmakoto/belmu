@@ -1,0 +1,46 @@
+
+/* To learn how to use BELMU refer to the guide at -----  */
+
+/* B.ase
+   E.ngine
+   L.ayout
+   M.odule
+   U.tility
+   –––––––-- */
+
+/* CSS properties follow T.C.D.L.I
+   – Type
+   – Color
+   – Display
+   – Layout
+   – Interaction
+
+/* BASE 
+   –––– 
+   -- this will have all
+   -- @import '_base/_base.typography.css' (for example)
+*/
+   
+/* ENGINE 
+   –––––– 
+   -- this will have all
+   -- @import '_base/_engine.csstriangles.css' (for example)
+*/
+
+/* LAYOUT 
+   –––––– 
+   -- this will have all
+   -- @import '_base/_layout.home.css' (for example)
+*/
+
+/* MODULE 
+   –––––– 
+   -- this will have all
+   -- @import '_module/_module.search.css' (for example)
+*/
+
+/* UTILITY 
+   ––––––– 
+   -- this will have all
+   -- @import '_utility/_utility.clearfloats.css' (for example)
+*/

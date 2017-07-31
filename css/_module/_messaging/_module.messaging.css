@@ -1,0 +1,62 @@
+/* MESSAGING Message-Header
+   ––––––––––––––––––––––––
+   written by:
+   tim.clulow@vocus.co.nz */
+
+.o-messaging{
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translateY(-55px);
+  border-top: 2px solid var(--green);
+  background: hsla(79, 74%, 84%, 0.73);
+  z-index: 99;
+  overflow: hidden;
+  transition: all 1s ease-in;
+  pointer-events: none;
+  opacity: 0;
+}
+.o-messaging.top-2{
+  top: calc(var(--spacing) * 2.44);
+}
+.o-messaging.top-3{
+  top: calc(var(--spacing) * 3);
+}
+.o-messaging.top-4{
+  top: calc(var(--spacing) * 3.58);
+}
+
+.o-messaging:container(width <= 35em) .text {
+  font-size: 1em;
+}
+    
+.o-messaging .circular-tick{
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cg class='st0'%3E%3Cpath class='st1' style='fill:%23afd568' d='M13.1 19.3L27.3 5.2l3.9 3.9-18.1 18-11-11L6 12.2l7.1 7.1z'/%3E%3C/g%3E%3C/svg%3E");
+  display: inline-block;
+  width: 1.1em;
+  height: 1.1em;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  top: 3px;
+  padding: 9px;
+}
+.o-messaging .text{
+  display: inline-block;
+  vertical-align: top;
+  padding: 0.5em;
+  font-size: 1em;
+  text-align: center;
+  margin: auto;
+  width: 100%;
+  color: var(--green);
+  font-weight: var(--heavyweight);
+}
+.o-messaging.successful {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  transition: 0.6s all ease-out;
+  pointer-events: auto;
+}

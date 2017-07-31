@@ -1,0 +1,85 @@
+* .helpertext{
+  position: absolute;
+  bottom: 147%;
+  right: 0;
+  opacity: 0;
+  pointer-events: none;
+  display: inline-block;
+  padding: calc(var(--spacing) * 0.5) var(--spacing) calc(var(--spacing) * 0.6666666);
+  font-size: var(--rem-08);
+  line-height: 1.2;
+  width: 170px;
+  text-align: left;
+  border-radius: var(--border-radius); /* 2rem;*/
+  transition: var(--transition-all);
+  color: var(--white);
+  font-weight: var(--bookweight);
+  background: var(--cyan);
+}
+.helpertext:before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 47%;
+  display: block;
+  border: 5px solid var(--cyan);
+  border-color: var(--cyan) transparent transparent transparent;
+}
+
+.showhelper .helpertext{
+  opacity: 1;
+}
+
+.helpertext.right{
+  top: 50%;
+  bottom: auto;
+  left: 20.5vw;
+  width: 240px;
+  color: var(--navy);
+  font-size: var(--rem-09);
+  padding: var(--spacing) var(--spacing) var(--spacing);
+  background: var(--white);
+  border-left: 4px solid var(--blue);
+  border-right: 4px solid var(--blue);
+  transform: translateX(-50px);
+  z-index: -1;
+  box-shadow: 0 1px 10px var(--grey);
+}
+.helpertext.show{
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: all;
+}
+.helpertext.right:before{
+  border-color:  transparent var(--blue) transparent transparent;
+  top: 50%;
+  bottom: auto;
+  margin-top: -5px;
+  left: -14px;
+}
+.helpertext i{
+  opacity: 0.5;
+  position: absolute;
+  right: 3px;
+  top: 6px;
+  cursor: pointer;
+  padding: 6px;
+  font-size: 0.7rem;
+}
+.helpertext i:hover{
+  opacity: 1;
+}
+.selectable{
+  padding: 1em 1.2em 1em;
+  margin: 0 -1.5em;
+  transition: var(--transition-all);
+}
+.selectable:hover{
+  background: var(--blue-dark);
+}
+.selectable.active{
+  background: var(--blue);
+}
+.selectable.active .input-autocomplete, .selectable.active .activearea{
+  background-color: var(--white);
+}

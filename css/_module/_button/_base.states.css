@@ -1,0 +1,153 @@
+/* -- ACTIVE 
+   ––––––––– */
+
+/* -- PROCESSED  
+   –––––––––––– */
+.o-button.processed{
+  z-index: 9;
+}
+.o-button.processed .text{
+  opacity: 0;
+  animation: delayedfade 2.6s 1.8s forwards;
+}
+.o-button.processed .loader{
+  animation: finishloader 0.4s forwards;
+}
+.o-button.processed .success{
+  animation: fadeout 1.4s 0.4s forwards;
+}
+
+@keyframes delayedfade {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes finishloader {
+  0%{
+    width: 100%;
+  }
+  100%{
+    width: 100%;
+    opacity: 0;
+  }
+}
+@keyframes fadeout {
+  0%{
+    opacity: .4;
+    transform: scale(0.6);
+  }
+  50%{
+    opacity: 1;
+    transform: scale(1.3);
+  }
+  100%{
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+/* -- SUCCESSFUL 
+   ––––––––––––– */
+.successful .o-button{
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  transition: 0.3s all;
+}
+
+.o-button.successful{ pointer-events: auto; background: var(--green) !important;}
+
+.o-button .success{
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cg class='st0'%3E%3Cpath class='st1' style='fill:%23ffffff' d='M13.1 19.3L27.3 5.2l3.9 3.9-18.1 18-11-11L6 12.2l7.1 7.1z'/%3E%3C/g%3E%3C/svg%3E");
+  filter: var(--filterwhite);
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -0.75em;
+  margin-top: -0.75em;
+  opacity: 0;
+  display: inline-block;
+  width: 1.3em;
+  height: 1.3em;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 9px;
+}
+
+/* LOADING 
+   ––––––– */
+.o-button.loading         { max-height: 1rem; padding-top: 0; padding-bottom: 0}
+.o-button.loading .text   { opacity: 0; }
+.o-button.loading .loader { animation: loadit 3s linear forwards;}
+
+@keyframes loadit {
+  0%{
+    width: 0;
+  }
+  33%{
+    width: 66%;
+  }
+  100%{
+    width: 99%;
+  }
+}
+
+/* -- DESTROYED 
+   –––––––––––– */
+.destroyed {
+  pointer-events: none;
+}
+.destroyed .o-button.active{
+  pointer-events: auto;
+  animation: none;
+  background: hsl(200, 50%, 10%);
+  opacity: 1;
+  transform: scale(1);
+}
+
+.destroyed .o-button{
+  opacity: 0;
+  transform: scaleY(0);
+  transition-timing-function: cubic-bezier(0.91, 0.13, 1, 0.15);
+}
+
+
+/* -- DISABLED 
+   ––––––––––– */
+.disabled .o-button:not(.cancel){
+  pointer-events: none;
+  /*animation: shake 0.8s infinite;*/
+}
+.disabled .o-button.active, .disabled .o-button.cancel  {
+  pointer-events: auto;
+  animation: none;
+}
+
+.disabled .o-button                 { background: var(--grey-300);}
+.disabled .o-button.active          { background: var(--cyan);}
+.disabled .o-button.active.success  { background: var(--green);}
+.disabled .o-button.active.mid      { background: var(--blue);}
+.disabled .o-button.active.muted    { background: var(--grey);}
+.disabled .o-button.active.loud     { background: var(--yellow);}
+.disabled .o-button.cancel          { background: var(--white);}
+
+.disabled .input-switch{
+  pointer-events: none;
+}
+.disabled .input-switch .switch-base,
+.disabled .input-switch .switch-base:before,
+.disabled .input-switch .switch-base:after{ 
+  background: var(--grey-100) !important;
+}
+.disabled .input-switch input{
+  pointer-events: none;
+}
+.disabled .input-autocomplete, .disabled .input-select, .disabled .input-switch, .disabled textarea{
+  pointer-events: none;
+  opacity: 0.3;
+}

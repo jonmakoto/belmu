@@ -1,0 +1,22 @@
+/* Text classes
+   –––––––––––– */
+
+/* FONT WEIGHTS */
+.-bookweight{
+  font-weight: 500;
+}
+.-heavyweight{
+  font-weight: 600;
+}
+.-boldweight{
+  font-weight: 700;
+}
+.-extraboldweight{
+  font-weight: 800;
+}
+.-upcase{
+  text-transform: uppercase;
+}
+.-nocase{
+  text-transform: none;
+}

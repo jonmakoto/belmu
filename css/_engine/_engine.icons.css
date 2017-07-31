@@ -1,0 +1,30 @@
+/* -- Icons
+   –––––––– */
+
+@define-mixin svgicon $url{
+  background-image: url("../../../img/$(url).svg");
+}
+@define-mixin icon-bg $url, $color:var, $posx:center, $posy:center, $sizex:100%, $sizey:100%(--navy){
+  background-image: url("../../../img/sprites.svg#$(url)" param(--color $color));
+  background-repeat: no-repeat;
+  background-position: $posx $posy;
+  background-size: $sizex $sizey;
+}
+
+@define-mixin icon-fill $url, $color:#191e43{
+  background-image: url("../../../img/sprites.svg#$(url)" param(--color $color));
+}
+@define-mixin icon-stroke $url, $color:#191e43{
+  background-image: url("../../../img/sprites-stroked.svg#$(url)" param(--color $color));
+  fill: transparent;
+}
+@define-mixin icon-multicolour $url{
+  background-image: url("../../../img/_svg/coloured/$(url).svg");
+}
+
+/*
+@styleguide
+
+@title Engine
+
+*/

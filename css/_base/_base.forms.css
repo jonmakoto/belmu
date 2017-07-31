@@ -1,0 +1,19 @@
+/* -- Forms
+   –––––––– */
+
+.textarea {
+  font-weight: var(--bookweight);
+  font-size: 1em;
+
+  color: var(--grey);
+
+  border: 0;
+  border-radius: var(--border-radius);
+  min-height: 10vh;
+  padding: calc(var(--spacing) * 0.666666666 );
+
+  resize: vertical; /* user can resize vertically, but width is fixed */
+}
+.textarea::placeholder{
+  color: var(--grey);
+}

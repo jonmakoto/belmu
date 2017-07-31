@@ -1,0 +1,77 @@
+/* MESSAGING Stepped Progress
+   ––––––––––––––––––––––––––
+   written by:
+   tim.clulow@vocus.co.nz */
+
+.o-stepped-progress{
+  width: 210px;
+  height: 40px;
+  animation: showMeRight 0.5s ease-out;
+}
+.o-stepped-progress .button{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: initial;
+  padding: 8px 7px 5px;
+}
+.o-stepped-progress .progress-bg{
+  background: var(--grey-300);
+  position: absolute;
+  left: 7px;
+  bottom: 26px;
+  height: 10px;
+  width: 81px;
+}
+.o-stepped-progress .percentagetext{
+  position: absolute;
+  left: -50px;
+  top: -8px;
+  font-weight: var(--heavyweight);
+  color: var(--navy);
+  font-size: 19px;
+}
+.o-stepped-progress .percentagetext .d-block{
+  font-size: 8px;
+  text-transform: uppercase;
+}
+.o-stepped-progress .progress{
+  height: 10px;
+  background: var(--blue);
+  transition: var(--transition-all);
+}
+.o-stepped-progress .progress:hover{
+  background: var(--cyan);
+}
+.o-stepped-progress{
+  z-index: 999;
+}
+.o-stepped-progress .button{
+  width: 110px;
+}
+
+.unshowright{
+  animation: unshowMeRight 0.3s forwards !Important;
+}
+
+@keyframes showMeRight{
+  0%{
+    opacity: 0;
+    transform: translateX(6px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes unshowMeRight{
+  0%{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  100%{
+    opacity: 0;
+    transform: translateX(6px);
+  }
+}
