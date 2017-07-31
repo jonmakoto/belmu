@@ -11,28 +11,34 @@
 <body>  
   <div class="wrapper -p-x-2 -p-top-4">
     <nav class="nav -fixed -top-0 -left-0 -w-100">
-     
-      <ul class="flex">
-        
+      <ul class="flex">       
         <% if (Array.isArray(colorPalette) && colorPalette.length !== 0) { %>
           <li class="item">
             <a href="#color-palette">Base</a>
           </li>
         <% } %>
+        <% var count = 1; %>
         <% maps.forEach(function (map) { %>
         <% if (map.link.title !== null) { %>
+          <% if(map.link.title.indexOf('Module') !== -1 && count == 1){ %>
+            <li class="item">
+              <a href="#module">
+              Module
+              </a>
+            </li> 
+            <% count++; %>
+          <% } else if(map.link.title.indexOf('Module') == -1){ %>
           <li class="item">
             <a href="#<%= map.link.id %>">
             <%= map.link.title %>
             </a>
           </li> 
+          <% } %>
         <% } %>
         <% }) %>
-        
-        <li class="item"><a href="/components.html">Components</a></li>
       </ul>
     </nav>
-     <img src="img/belmu.svg" class="belmu" />  
+    <img src="img/belmu.svg" class="belmu" />  
 
     <div class="main"> 
       <% if (Array.isArray(colorPalette) && colorPalette.length !== 0) { %>
@@ -56,17 +62,18 @@
       <% } %>
 
       <% maps.forEach(function (map) { %>
-      <section>
-
-        <h2 id="<%= map.link.id %>" class="psg-h2 -boldweight"><%= map.link.title %></h2>
-
-        <div class="contents">
-          <% if (!showCode) { %> 
-          <%- map.html %>
-          <% } %>
-        </div>
-
-      </section>
+        <% if(map.link.title.indexOf('Module') !== -1){ %>
+          <div id="module"></div>
+        <% } else{ %>
+          <section>
+            <h2 id="<%= map.link.id %>" class="psg-h2 -boldweight"><%= map.link.title %></h2>
+            <div class="contents">
+              <% if (!showCode) { %> 
+              <%- map.html %>
+              <% } %>
+            </div>
+          </section>
+        <% } %>
       <% }) %>
         
      
