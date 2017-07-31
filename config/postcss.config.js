@@ -18,7 +18,7 @@ module.exports = (ctx) => ({
       "project": "BELMU",
       "dest": "index.html",
       "showCode": true,
-      "themePath": "css/_engine/engine.styleguide.theme/"
+      "themePath": "css/belmu/_engine/engine.styleguide.theme/"
     },
     'cssnano': ctx.env === 'production' ? {
       discardComments: {

@@ -201,92 +201,91 @@ button {
    ––––––––––––––––––––––––––––––––– */
 
 :root{
-  --core-white:     0, 100%;
-  --core-black:     0, 0%;
-  --core-grey:      220, 2%;
-  --core-lime:      65, 77%;
-  --core-cyan:      200, 48%;
-  --core-pink:      349, 57%;
+  --core-white:           0, 100%;
+  --core-black:           0, 0%;
+  --core-grey:            220, 2%;
+  --core-secondary:       65, 77%;
+  --core-primary:         200, 48%;
+  --core-highlight:       349, 57%;
 
+  --white:                hsl( var(--core-white),     100% );
+  --black:                hsl( var(--core-black),     0%   );
 
-  --white:          hsl( var(--core-white),     100% );
-  --black:          hsl( var(--core-black),     0%   );
+  --secondary:	          hsl( var(--core-secondary),      46%  );
+  --primary:	            hsl( var(--core-primary),      53%  );
+  --highlight:			      hsl( var(--core-highlight),      58%  );
 
-  --lime:	          hsl( var(--core-lime),      46%  );
-  --cyan:	          hsl( var(--core-cyan),      53%  );
-  --pink:			      hsl( var(--core-pink),      58%  );
+  --grey:			            hsl( var(--core-grey),      28%  );
+  --grey-900:	            hsl( var(--core-grey),      30%  );
+  --grey-800:	            hsl( var(--core-grey),      40%  );
+  --grey-700:			        hsl( var(--core-grey),      50%  );
+  --grey-600:			        hsl( var(--core-grey),      60%  );
+  --grey-500:			        hsl( var(--core-grey),      70%  );
+  --grey-400:			        hsl( var(--core-grey),      80%  );
+  --grey-300:			        hsl( var(--core-grey),      90%  );
+  --grey-200:			        hsl( var(--core-grey),      95%  );
+  --grey-100:			        hsl( var(--core-grey),      98%  );
 
-  --grey:			      hsl( var(--core-grey),      28%  );
-  --grey-900:	      hsl( var(--core-grey),      30%  );
-  --grey-800:	      hsl( var(--core-grey),      40%  );
-  --grey-700:			  hsl( var(--core-grey),      50%  );
-  --grey-600:			  hsl( var(--core-grey),      60%  );
-  --grey-500:			  hsl( var(--core-grey),      70%  );
-  --grey-400:			  hsl( var(--core-grey),      80%  );
-  --grey-300:			  hsl( var(--core-grey),      90%  );
-  --grey-200:			  hsl( var(--core-grey),      95%  );
-  --grey-100:			  hsl( var(--core-grey),      98%  );
+  --black:			          hsl( var(--core-black),     0%   );
+  --black-900:	          hsl( var(--core-black),     10%  );
+  --black-800:	          hsl( var(--core-black),     20%  );
+  --black-700:			      hsl( var(--core-black),     30%  );
+  --black-600:			      hsl( var(--core-black),     40%  );
+  --black-500:			      hsl( var(--core-black),     50%  );
+  --black-400:			      hsl( var(--core-black),     60%  );
+  --black-300:			      hsl( var(--core-black),     70%  );
+  --black-200:			      hsl( var(--core-black),     80%  );
+  --black-100:			      hsl( var(--core-black),     90%  );
 
-  --black:			    hsl( var(--core-black),     0%   );
-  --black-900:	    hsl( var(--core-black),     10%  );
-  --black-800:	    hsl( var(--core-black),     20%  );
-  --black-700:			hsl( var(--core-black),     30%  );
-  --black-600:			hsl( var(--core-black),     40%  );
-  --black-500:			hsl( var(--core-black),     50%  );
-  --black-400:			hsl( var(--core-black),     60%  );
-  --black-300:			hsl( var(--core-black),     70%  );
-  --black-200:			hsl( var(--core-black),     80%  );
-  --black-100:			hsl( var(--core-black),     90%  );
-
-  --black-900a:     hsla( var(--core-black), 0%, 0.9 );
-  --black-800a:     hsla( var(--core-black), 0%, 0.8 );
-  --black-700a:     hsla( var(--core-black), 0%, 0.7 );
-  --black-600a:     hsla( var(--core-black), 0%, 0.6 );
-  --black-500a:     hsla( var(--core-black), 0%, 0.5 );
-  --black-400a:     hsla( var(--core-black), 0%, 0.4 );
-  --black-300a:     hsla( var(--core-black), 0%, 0.3 );
-  --black-200a:     hsla( var(--core-black), 0%, 0.2 );
-  --black-100a:     hsla( var(--core-black), 0%, 0.1 );
+  --black-900a:           hsla( var(--core-black), 0%, 0.9 );
+  --black-800a:           hsla( var(--core-black), 0%, 0.8 );
+  --black-700a:           hsla( var(--core-black), 0%, 0.7 );
+  --black-600a:           hsla( var(--core-black), 0%, 0.6 );
+  --black-500a:           hsla( var(--core-black), 0%, 0.5 );
+  --black-400a:           hsla( var(--core-black), 0%, 0.4 );
+  --black-300a:           hsla( var(--core-black), 0%, 0.3 );
+  --black-200a:           hsla( var(--core-black), 0%, 0.2 );
+  --black-100a:           hsla( var(--core-black), 0%, 0.1 );
   
-  --white-900a:     hsla( var(--core-white), 100%, 0.9 );
-  --white-800a:     hsla( var(--core-white), 100%, 0.8 );
-  --white-700a:     hsla( var(--core-white), 100%, 0.7 );
-  --white-600a:     hsla( var(--core-white), 100%, 0.6 );
-  --white-500a:     hsla( var(--core-white), 100%, 0.5 );
-  --white-400a:     hsla( var(--core-white), 100%, 0.4 );
-  --white-300a:     hsla( var(--core-white), 100%, 0.3 );
-  --white-200a:     hsla( var(--core-white), 100%, 0.2 );
-  --white-100a:     hsla( var(--core-white), 100%, 0.1 );
+  --white-900a:           hsla( var(--core-white), 100%, 0.9 );
+  --white-800a:           hsla( var(--core-white), 100%, 0.8 );
+  --white-700a:           hsla( var(--core-white), 100%, 0.7 );
+  --white-600a:           hsla( var(--core-white), 100%, 0.6 );
+  --white-500a:           hsla( var(--core-white), 100%, 0.5 );
+  --white-400a:           hsla( var(--core-white), 100%, 0.4 );
+  --white-300a:           hsla( var(--core-white), 100%, 0.3 );
+  --white-200a:           hsla( var(--core-white), 100%, 0.2 );
+  --white-100a:           hsla( var(--core-white), 100%, 0.1 );
 
-  --lime-900:	      hsl( var(--core-lime),      20%  );
-  --lime-800:	      hsl( var(--core-lime),      30%  );
-  --lime-700:			  hsl( var(--core-lime),      40%  );
-  --lime-600:			  hsl( var(--core-lime),      50%  );
-  --lime-500:			  hsl( var(--core-lime),      60%  );
-  --lime-400:			  hsl( var(--core-lime),      70%  );
-  --lime-300:			  hsl( var(--core-lime),      80%  );
-  --lime-200:			  hsl( var(--core-lime),      90%  );
-  --lime-100:			  hsl( var(--core-lime),      95%  );
+  --secondary-900:	      hsl( var(--core-secondary),      20%  );
+  --secondary-800:	      hsl( var(--core-secondary),      30%  );
+  --secondary-700:			  hsl( var(--core-secondary),      40%  );
+  --secondary-600:			  hsl( var(--core-secondary),      50%  );
+  --secondary-500:			  hsl( var(--core-secondary),      60%  );
+  --secondary-400:			  hsl( var(--core-secondary),      70%  );
+  --secondary-300:			  hsl( var(--core-secondary),      80%  );
+  --secondary-200:			  hsl( var(--core-secondary),      90%  );
+  --secondary-100:			  hsl( var(--core-secondary),      95%  );
 
-  --cyan-900:	      hsl( var(--core-cyan),      50%  );
-  --cyan-800:	      hsl( var(--core-cyan),      55%  );
-  --cyan-700:			  hsl( var(--core-cyan),      60%  );
-  --cyan-600:			  hsl( var(--core-cyan),      65%  );
-  --cyan-500:			  hsl( var(--core-cyan),      70%  );
-  --cyan-400:			  hsl( var(--core-cyan),      75%  );
-  --cyan-300:			  hsl( var(--core-cyan),      80%  );
-  --cyan-200:			  hsl( var(--core-cyan),      85%  );
-  --cyan-100:			  hsl( var(--core-cyan),      90%  );
+  --primary-900:	        hsl( var(--core-primary),      50%  );
+  --primary-800:	        hsl( var(--core-primary),      55%  );
+  --primary-700:			    hsl( var(--core-primary),      60%  );
+  --primary-600:			    hsl( var(--core-primary),      65%  );
+  --primary-500:			    hsl( var(--core-primary),      70%  );
+  --primary-400:			    hsl( var(--core-primary),      75%  );
+  --primary-300:			    hsl( var(--core-primary),      80%  );
+  --primary-200:			    hsl( var(--core-primary),      85%  );
+  --primary-100:			    hsl( var(--core-primary),      90%  );
 
-  --pink-900:	      hsl( var(--core-pink),      32%  );
-  --pink-800:	      hsl( var(--core-pink),      40%  );
-  --pink-700:			  hsl( var(--core-pink),      48%  );
-  --pink-600:			  hsl( var(--core-pink),      56%  );
-  --pink-500:			  hsl( var(--core-pink),      62%  );
-  --pink-400:			  hsl( var(--core-pink),      70%  );
-  --pink-300:			  hsl( var(--core-pink),      78%  );
-  --pink-200:			  hsl( var(--core-pink),      86%  );
-  --pink-100:			  hsl( var(--core-pink),      92%  );
+  --highlight-900:	      hsl( var(--core-highlight),      32%  );
+  --highlight-800:	      hsl( var(--core-highlight),      40%  );
+  --highlight-700:			  hsl( var(--core-highlight),      48%  );
+  --highlight-600:			  hsl( var(--core-highlight),      56%  );
+  --highlight-500:			  hsl( var(--core-highlight),      62%  );
+  --highlight-400:			  hsl( var(--core-highlight),      70%  );
+  --highlight-300:			  hsl( var(--core-highlight),      78%  );
+  --highlight-200:			  hsl( var(--core-highlight),      86%  );
+  --highlight-100:			  hsl( var(--core-highlight),      92%  );
 
   --borders-dark:   hsla(var(--black), 0.1);
   --borders-light:  hsla(var(--white), 0.1);
@@ -305,9 +304,9 @@ button {
   black:		      #131834;
   white:	        #093f78;
   grey:	          #9C9C9C;
-  lime:			      #BFCE1B;
-  cyan:	          #4D9BC1;
-  pink:		        #D1566D;
+  secondary:			      #BFCE1B;
+  primary:	          #4D9BC1;
+  highlight:		        #D1566D;
 
   grey:			      #9C9C9C;
   grey-500:	      #b2b2b2;
@@ -396,7 +395,7 @@ button {
    ––––––––––––––– */
 
 a:link, a:active, a:link {
-  color: var(--cyan);
+  color: var(--primary);
 }
 
 /* -- Typography
@@ -841,17 +840,17 @@ label{
 /* -- BUTTON Colours
    ––––––––––––––––– */
 
-.o-button:hover           { background: hsl( var(--core-cyan), 70%);        }
+.o-button:hover           { background: hsl( var(--core-primary), 70%);     }
 
-.o-button.loud            { background: var(--pink);                      }
+.o-button.loud            { background: var(--highlight);                   }
 
 .o-button.white           { background: var(--white);                       }
 
-.o-button.white .text     { color: var(--black);                             }
+.o-button.white .text     { color: var(--black);                            }
 
 .o-button.white:hover     { background: var(--grey-300);                    }
 
-.o-button.loud:hover      { background: hsl( var(--core-pink), 80%);      }
+.o-button.loud:hover      { background: hsl( var(--core-highlight), 80%);   }
 
 .o-button.muted           { background: var(--grey-500);                    }
 
@@ -859,19 +858,19 @@ label{
 
 .o-button.mid             { background: var(--lime);                        }
 
-.o-button.mid:hover       { background: hsl( var(--core-lime), 43%);        }
+.o-button.mid:hover       { background: hsl( var(--core-secondary), 43%);   }
 
-.o-button.success         { background: var(--lime);                       }
+.o-button.success         { background: var(--lime);                        }
 
-.o-button.success:hover   { background: hsl(var(--core-lime), 45%);        }
+.o-button.success:hover   { background: hsl(var(--core-secondary), 45%);    }
 
-.o-button.danger          { background: var(--pink);                         }
+.o-button.danger          { background: var(--highlight);                   }
 
-.o-button.danger:hover    { background: hsl( var(--core-pink), 77%);         }
+.o-button.danger:hover    { background: hsl( var(--core-highlight), 77%);   }
 
-.o-button.dark            { background: var(--black);                        }
+.o-button.dark            { background: var(--black);                       }
 
-.o-button.dark:hover      { background: var(--cyan);                        }
+.o-button.dark:hover      { background: var(--primary);                     }
 
 .borderless{
   border: 0 !important;
@@ -1121,15 +1120,15 @@ label{
 
 .disabled .o-button                 { background: var(--grey-300);}
 
-.disabled .o-button.active          { background: var(--cyan);}
+.disabled .o-button.active          { background: var(--primary);}
 
-.disabled .o-button.active.success  { background: var(--green);}
+.disabled .o-button.active.success  { background: var(--secondary);}
 
-.disabled .o-button.active.mid      { background: var(--blue);}
+.disabled .o-button.active.mid      { background: var(--secondary);}
 
 .disabled .o-button.active.muted    { background: var(--grey);}
 
-.disabled .o-button.active.loud     { background: var(--highlight);}
+.disabled .o-button.active.loud     { background: var(--secondary);}
 
 .disabled .o-button.cancel          { background: var(--white);}
 
@@ -1157,7 +1156,7 @@ label{
   text-align: center;
   
   color: var(--white);
-  background-color: var(--cyan);
+  background-color: var(--primary);
 
   border: 0;
   outline: 0 !important;
@@ -1287,7 +1286,7 @@ o-button.col{
   transition: var(--transition-all);
   color: var(--white);
   font-weight: var(--bookweight);
-  background: var(--cyan);
+  background: var(--primary);
 }
 
 .helpertext:before {
@@ -1296,8 +1295,8 @@ o-button.col{
   bottom: -10px;
   left: 47%;
   display: block;
-  border: 5px solid var(--cyan);
-  border-color: var(--cyan) transparent transparent transparent;
+  border: 5px solid var(--primary);
+  border-color: var(--primary) transparent transparent transparent;
 }
 
 .showhelper .helpertext{
@@ -1314,8 +1313,8 @@ o-button.col{
   font-size: var(--rem-09);
   padding: var(--spacing) var(--spacing) var(--spacing);
   background: var(--white);
-  border-left: 4px solid var(--blue);
-  border-right: 4px solid var(--blue);
+  border-left: 4px solid var(--secondary);
+  border-right: 4px solid var(--secondary);
   -webkit-transform: translateX(-50px);
           transform: translateX(-50px);
   z-index: -1;
@@ -1331,7 +1330,7 @@ o-button.col{
 }
 
 .helpertext.right:before{
-  border-color:  transparent var(--blue) transparent transparent;
+  border-color:  transparent var(--secondary) transparent transparent;
   top: 50%;
   bottom: auto;
   margin-top: -5px;
@@ -1361,11 +1360,11 @@ o-button.col{
 }
 
 .selectable:hover{
-  background: var(--blue-dark);
+  background: var(--secondary);
 }
 
 .selectable.active{
-  background: var(--blue);
+  background: var(--secondary);
 }
 
 .selectable.active .input-autocomplete, .selectable.active .activearea{
@@ -1680,12 +1679,12 @@ o-button.col{
   }
 
 .o-input-switch input:checked + .switcher + .switch-base{
-    background: var(--cyan);
+    background: var(--primary);
   }
 
 .o-input-switch input:checked + .switcher + .switch-base:before, 
   .o-input-switch input:checked + .switcher + .switch-base:after{
-    background: var(--cyan);
+    background: var(--primary);
   }
 
 .o-input-switch input:checked + .switcher:before{
@@ -1914,13 +1913,13 @@ o-button.col{
 .o-progress{
   height: 4px;
   position: relative;
-  background: var(--blue);
+  background: var(--secondary);
   -webkit-transition: var(--transition-all);
   transition: var(--transition-all);
 }
 
 .o-progress:hover{
-  background: var(--cyan);
+  background: var(--primary);
 }
 
 /* SHAME */
@@ -1975,13 +1974,13 @@ o-progress .helpertext{
 
 .o-stepped-progress .progress{
   height: 10px;
-  background: var(--blue);
+  background: var(--secondary);
   -webkit-transition: var(--transition-all);
   transition: var(--transition-all);
 }
 
 .o-stepped-progress .progress:hover{
-  background: var(--cyan);
+  background: var(--primary);
 }
 
 .o-stepped-progress{
@@ -2181,7 +2180,7 @@ o-progress .helpertext{
   transition: all 0.45s;
   opacity: 0;
   z-index: -1;
-  background: var(--blue);
+  background: var(--secondary);
   -webkit-user-select: none; /* Chrome/Safari */        
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+ */
@@ -2194,7 +2193,7 @@ o-progress .helpertext{
 }
 
 .o-site-selector .results li.active, .o-site-selector .results li:hover{
-  background: var(--blue-800);
+  background: var(--secondary-800);
   color: var(--white);
 }
 
@@ -2552,35 +2551,31 @@ o-progress .helpertext{
 /* -- Colours
    –––––––––– */
 
-.-white                   { color: var(--white);              }
+.-white                         { color: var(--white);              }
 
-.-black                    { color: var(--black);               }
+.-secondary                     { color: var(--secondary);          }
 
-.-blue                    { color: var(--middle-blue);        }
+.-highlight                     { color: var(-highlight);           }
 
-.-bg-cyan                 { background: var(--cyan);          }
+.-bg-primary                    { background: var(--primary);       }
 
-.-bg-black                 { background: var(--black);          }
+.-bg-secondary                  { background: var(--secondary);     }
 
-.-bg-blue                 { background: var(--blue);          }
+.-bg-highlight                  { background: var(--highlight);     }
 
-.-bg-white                { background: var(--white);         }
+.-bg-white                      { background: var(--white);         }
 
-.-bg-midblue-highlight    { background: var(--midblue-800);   }
+.-bg-grey                       { background: var(--grey);          }
 
-.-bg-darkblack             { background: #0c0e31;              }
+.-bg-grey-100                   { background: var(--grey-100);      }
 
-.-bg-grey                 { background: var(--grey);          }
+.-bg-grey-200                   { background: var(--grey-200);      }
 
-.-bg-grey-100             { background: var(--grey-100);      }
+.-bg-grey-300                   { background: var(--grey-300);      }
 
-.-bg-grey-200             { background: var(--grey-200);      }
+.-bg-grey-500                   { background: var(--grey-500);      }
 
-.-bg-grey-300             { background: var(--grey-300);      }
-
-.-bg-grey-500             { background: var(--grey-500);      }
-
-.-bg-grey-900             { background: var(--grey-900);      }
+.-bg-grey-900                   { background: var(--grey-900);      }
 
 /*
 @styleguide
@@ -6478,3 +6473,4 @@ o-progress .helpertext{
 
 */
 
+/* END of css */
