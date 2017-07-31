@@ -215,7 +215,7 @@ button {
   --primary:	            hsl( var(--core-primary),      53%  );
   --highlight:			      hsl( var(--core-highlight),      58%  );
 
-  --grey:			            hsl( var(--core-grey),      28%  );
+  --grey:			            hsl( var(--core-grey),      61%  );
   --grey-900:	            hsl( var(--core-grey),      30%  );
   --grey-800:	            hsl( var(--core-grey),      40%  );
   --grey-700:			        hsl( var(--core-grey),      50%  );
