@@ -28,7 +28,7 @@
   left: -50px;
   top: -8px;
   font-weight: var(--heavyweight);
-  color: var(--navy);
+  color: var(--black);
   font-size: 19px;
 }
 .o-stepped-progress .percentagetext .d-block{
@@ -37,11 +37,11 @@
 }
 .o-stepped-progress .progress{
   height: 10px;
-  background: var(--blue);
+  background: var(--secondary);
   transition: var(--transition-all);
 }
 .o-stepped-progress .progress:hover{
-  background: var(--cyan);
+  background: var(--primary);
 }
 .o-stepped-progress{
   z-index: 999;

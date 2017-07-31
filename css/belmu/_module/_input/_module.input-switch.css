@@ -6,7 +6,7 @@
     font-size: 0.875rem;
     cursor: pointer;
     font-weight: var(--heavyweight);
-    color: var(--navy);
+    color: var(--black);
   }
 
 
@@ -102,11 +102,11 @@
     left: 14px;
   }
   .o-input-switch input:checked + .switcher + .switch-base{
-    background: var(--cyan);
+    background: var(--primary);
   }
   .o-input-switch input:checked + .switcher + .switch-base:before, 
   .o-input-switch input:checked + .switcher + .switch-base:after{
-    background: var(--cyan);
+    background: var(--primary);
   }
   .o-input-switch input:checked + .switcher:before{
     color: $white;
@@ -126,7 +126,7 @@
     float: left;
     margin-left: 35px;
     line-height: 1;
-    color: var(--navy);
+    color: var(--black);
     opacity: .5;
     cursor: pointer;
     padding: 2px;

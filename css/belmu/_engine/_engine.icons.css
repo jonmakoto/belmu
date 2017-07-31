@@ -4,7 +4,7 @@
 @define-mixin svgicon $url{
   background-image: url("../../../img/$(url).svg");
 }
-@define-mixin icon-bg $url, $color:var, $posx:center, $posy:center, $sizex:100%, $sizey:100%(--navy){
+@define-mixin icon-bg $url, $color:var, $posx:center, $posy:center, $sizex:100%, $sizey:100%(--black){
   background-image: url("../../../img/sprites.svg#$(url)" param(--color $color));
   background-repeat: no-repeat;
   background-position: $posx $posy;

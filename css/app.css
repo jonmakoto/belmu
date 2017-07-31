@@ -1,54 +1,9 @@
+@import 'belmu/belmu.css';
 
-/* To learn how to use BELMU refer to the guide at -----  */
+@import '_base.css';
+@import '_engine.css';
+@import '_layout.css';
+@import '_module.css';
+@import '_utility.css';
 
-/* BASE 
-   –––– */
-@import '_base/_base.reset.css';
-@import '_base/_base.animations.css';
-@import '_base/_base.colours.css';
-@import '_base/_base.fonts.css';
-@import '_base/_base.forms.css';
-@import '_base/_base.inputs.css';
-@import '_base/_base.interactions.css';
-@import '_base/_base.typography.css';
-@import '_base/_base.vars.css';
-
-/* ENGINE 
-   –––––– */
-@import '_engine/_engine.icons.css';
-@import '_engine/_engine.triangles.css';
-
-/* LAYOUT 
-   –––––– */
-@import '_layout/_layout.grid.css';
-@import '_layout/_layout.flex.css';
-
-/* MODULE 
-   –––––– */
-@import '_module/_button/_module.button.css';
-@import '_module/_input/_helpertext.css';
-@import '_module/_input/_module.input-autocomplete.css';
-@import '_module/_input/_module.input-select.css';
-@import '_module/_input/_module.input-switch.css';
-@import '_module/_messaging/_module.messaging.css';
-@import '_module/_messaging/_module.modal.css';
-@import '_module/_messaging/_module.progress.css';
-@import '_module/_messaging/_module.stepped-progress.css';
-@import '_module/_prototype/_module.siteselector.css';
-@import '_module/_prototype/_module.product-row.css';
-
-/* example only */
-@import '_module/_example/_module.card.css';
-
-/* UTILITY 
-   ––––––– */
-@import '_utility/_utility.display.css';
-@import '_utility/_utility.colours.css';
-@import '_utility/_utility.floats.css';
-@import '_utility/_utility.percentages.css';
-@import '_utility/_utility.positioning.css';
-@import '_utility/_utility.spacing.css';
-@import '_utility/_utility.text.css';
-@import '_utility/_utility.typesizes.css';
-@import '_utility/_utility.icons.css';
-
+/* END of css */

@@ -111,7 +111,7 @@
   transition: all 0.45s;
   opacity: 0;
   z-index: -1;
-  background: var(--blue);
+  background: var(--secondary);
   -webkit-user-select: none; /* Chrome/Safari */        
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+ */
@@ -122,7 +122,7 @@
   pointer-events: all;
 }
 .o-site-selector .results li.active, .o-site-selector .results li:hover{
-  background: var(--blue-800);
+  background: var(--secondary-800);
   color: var(--white);
 }
 .o-site-selector .results li{

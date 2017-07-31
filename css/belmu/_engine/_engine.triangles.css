@@ -2,7 +2,7 @@
    –––––––––––– */
    
 /* todo: make this work 
-@define-mixin tirangle, $direction, $colour: var(--navy){
+@define-mixin tirangle, $direction, $colour: var(--black){
   border-radius: 2rem;
   &:before {
     content: "";
@@ -15,7 +15,7 @@
   }
 }*/
 
-@define-mixin carrat-left, $colour: var(--navy){
+@define-mixin carrat-left, $colour: var(--black){
   border-radius: 2rem;
   &:before {
     content: "";
@@ -28,7 +28,7 @@
   }
 }
 
-@define-mixin carrat-bottom, $colour: var(--navy){
+@define-mixin carrat-bottom, $colour: var(--black){
   border-radius: 2rem;
   &:before {
     content: "";

@@ -14,7 +14,7 @@
   transition: var(--transition-all);
   color: var(--white);
   font-weight: var(--bookweight);
-  background: var(--cyan);
+  background: var(--primary);
 }
 .helpertext:before {
   content: "";
@@ -22,8 +22,8 @@
   bottom: -10px;
   left: 47%;
   display: block;
-  border: 5px solid var(--cyan);
-  border-color: var(--cyan) transparent transparent transparent;
+  border: 5px solid var(--primary);
+  border-color: var(--primary) transparent transparent transparent;
 }
 
 .showhelper .helpertext{
@@ -35,12 +35,12 @@
   bottom: auto;
   left: 20.5vw;
   width: 240px;
-  color: var(--navy);
+  color: var(--black);
   font-size: var(--rem-09);
   padding: var(--spacing) var(--spacing) var(--spacing);
   background: var(--white);
-  border-left: 4px solid var(--blue);
-  border-right: 4px solid var(--blue);
+  border-left: 4px solid var(--secondary);
+  border-right: 4px solid var(--secondary);
   transform: translateX(-50px);
   z-index: -1;
   box-shadow: 0 1px 10px var(--grey);
@@ -51,7 +51,7 @@
   pointer-events: all;
 }
 .helpertext.right:before{
-  border-color:  transparent var(--blue) transparent transparent;
+  border-color:  transparent var(--secondary) transparent transparent;
   top: 50%;
   bottom: auto;
   margin-top: -5px;
@@ -75,10 +75,10 @@
   transition: var(--transition-all);
 }
 .selectable:hover{
-  background: var(--blue-dark);
+  background: var(--secondary);
 }
 .selectable.active{
-  background: var(--blue);
+  background: var(--secondary);
 }
 .selectable.active .input-autocomplete, .selectable.active .activearea{
   background-color: var(--white);

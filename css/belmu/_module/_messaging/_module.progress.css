@@ -6,11 +6,11 @@
 .o-progress{
   height: 4px;
   position: relative;
-  background: var(--blue);
+  background: var(--secondary);
   transition: var(--transition-all);
 }
 .o-progress:hover{
-  background: var(--cyan);
+  background: var(--primary);
 }
 
 /* SHAME */

@@ -437,7 +437,7 @@ body{
 
 h1, h2, h3, h4, h5, h6{
   font-weight: var(--boldweight);
-  color: var(--navy);
+  color: var(--black);
   margin-bottom: var(--spacing);
 }
 
@@ -486,7 +486,7 @@ label{
   font-weight: var(--heavyweight);
   font-size: var(--rem-08);
   font-size: var(--rem-08);
-  color: var(--navy);
+  color: var(--black);
   margin-bottom: calc(var(--spacing) * 0.5);
 }
 
@@ -527,7 +527,7 @@ label{
    –––––––––––– */
 
 /* todo: make this work 
-@define-mixin tirangle, $direction, $colour: var(--navy){
+@define-mixin tirangle, $direction, $colour: var(--black){
   border-radius: 2rem;
   &:before {
     content: "";
@@ -1129,7 +1129,7 @@ label{
 
 .disabled .o-button.active.muted    { background: var(--grey);}
 
-.disabled .o-button.active.loud     { background: var(--yellow);}
+.disabled .o-button.active.loud     { background: var(--highlight);}
 
 .disabled .o-button.cancel          { background: var(--white);}
 
@@ -1309,7 +1309,7 @@ o-button.col{
   bottom: auto;
   left: 20.5vw;
   width: 240px;
-  color: var(--navy);
+  color: var(--black);
   font-size: var(--rem-09);
   font-size: var(--rem-09);
   padding: var(--spacing) var(--spacing) var(--spacing);
@@ -1577,7 +1577,7 @@ o-button.col{
     font-size: 0.875rem;
     cursor: pointer;
     font-weight: var(--heavyweight);
-    color: var(--navy);
+    color: var(--black);
   }
 
 .o-input-switch .switcher{
@@ -1708,7 +1708,7 @@ o-button.col{
     float: left;
     margin-left: 35px;
     line-height: 1;
-    color: var(--navy);
+    color: var(--black);
     opacity: .5;
     cursor: pointer;
     padding: 2px;
@@ -1964,7 +1964,7 @@ o-progress .helpertext{
   left: -50px;
   top: -8px;
   font-weight: var(--heavyweight);
-  color: var(--navy);
+  color: var(--black);
   font-size: 19px;
 }
 
@@ -2554,13 +2554,13 @@ o-progress .helpertext{
 
 .-white                   { color: var(--white);              }
 
-.-navy                    { color: var(--navy);               }
+.-black                    { color: var(--black);               }
 
 .-blue                    { color: var(--middle-blue);        }
 
 .-bg-cyan                 { background: var(--cyan);          }
 
-.-bg-navy                 { background: var(--navy);          }
+.-bg-black                 { background: var(--black);          }
 
 .-bg-blue                 { background: var(--blue);          }
 
@@ -2568,7 +2568,7 @@ o-progress .helpertext{
 
 .-bg-midblue-highlight    { background: var(--midblue-800);   }
 
-.-bg-darknavy             { background: #0c0e31;              }
+.-bg-darkblack             { background: #0c0e31;              }
 
 .-bg-grey                 { background: var(--grey);          }
 

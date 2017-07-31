@@ -129,11 +129,11 @@
 }
 
 .disabled .o-button                 { background: var(--grey-300);}
-.disabled .o-button.active          { background: var(--cyan);}
-.disabled .o-button.active.success  { background: var(--green);}
-.disabled .o-button.active.mid      { background: var(--blue);}
+.disabled .o-button.active          { background: var(--primary);}
+.disabled .o-button.active.success  { background: var(--secondary);}
+.disabled .o-button.active.mid      { background: var(--secondary);}
 .disabled .o-button.active.muted    { background: var(--grey);}
-.disabled .o-button.active.loud     { background: var(--yellow);}
+.disabled .o-button.active.loud     { background: var(--secondary);}
 .disabled .o-button.cancel          { background: var(--white);}
 
 .disabled .input-switch{

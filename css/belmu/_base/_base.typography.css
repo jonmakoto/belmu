@@ -27,7 +27,7 @@ body{
 
 h1, h2, h3, h4, h5, h6{
   font-weight: var(--boldweight);
-  color: var(--navy);
+  color: var(--black);
   margin-bottom: var(--spacing);
 }
 
@@ -69,7 +69,7 @@ label{
   font-family: var(--slab);
   font-weight: var(--heavyweight);
   font-size: var(--rem-08);
-  color: var(--navy);
+  color: var(--black);
   margin-bottom: calc(var(--spacing) * 0.5 );
 }
 
