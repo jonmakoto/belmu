@@ -4,11 +4,9 @@
 /* BASE 
    –––– */
 @import '_base/_base.reset.css';
-@import '_base/_base.animations.css';
 @import '_base/_base.colours.css';
 @import '_base/_base.fonts.css';
 @import '_base/_base.forms.css';
-@import '_base/_base.inputs.css';
 @import '_base/_base.interactions.css';
 @import '_base/_base.typography.css';
 @import '_base/_base.vars.css';
@@ -32,13 +30,6 @@
 @import '_module/_input/_module.input-switch.css';
 @import '_module/_messaging/_module.messaging.css';
 @import '_module/_messaging/_module.modal.css';
-@import '_module/_messaging/_module.progress.css';
-@import '_module/_messaging/_module.stepped-progress.css';
-@import '_module/_prototype/_module.siteselector.css';
-@import '_module/_prototype/_module.product-row.css';
-
-/* example only */
-@import '_module/_example/_module.card.css';
 
 /* UTILITY 
    ––––––– */

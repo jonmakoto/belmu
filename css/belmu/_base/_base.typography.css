@@ -74,6 +74,10 @@ label{
   margin-bottom: calc(var(--spacing) * 0.5 );
 }
 
+a:link, a:active, a:link {
+  color: var(--primary);
+}
+
 /* icons */
 [class^="icon-"], [class*=" icon-"] {
     display: inline-block;
