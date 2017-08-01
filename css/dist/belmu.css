@@ -403,6 +403,7 @@ a:link, a:active, a:link {
 
 :root{
   --slab: 'Zilla Slab', Serif;
+  --sans: 'Dosis', sans-serif;
   --bookweight: 500;
   --heavyweight: 600;
   --boldweight: 700;
@@ -519,7 +520,7 @@ label{
 @styleguide
 
 @title Engine
-
+Mixins and other generated styles live here
 */
 
 /* -- Triangles
@@ -599,6 +600,7 @@ label{
 @styleguide
 
 @title Layout
+Everything to do with layout, grids etc.
 <div class="grid mq-small-full">
   <div class="col">
     <div class="-bg-grey-300 -p-all-1">Hi I'm a column!</div>
@@ -762,6 +764,7 @@ label{
     <div class="-bg-grey-300 -p-all-1">Hi I'm a itemumn!</div>
   </div>
 </div> 
+
 <strong>Gutterless Flex</strong>
 <div class="flex gutterless">
   <div class="item -w-80">
@@ -2581,7 +2584,7 @@ o-progress .helpertext{
 @styleguide
 
 @title Utility
-
+All Utility classes go here.
 */
 
 /* -- Floats

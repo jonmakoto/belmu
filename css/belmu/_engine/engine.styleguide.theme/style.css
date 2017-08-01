@@ -4,19 +4,22 @@
 .nav{
   background: var(--grey-300);
   z-index: 9;
+  font-size: 0.9rem;
   border-bottom: 6px solid var(--white);
 }
 .nav .flex .item{
   text-align: center;
   padding: 0;
+  width: 20%;
 }
-
 .nav a{
   color: var(--black);
   text-decoration: none;
   display: block;
   padding: 6px;
   transition: 0.2s all;
+  font-family: var(--sans);
+  text-transform: uppercase;
 }
 .nav a:hover{color: var(--white);}
 .nav li:nth-child(1) a:hover{ background: var(--black);}
@@ -26,8 +29,9 @@
 .nav li:nth-child(5) a:hover{ background: var(--highlight);}
 
 .belmu{
-  max-width: 250px;
+  max-width: 268px;
   margin-bottom: 1.3em;
+  margin-top: 2em;
 }
 
 .colourbox-sample{
@@ -36,4 +40,12 @@
 }
 .colourbox-name{
   margin-top: 7px;
+}
+
+p strong{
+  background: var(--secondary);
+  padding: 2px 6px;
+  color: var(--white);
+  display: inline-block;
+  margin-top: 2em;
 }

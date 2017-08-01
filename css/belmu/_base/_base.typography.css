@@ -3,6 +3,7 @@
 
 :root{
   --slab: 'Zilla Slab', Serif;
+  --sans: 'Dosis', sans-serif;
   --bookweight: 500;
   --heavyweight: 600;
   --boldweight: 700;

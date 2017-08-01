@@ -54,6 +54,7 @@
 @styleguide
 
 @title Layout
+Everything to do with layout, grids etc.
 <div class="grid mq-small-full">
   <div class="col">
     <div class="-bg-grey-300 -p-all-1">Hi I'm a column!</div>
@@ -217,6 +218,7 @@
     <div class="-bg-grey-300 -p-all-1">Hi I'm a itemumn!</div>
   </div>
 </div> 
+
 <strong>Gutterless Flex</strong>
 <div class="flex gutterless">
   <div class="item -w-80">
