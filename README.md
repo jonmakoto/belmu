@@ -1,2 +1,2 @@
 # belmu
-![Belmu](https://raw.githubusercontent.com/johnmakoto/belmu/master/img/belmu.svg "Belmu")
+![Belmu](http://cdn.rawgit.com/johnmakoto/belmu/master/img/belmu.svg "Belmu")
