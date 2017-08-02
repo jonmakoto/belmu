@@ -7,7 +7,6 @@
 @import '_base/_base.colours.css';
 @import '_base/_base.fonts.css';
 @import '_base/_base.forms.css';
-@import '_base/_base.interactions.css';
 @import '_base/_base.typography.css';
 @import '_base/_base.vars.css';
 
@@ -41,5 +40,5 @@
 @import '_utility/_utility.spacing.css';
 @import '_utility/_utility.text.css';
 @import '_utility/_utility.typesizes.css';
-@import '_utility/_utility.icons.css';
+/*@import '_utility/_utility.icons.css';*/
 

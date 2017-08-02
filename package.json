@@ -6,7 +6,7 @@
     "postcss": "postcss css/app.css -o css/dist/belmu.css --no-map -c ./config/ --watch",
     "svg-optimize": "svgo -f src/img/_svg && svgo -f src/img/_svg/stroked",
     "svgsprites": "rm -f src/img/sprites* && svg-join -s 'src/img/_svg/*.svg' -o -n src/img/sprites && svg-join -s 'src/img/_svg/stroked/*.svg' -o -n src/img/sprites-stroked",
-    "start": "npm run postcss | browser-sync start 'localhost:8888' --files './'"
+    "start": "npm run postcss | browser-sync start --server --files './'"
   },
   "repository": {
     "type": "git",
