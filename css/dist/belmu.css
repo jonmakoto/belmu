@@ -732,10 +732,108 @@ Everything to do with layout, grids etc.
 /* MODULE 
    –––––– */
 
-/* BUTTON Module
-   –––––––––––––
-   written by:
-   tim.clulow@vocus.co.nz */
+* .helpertext{
+  position: absolute;
+  bottom: 147%;
+  right: 0;
+  opacity: 0;
+  pointer-events: none;
+  display: inline-block;
+  padding: calc(var(--spacing) * 0.5) var(--spacing) calc(var(--spacing) * 0.66667);
+  font-size: var(--rem-08);
+  font-size: var(--rem-08);
+  line-height: 1.2;
+  width: 170px;
+  text-align: left;
+  border-radius: var(--border-radius); /* 2rem;*/
+  -webkit-transition: var(--transition-all);
+  transition: var(--transition-all);
+  color: var(--white);
+  font-weight: var(--bookweight);
+  background: var(--primary);
+}
+
+.helpertext:before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 47%;
+  display: block;
+  border: 5px solid var(--primary);
+  border-color: var(--primary) transparent transparent transparent;
+}
+
+.showhelper .helpertext{
+  opacity: 1;
+}
+
+.helpertext.right{
+  top: 50%;
+  bottom: auto;
+  left: 20.5vw;
+  width: 240px;
+  color: var(--black);
+  font-size: var(--rem-09);
+  font-size: var(--rem-09);
+  padding: var(--spacing) var(--spacing) var(--spacing);
+  background: var(--white);
+  border-left: 4px solid var(--secondary);
+  border-right: 4px solid var(--secondary);
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
+  z-index: -1;
+  -webkit-box-shadow: 0 1px 10px var(--grey);
+          box-shadow: 0 1px 10px var(--grey);
+}
+
+.helpertext.show{
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+  pointer-events: all;
+}
+
+.helpertext.right:before{
+  border-color:  transparent var(--secondary) transparent transparent;
+  top: 50%;
+  bottom: auto;
+  margin-top: -5px;
+  left: -14px;
+}
+
+.helpertext i{
+  opacity: 0.5;
+  position: absolute;
+  right: 3px;
+  top: 6px;
+  cursor: pointer;
+  padding: 6px;
+  font-size: 11.2px;
+  font-size: 0.7rem;
+}
+
+.helpertext i:hover{
+  opacity: 1;
+}
+
+.selectable{
+  padding: 1em 1.2em 1em;
+  margin: 0 -1.5em;
+  -webkit-transition: var(--transition-all);
+  transition: var(--transition-all);
+}
+
+.selectable:hover{
+  background: var(--secondary);
+}
+
+.selectable.active{
+  background: var(--secondary);
+}
+
+.selectable.active .input-autocomplete, .selectable.active .activearea{
+  background-color: var(--white);
+}
 
 /* -- BUTTON Colours
    ––––––––––––––––– */
@@ -752,15 +850,15 @@ Everything to do with layout, grids etc.
 
 .o-button.loud:hover      { background: hsl( var(--core-highlight), 80%);   }
 
-.o-button.muted           { background: var(--grey-500);                    }
+.o-button.muted           { background: var(--grey);                    }
 
 .o-button.muted:hover     { background: hsl( var(--core-grey), 80%);        }
 
-.o-button.mid             { background: var(--lime);                        }
+.o-button.mid             { background: var(--secondary);                        }
 
 .o-button.mid:hover       { background: hsl( var(--core-secondary), 43%);   }
 
-.o-button.success         { background: var(--lime);                        }
+.o-button.success         { background: var(--secondary);                        }
 
 .o-button.success:hover   { background: hsl(var(--core-secondary), 45%);    }
 
@@ -1051,6 +1149,11 @@ Everything to do with layout, grids etc.
   opacity: 0.3;
 }
 
+/* BUTTON Module
+   –––––––––––––
+   written by:
+   tim.clulow@vocus.co.nz */
+
 .o-button{
   font-weight: var(--boldweight);
   text-align: center;
@@ -1167,109 +1270,6 @@ o-button.col{
 </button>
 </div>
 */
-
-* .helpertext{
-  position: absolute;
-  bottom: 147%;
-  right: 0;
-  opacity: 0;
-  pointer-events: none;
-  display: inline-block;
-  padding: calc(var(--spacing) * 0.5) var(--spacing) calc(var(--spacing) * 0.66667);
-  font-size: var(--rem-08);
-  font-size: var(--rem-08);
-  line-height: 1.2;
-  width: 170px;
-  text-align: left;
-  border-radius: var(--border-radius); /* 2rem;*/
-  -webkit-transition: var(--transition-all);
-  transition: var(--transition-all);
-  color: var(--white);
-  font-weight: var(--bookweight);
-  background: var(--primary);
-}
-
-.helpertext:before {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 47%;
-  display: block;
-  border: 5px solid var(--primary);
-  border-color: var(--primary) transparent transparent transparent;
-}
-
-.showhelper .helpertext{
-  opacity: 1;
-}
-
-.helpertext.right{
-  top: 50%;
-  bottom: auto;
-  left: 20.5vw;
-  width: 240px;
-  color: var(--black);
-  font-size: var(--rem-09);
-  font-size: var(--rem-09);
-  padding: var(--spacing) var(--spacing) var(--spacing);
-  background: var(--white);
-  border-left: 4px solid var(--secondary);
-  border-right: 4px solid var(--secondary);
-  -webkit-transform: translateX(-50px);
-          transform: translateX(-50px);
-  z-index: -1;
-  -webkit-box-shadow: 0 1px 10px var(--grey);
-          box-shadow: 0 1px 10px var(--grey);
-}
-
-.helpertext.show{
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-  opacity: 1;
-  pointer-events: all;
-}
-
-.helpertext.right:before{
-  border-color:  transparent var(--secondary) transparent transparent;
-  top: 50%;
-  bottom: auto;
-  margin-top: -5px;
-  left: -14px;
-}
-
-.helpertext i{
-  opacity: 0.5;
-  position: absolute;
-  right: 3px;
-  top: 6px;
-  cursor: pointer;
-  padding: 6px;
-  font-size: 11.2px;
-  font-size: 0.7rem;
-}
-
-.helpertext i:hover{
-  opacity: 1;
-}
-
-.selectable{
-  padding: 1em 1.2em 1em;
-  margin: 0 -1.5em;
-  -webkit-transition: var(--transition-all);
-  transition: var(--transition-all);
-}
-
-.selectable:hover{
-  background: var(--secondary);
-}
-
-.selectable.active{
-  background: var(--secondary);
-}
-
-.selectable.active .input-autocomplete, .selectable.active .activearea{
-  background-color: var(--white);
-}
 
 .input-autocomplete{
   position: relative;

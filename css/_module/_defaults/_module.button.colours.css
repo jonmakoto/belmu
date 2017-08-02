@@ -7,11 +7,11 @@
 .o-button.white .text     { color: var(--black);                            }
 .o-button.white:hover     { background: var(--grey-300);                    }
 .o-button.loud:hover      { background: hsl( var(--core-highlight), 80%);   }
-.o-button.muted           { background: var(--grey-500);                    }
+.o-button.muted           { background: var(--grey);                    }
 .o-button.muted:hover     { background: hsl( var(--core-grey), 80%);        }
-.o-button.mid             { background: var(--lime);                        }
+.o-button.mid             { background: var(--secondary);                        }
 .o-button.mid:hover       { background: hsl( var(--core-secondary), 43%);   }
-.o-button.success         { background: var(--lime);                        }
+.o-button.success         { background: var(--secondary);                        }
 .o-button.success:hover   { background: hsl(var(--core-secondary), 45%);    }
 .o-button.danger          { background: var(--highlight);                   }
 .o-button.danger:hover    { background: hsl( var(--core-highlight), 77%);   }

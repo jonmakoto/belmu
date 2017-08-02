@@ -1,9 +1,3 @@
-@import 'belmu/belmu.css';
-
-@import '_base.css';
-@import '_engine.css';
-@import '_layout.css';
-@import '_module.css';
-@import '_utility.css';
+@import 'belmu.css';
 
 /* END of css */

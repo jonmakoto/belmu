@@ -20,6 +20,7 @@
   transition: 0.2s all;
   font-family: var(--sans);
   text-transform: uppercase;
+  cursor: pointer;
 }
 .nav a:hover{color: var(--white);}
 .nav li:nth-child(1) a:hover{ background: var(--black);}

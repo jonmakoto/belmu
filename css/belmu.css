@@ -4,11 +4,11 @@
 /* BASE 
    –––– */
 @import '_base/_defaults/_base.reset.css';
-@import '_base/_defaults/_basecolours.css';
-@import '_base/_defaults/_basefonts.css';
-@import '_base/_defaults/_baseforms.css';
-@import '_base/_defaults/_basetypography.css';
-@import '_base/_defaults/_basevars.css';
+@import '_base/_defaults/_base.colours.css';
+@import '_base/_defaults/_base.fonts.css';
+@import '_base/_defaults/_base.forms.css';
+@import '_base/_defaults/_base.typography.css';
+@import '_base/_defaults/_base.vars.css';
 
 /* ENGINE 
    –––––– */
