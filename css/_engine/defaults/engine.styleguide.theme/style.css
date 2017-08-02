@@ -28,10 +28,15 @@
 .nav li:nth-child(4) a:hover{ background: var(--primary);}
 .nav li:nth-child(5) a:hover{ background: var(--highlight);}
 
+.resting{
+  opacity: 0;
+  height: 0;
+}
 .belmu{
   max-width: 268px;
   margin-bottom: 1.3em;
   margin-top: 2em;
+  height: auto;
 }
 
 .colourbox-sample{

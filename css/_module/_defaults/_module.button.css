@@ -3,10 +3,6 @@
    written by:
    tim.clulow@vocus.co.nz */
 
-@import '_base.colours.css';
-@import '_base.sizes.css';
-@import '_base.states.css';
-
 .o-button{
   font-weight: var(--boldweight);
   text-align: center;
