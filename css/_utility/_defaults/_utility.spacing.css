@@ -164,3 +164,7 @@ left{
 .-p-0, .-p-all-0{
   padding: 0 !important;
 }
+
+.-m-auto {
+    margin: auto;
+}
