@@ -7,31 +7,10 @@
   grid-gap: 1em 1em;
   grid-auto-flow: dense;
 }
+
 .grid.gutterless{
   grid-template-columns: repeat(auto-fit, minmax(10%, 1fr));
   grid-gap: 0;
-}
-
-.grid-12{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(calc(8.3333% - 1em), 1fr));
-  grid-gap: 1em 1em;
-  grid-auto-flow: dense;
-}
-.grid-12s.gutterless{
-   grid-template-columns: repeat(auto-fit, minmax(8.3333%, 1fr));
-   grid-gap: 0;
-}
-
-.grid-16{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(calc(6.25% - 1em), 1fr));
-  grid-gap: 1em 1em;
-  grid-auto-flow: dense;
-}
-.grid-16.gutterless{
-   grid-template-columns: repeat(auto-fit, minmax(6.25%, 1fr));
-   grid-gap: 0;
 }
 
 .grid-auto{
@@ -41,8 +20,6 @@
   grid-auto-flow: dense;
 }
 
-
-
 /* experimental features */
 @media (max-width: 34em) {
   .grid.mq-small-full > .col{
@@ -50,14 +27,34 @@
     width: auto !important;
     margin: 0 !important;
   }
+  .grid.mq-small-halves > .col{
+  }
+  .grid.mq-small-quarters > .col{
+  }
+  .grid.mq-small-thirds > .col{
+  }
+  .grid.mq-small-auto > .col{
+  }
+}
+
+@media (min-width: 34em) {
+  .grid.mq-medium-full > .col{
+  }
+  .grid.mq-medium-halves > .col{
+  }
+  .grid.mq-medium-quarters > .col{
+  }
+  .grid.mq-medium-thirds > .col{
+  }
+  .grid.mq-medium-auto > .col{
+  }
 }
  
-
-
 /*
 @styleguide
 
-@title Grid
+@title Layout
+Everything to do with layout, grids etc.
 <div class="grid mq-small-full">
   <div class="col">
     <div class="-bg-grey-300 -p-all-1">Hi I'm a column!</div>
@@ -73,10 +70,10 @@
   </div>
 </div> 
 <div class="grid -m-top-3 mq-small-full">
-  <div class="col -span-cols-8">
+  <div class="col -w-80">
     <div class="-bg-grey-300 -h-100 -p-all-1">Hi I'm an 80% column!</div>
   </div>
-  <div class="col -span-cols-2">
+  <div class="col -w-20">
     <div class="-bg-grey-300 -h-100 -p-all-1">Hi I'm a 20% column!</div>
   </div>
   <div class="col -w-100 m-top-1">
@@ -84,29 +81,6 @@
   </div>
   <div class="col -w-80 -offset-left-20 m-top-1">
     <div class="-bg-grey-300 -p-all-1">Hi I'm an offset colum</div>
-  </div>
-</div>
-
-<strong>12 column grid</strong>
-<div class="grid-12 mq-small-full">
-  <div class="col -span-cols-9">
-    <div class="-bg-grey-300 -h-100 -p-all-1">9 cols</div>
-  </div>
-  <div class="col -span-cols-3">
-    <div class="-bg-grey-300 -h-100 -p-all-1">3 cols!</div>
-  </div>
-</div>
-
-<strong>16 column grid</strong>
-<div class="grid-16 mq-small-full">
-  <div class="col -span-cols-4">
-    <div class="-bg-grey-300 -h-100 -p-all-1">4 cols</div>
-  </div>
-  <div class="col -span-cols-4">
-    <div class="-bg-grey-300 -h-100 -p-all-1">4 cols</div>
-  </div>
-  <div class="col -span-cols-4">
-    <div class="-bg-grey-300 -h-100 -p-all-1">4 cols</div>
   </div>
 </div>
 
@@ -218,16 +192,5 @@
   </div>
 </div>
 
-<strong>Gutterless Grid</strong>
-<div class="grid gutterless">
-  <div class="col -w-80">
-    <div class="-bg-grey-300 -p-all-1">Hi I'm an 80% column!</div>
-  </div>
-  <div class="col -w-20">
-    <div class="-bg-grey-100 -p-all-1">Hi I'm a 20% column!</div>
-  </div>
-  <div class="col -w-100">
-    <div class="-bg-grey-500 -p-all-1">Hi I'm a 100% column!</div>
-  </div>
-</div>
-*/ 
+
+*/

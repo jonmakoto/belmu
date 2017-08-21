@@ -3,6 +3,9 @@
  * Version 0.1.1
  * https://github.com/jaydenseric/Fix
 */
+*{
+  box-sizing: border-box;
+}
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
