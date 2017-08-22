@@ -9,6 +9,12 @@
     });
 
     this.opts.observable.on('showComponent', function(e) {
+        var sections = document.querySelectorAll('styleguide-module > div'), i;
+
+        for (i = 0; i < sections.length; ++i) {
+          sections[i].classList.add('resting');
+        }
+      console.log(e);
       document.querySelector('#'+e + ' > div').classList.remove('resting');
       //self.opts.state = '';
       //self.update();

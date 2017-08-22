@@ -10,6 +10,11 @@
  * https://github.com/jaydenseric/Fix
 */
 
+*{
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -449,6 +454,30 @@ Mixins and other generated styles live here
   grid-gap: 0;
 }
 
+.grid-12{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(calc(8.3333% - 1em), 1fr));
+  grid-gap: 1em 1em;
+  grid-auto-flow: dense;
+}
+
+.grid-12s.gutterless{
+   grid-template-columns: repeat(auto-fit, minmax(8.3333%, 1fr));
+   grid-gap: 0;
+}
+
+.grid-16{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(calc(6.25% - 1em), 1fr));
+  grid-gap: 1em 1em;
+  grid-auto-flow: dense;
+}
+
+.grid-16.gutterless{
+   grid-template-columns: repeat(auto-fit, minmax(6.25%, 1fr));
+   grid-gap: 0;
+}
+
 .grid-auto{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -464,34 +493,12 @@ Mixins and other generated styles live here
     width: auto !important;
     margin: 0 !important;
   }
-  .grid.mq-small-halves > .col{
-  }
-  .grid.mq-small-quarters > .col{
-  }
-  .grid.mq-small-thirds > .col{
-  }
-  .grid.mq-small-auto > .col{
-  }
-}
-
-@media (min-width: 34em) {
-  .grid.mq-medium-full > .col{
-  }
-  .grid.mq-medium-halves > .col{
-  }
-  .grid.mq-medium-quarters > .col{
-  }
-  .grid.mq-medium-thirds > .col{
-  }
-  .grid.mq-medium-auto > .col{
-  }
 }
 
 /*
 @styleguide
 
-@title Layout
-Everything to do with layout, grids etc.
+@title Layout Grid
 <div class="grid mq-small-full">
   <div class="col">
     <div class="-bg-grey-300 -p-all-1">Hi I'm a column!</div>
@@ -507,10 +514,10 @@ Everything to do with layout, grids etc.
   </div>
 </div> 
 <div class="grid -m-top-3 mq-small-full">
-  <div class="col -w-80">
+  <div class="col -span-cols-8">
     <div class="-bg-grey-300 -h-100 -p-all-1">Hi I'm an 80% column!</div>
   </div>
-  <div class="col -w-20">
+  <div class="col -span-cols-2">
     <div class="-bg-grey-300 -h-100 -p-all-1">Hi I'm a 20% column!</div>
   </div>
   <div class="col -w-100 m-top-1">
@@ -518,6 +525,29 @@ Everything to do with layout, grids etc.
   </div>
   <div class="col -w-80 -offset-left-20 m-top-1">
     <div class="-bg-grey-300 -p-all-1">Hi I'm an offset colum</div>
+  </div>
+</div>
+
+<strong>12 column grid</strong>
+<div class="grid-12 mq-small-full">
+  <div class="col -span-cols-9">
+    <div class="-bg-grey-300 -h-100 -p-all-1">9 cols</div>
+  </div>
+  <div class="col -span-cols-3">
+    <div class="-bg-grey-300 -h-100 -p-all-1">3 cols!</div>
+  </div>
+</div>
+
+<strong>16 column grid</strong>
+<div class="grid-16 mq-small-full">
+  <div class="col -span-cols-4">
+    <div class="-bg-grey-300 -h-100 -p-all-1">4 cols</div>
+  </div>
+  <div class="col -span-cols-4">
+    <div class="-bg-grey-300 -h-100 -p-all-1">4 cols</div>
+  </div>
+  <div class="col -span-cols-4">
+    <div class="-bg-grey-300 -h-100 -p-all-1">4 cols</div>
   </div>
 </div>
 
@@ -654,18 +684,18 @@ Everything to do with layout, grids etc.
       flex-wrap: wrap;
   /*padding-top: 1px;*/
 
-  .flex.gutterless .item {
+  .flex.gutterless .item{
     padding: 0;
   }
 }
 
-.flex.gutterless .item {
+.flex.gutterless .item{
   padding: 0;
 }
 
-.flex {
+.flex{
 
-  .flex .item {
+  .flex .item{
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
@@ -674,12 +704,12 @@ Everything to do with layout, grids etc.
     padding: calc(var(--spacing) * 0.5);
   }
 
-  .flex .item.gutterless {
+  .flex .item.gutterless{
     padding: 0;
   }
 }
 
-.flex .item {
+.flex .item{
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -687,12 +717,12 @@ Everything to do with layout, grids etc.
       align-self: stretch;
   padding: calc(var(--spacing) * 0.5);
 
-  .flex .item.gutterless {
+  .flex .item.gutterless{
     padding: 0;
   }
 }
 
-.flex .item.gutterless {
+.flex .item.gutterless{
   padding: 0;
 }
 
@@ -728,6 +758,8 @@ Everything to do with layout, grids etc.
   </div>
 </div>
 */
+
+/*@import '_layout/_defaults/_layout.masonry.css';*/
 
 /* MODULE 
    –––––– */
@@ -1367,7 +1399,7 @@ All Utility classes go here.
   width: 10% !important
  }
 
-.-w-10.col:not(.-fixed) {
+.-w-10.col:not(.-fixed){
   width: auto !important;
   grid-column-end: span 1;
 }
@@ -1376,7 +1408,7 @@ All Utility classes go here.
   height: 10% !important
  }
 
-.-h-10.col:not(.-fixed) {
+.-h-10.col:not(.-fixed){
   height: auto !important;
   grid-row-end: span 1;
 }
@@ -1425,7 +1457,7 @@ All Utility classes go here.
   width: 12% !important
  }
 
-.-w-12.col:not(.-fixed) {
+.-w-12.col:not(.-fixed){
   width: auto !important;
   grid-column-end: span 1.2000000000000002;
 }
@@ -1434,7 +1466,7 @@ All Utility classes go here.
   height: 12% !important
  }
 
-.-h-12.col:not(.-fixed) {
+.-h-12.col:not(.-fixed){
   height: auto !important;
   grid-row-end: span 1.2000000000000002;
 }
@@ -1483,7 +1515,7 @@ All Utility classes go here.
   width: 14% !important
  }
 
-.-w-14.col:not(.-fixed) {
+.-w-14.col:not(.-fixed){
   width: auto !important;
   grid-column-end: span 1.4000000000000001;
 }
@@ -1492,7 +1524,7 @@ All Utility classes go here.
   height: 14% !important
  }
 
-.-h-14.col:not(.-fixed) {
+.-h-14.col:not(.-fixed){
   height: auto !important;
   grid-row-end: span 1.4000000000000001;
 }
@@ -1541,7 +1573,7 @@ All Utility classes go here.
   width: 15% !important
  }
 
-.-w-15.col:not(.-fixed) {
+.-w-15.col:not(.-fixed){
   width: auto !important;
   grid-column-end: span 1.5;
 }
@@ -1550,7 +1582,7 @@ All Utility classes go here.
   height: 15% !important
  }
 
-.-h-15.col:not(.-fixed) {
+.-h-15.col:not(.-fixed){
   height: auto !important;
   grid-row-end: span 1.5;
 }
@@ -1599,7 +1631,7 @@ All Utility classes go here.
   width: 18% !important
  }
 
-.-w-18.col:not(.-fixed) {
+.-w-18.col:not(.-fixed){
   width: auto !important;
   grid-column-end: span 1.8;
 }
@@ -1608,7 +1640,7 @@ All Utility classes go here.
   height: 18% !important
  }
 
-.-h-18.col:not(.-fixed) {
+.-h-18.col:not(.-fixed){
   height: auto !important;
   grid-row-end: span 1.8;
 }
@@ -1657,7 +1689,7 @@ All Utility classes go here.
   width: 20% !important
  }
 
-.-w-20.col:not(.-fixed) {
+.-w-20.col:not(.-fixed){
   width: auto !important;
   grid-column-end: span 2;
 }
@@ -1666,7 +1698,7 @@ All Utility classes go here.
   height: 20% !important
  }
 
-.-h-20.col:not(.-fixed) {
+.-h-20.col:not(.-fixed){
   height: auto !important;
   grid-row-end: span 2;
 }
@@ -1715,7 +1747,7 @@ All Utility classes go here.
   width: 22% !important
  }
 
-.-w-22.col:not(.-fixed) {
+.-w-22.col:not(.-fixed){
   width: auto !important;
   grid-column-end: span 2.2;
 }
@@ -1724,7 +1756,7 @@ All Utility classes go here.
   height: 22% !important
  }
 
-.-h-22.col:not(.-fixed) {
+.-h-22.col:not(.-fixed){
   height: auto !important;
   grid-row-end: span 2.2;
 }
@@ -1773,7 +1805,7 @@ All Utility classes go here.
   width: 24% !important
  }
 
-.-w-24.col:not(.-fixed) {
+.-w-24.col:not(.-fixed){
   width: auto !important;
   grid-column-end: span 2.4000000000000004;
 }
@@ -1782,7 +1814,7 @@ All Utility classes go here.
   height: 24% !important
  }
 
-.-h-24.col:not(.-fixed) {
+.-h-24.col:not(.-fixed){
   height: auto !important;
   grid-row-end: span 2.4000000000000004;
 }
@@ -1831,7 +1863,7 @@ All Utility classes go here.
   width: 25% !important
  }
 
-.-w-25.col:not(.-fixed) {
+.-w-25.col:not(.-fixed){
   width: auto !important;
   grid-column-end: span 2.5;
 }
@@ -1840,7 +1872,7 @@ All Utility classes go here.
   height: 25% !important
  }
 
-.-h-25.col:not(.-fixed) {
+.-h-25.col:not(.-fixed){
   height: auto !important;
   grid-row-end: span 2.5;
 }
@@ -1889,7 +1921,7 @@ All Utility classes go here.
   width: 30% !important
  }
 
-.-w-30.col:not(.-fixed) {
+.-w-30.col:not(.-fixed){
   width: auto !important;
   grid-column-end: span 3;
 }
@@ -1898,7 +1930,7 @@ All Utility classes go here.
   height: 30% !important
  }
 
-.-h-30.col:not(.-fixed) {
+.-h-30.col:not(.-fixed){
   height: auto !important;
   grid-row-end: span 3;
 }
@@ -1947,7 +1979,7 @@ All Utility classes go here.
   width: 40% !important
  }
 
-.-w-40.col:not(.-fixed) {
+.-w-40.col:not(.-fixed){
   width: auto !important;
   grid-column-end: span 4;
 }
@@ -1956,7 +1988,7 @@ All Utility classes go here.
   height: 40% !important
  }
 
-.-h-40.col:not(.-fixed) {
+.-h-40.col:not(.-fixed){
   height: auto !important;
   grid-row-end: span 4;
 }
@@ -2005,7 +2037,7 @@ All Utility classes go here.
   width: 50% !important
  }
 
-.-w-50.col:not(.-fixed) {
+.-w-50.col:not(.-fixed){
   width: auto !important;
   grid-column-end: span 5;
 }
@@ -2014,7 +2046,7 @@ All Utility classes go here.
   height: 50% !important
  }
 
-.-h-50.col:not(.-fixed) {
+.-h-50.col:not(.-fixed){
   height: auto !important;
   grid-row-end: span 5;
 }
@@ -2063,7 +2095,7 @@ All Utility classes go here.
   width: 58% !important
  }
 
-.-w-58.col:not(.-fixed) {
+.-w-58.col:not(.-fixed){
   width: auto !important;
   grid-column-end: span 5.800000000000001;
 }
@@ -2072,7 +2104,7 @@ All Utility classes go here.
   height: 58% !important
  }
 
-.-h-58.col:not(.-fixed) {
+.-h-58.col:not(.-fixed){
   height: auto !important;
   grid-row-end: span 5.800000000000001;
 }
@@ -2121,7 +2153,7 @@ All Utility classes go here.
   width: 60% !important
  }
 
-.-w-60.col:not(.-fixed) {
+.-w-60.col:not(.-fixed){
   width: auto !important;
   grid-column-end: span 6;
 }
@@ -2130,7 +2162,7 @@ All Utility classes go here.
   height: 60% !important
  }
 
-.-h-60.col:not(.-fixed) {
+.-h-60.col:not(.-fixed){
   height: auto !important;
   grid-row-end: span 6;
 }
@@ -2179,7 +2211,7 @@ All Utility classes go here.
   width: 70% !important
  }
 
-.-w-70.col:not(.-fixed) {
+.-w-70.col:not(.-fixed){
   width: auto !important;
   grid-column-end: span 7;
 }
@@ -2188,7 +2220,7 @@ All Utility classes go here.
   height: 70% !important
  }
 
-.-h-70.col:not(.-fixed) {
+.-h-70.col:not(.-fixed){
   height: auto !important;
   grid-row-end: span 7;
 }
@@ -2237,7 +2269,7 @@ All Utility classes go here.
   width: 75% !important
  }
 
-.-w-75.col:not(.-fixed) {
+.-w-75.col:not(.-fixed){
   width: auto !important;
   grid-column-end: span 7.5;
 }
@@ -2246,7 +2278,7 @@ All Utility classes go here.
   height: 75% !important
  }
 
-.-h-75.col:not(.-fixed) {
+.-h-75.col:not(.-fixed){
   height: auto !important;
   grid-row-end: span 7.5;
 }
@@ -2295,7 +2327,7 @@ All Utility classes go here.
   width: 80% !important
  }
 
-.-w-80.col:not(.-fixed) {
+.-w-80.col:not(.-fixed){
   width: auto !important;
   grid-column-end: span 8;
 }
@@ -2304,7 +2336,7 @@ All Utility classes go here.
   height: 80% !important
  }
 
-.-h-80.col:not(.-fixed) {
+.-h-80.col:not(.-fixed){
   height: auto !important;
   grid-row-end: span 8;
 }
@@ -2353,7 +2385,7 @@ All Utility classes go here.
   width: 90% !important
  }
 
-.-w-90.col:not(.-fixed) {
+.-w-90.col:not(.-fixed){
   width: auto !important;
   grid-column-end: span 9;
 }
@@ -2362,7 +2394,7 @@ All Utility classes go here.
   height: 90% !important
  }
 
-.-h-90.col:not(.-fixed) {
+.-h-90.col:not(.-fixed){
   height: auto !important;
   grid-row-end: span 9;
 }
@@ -2411,7 +2443,7 @@ All Utility classes go here.
   width: 100% !important
  }
 
-.-w-100.col:not(.-fixed) {
+.-w-100.col:not(.-fixed){
   width: auto !important;
   grid-column-end: span 10;
 }
@@ -2420,7 +2452,7 @@ All Utility classes go here.
   height: 100% !important
  }
 
-.-h-100.col:not(.-fixed) {
+.-h-100.col:not(.-fixed){
   height: auto !important;
   grid-row-end: span 10;
 }
@@ -2468,6 +2500,134 @@ All Utility classes go here.
 .-w-100{
   grid-column: 1 / -1 !important;
 }
+
+.-span-cols-1{
+    grid-column-end: span 1;
+  }
+
+.-span-rows-1{
+    grid-row-end: span span 1;
+  }
+
+.-span-cols-2{
+    grid-column-end: span 2;
+  }
+
+.-span-rows-2{
+    grid-row-end: span span 2;
+  }
+
+.-span-cols-3{
+    grid-column-end: span 3;
+  }
+
+.-span-rows-3{
+    grid-row-end: span span 3;
+  }
+
+.-span-cols-4{
+    grid-column-end: span 4;
+  }
+
+.-span-rows-4{
+    grid-row-end: span span 4;
+  }
+
+.-span-cols-5{
+    grid-column-end: span 5;
+  }
+
+.-span-rows-5{
+    grid-row-end: span span 5;
+  }
+
+.-span-cols-6{
+    grid-column-end: span 6;
+  }
+
+.-span-rows-6{
+    grid-row-end: span span 6;
+  }
+
+.-span-cols-7{
+    grid-column-end: span 7;
+  }
+
+.-span-rows-7{
+    grid-row-end: span span 7;
+  }
+
+.-span-cols-8{
+    grid-column-end: span 8;
+  }
+
+.-span-rows-8{
+    grid-row-end: span span 8;
+  }
+
+.-span-cols-9{
+    grid-column-end: span 9;
+  }
+
+.-span-rows-9{
+    grid-row-end: span span 9;
+  }
+
+.-span-cols-10{
+    grid-column-end: span 10;
+  }
+
+.-span-rows-10{
+    grid-row-end: span span 10;
+  }
+
+.-span-cols-11{
+    grid-column-end: span 11;
+  }
+
+.-span-rows-11{
+    grid-row-end: span span 11;
+  }
+
+.-span-cols-12{
+    grid-column-end: span 12;
+  }
+
+.-span-rows-12{
+    grid-row-end: span span 12;
+  }
+
+.-span-cols-13{
+    grid-column-end: span 13;
+  }
+
+.-span-rows-13{
+    grid-row-end: span span 13;
+  }
+
+.-span-cols-14{
+    grid-column-end: span 14;
+  }
+
+.-span-rows-14{
+    grid-row-end: span span 14;
+  }
+
+.-span-cols-15{
+    grid-column-end: span 15;
+  }
+
+.-span-rows-15{
+    grid-row-end: span span 15;
+  }
+
+.-span-cols-16{
+    grid-column-end: span 16;
+  }
+
+.-span-rows-16{
+    grid-row-end: span span 16;
+  }
 
 /* -- Positioning
    –––––––––––––– */

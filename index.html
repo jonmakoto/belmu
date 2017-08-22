@@ -15,10 +15,10 @@
     <nav class="nav -fixed -top-0 -left-0 -w-100">
       <ul class="flex">       
         <li class="item">
-          <a href="#color-palette">Base</a>
+          <a onclick="showModule(event, 'base')" href="#color-palette">Base</a>
         </li>
         <li class="item">
-          <a>Engine</a>
+          <a onclick="showModule(event, 'engine')">Engine</a>
         </li>
         <li class="item">
           <a onclick="showModule(event, 'layout')">Layout</a>
@@ -144,8 +144,7 @@
         
           <styleguide-module id="layout">
              
-              <p>Everything to do with layout, grids etc.</p>
-<div class="grid mq-small-full">
+              <div class="grid mq-small-full">
   <div class="col">
     <div class="-bg-grey-300 -p-all-1">Hi I&#39;m a column!</div>
   </div>
@@ -160,10 +159,10 @@
   </div>
 </div> 
 <div class="grid -m-top-3 mq-small-full">
-  <div class="col -w-80">
+  <div class="col -span-cols-8">
     <div class="-bg-grey-300 -h-100 -p-all-1">Hi I&#39;m an 80% column!</div>
   </div>
-  <div class="col -w-20">
+  <div class="col -span-cols-2">
     <div class="-bg-grey-300 -h-100 -p-all-1">Hi I&#39;m a 20% column!</div>
   </div>
   <div class="col -w-100 m-top-1">
@@ -171,6 +170,29 @@
   </div>
   <div class="col -w-80 -offset-left-20 m-top-1">
     <div class="-bg-grey-300 -p-all-1">Hi I&#39;m an offset colum</div>
+  </div>
+</div>
+
+<p><strong>12 column grid</strong></p>
+<div class="grid-12 mq-small-full">
+  <div class="col -span-cols-9">
+    <div class="-bg-grey-300 -h-100 -p-all-1">9 cols</div>
+  </div>
+  <div class="col -span-cols-3">
+    <div class="-bg-grey-300 -h-100 -p-all-1">3 cols!</div>
+  </div>
+</div>
+
+<p><strong>16 column grid</strong></p>
+<div class="grid-16 mq-small-full">
+  <div class="col -span-cols-4">
+    <div class="-bg-grey-300 -h-100 -p-all-1">4 cols</div>
+  </div>
+  <div class="col -span-cols-4">
+    <div class="-bg-grey-300 -h-100 -p-all-1">4 cols</div>
+  </div>
+  <div class="col -span-cols-4">
+    <div class="-bg-grey-300 -h-100 -p-all-1">4 cols</div>
   </div>
 </div>
 
