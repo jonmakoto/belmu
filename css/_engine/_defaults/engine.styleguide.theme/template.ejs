@@ -71,14 +71,11 @@
             <% } %>
           </styleguide-module>
         <% } else{ %>
-          <section>
-            <h2 id="<%= map.link.id %>" class="psg-h2 -boldweight"><%= map.link.title %></h2>
-            <div class="contents">
+          <styleguide-module id="<%= map.link.title %>">
               <% if (!showCode) { %> 
               <%- map.html %>
               <% } %>
-            </div>
-          </section>
+          </styleguide-module>
         <% } %>
       <% }) %>
         
