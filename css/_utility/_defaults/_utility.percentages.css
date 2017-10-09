@@ -22,45 +22,54 @@
 80,
 90,
 100{
- .-w-$(size) {
-  width: $(size)% !important;
-  &.col:not(.-fixed){
-    width: auto !important;
-    grid-column-end: span resolve( $(size) * 0.1);
+  .-w-$(size) {
+    width: $(size)%;
   }
- }
-
- .-h-$(size) {
-  height: $(size)% !important;
-  &.col:not(.-fixed){
-    height: auto !important;
-    grid-row-end: span resolve( $(size) * 0.1);
+  @supports (display: grid){
+    .-w-$(size) {
+        width: $(size)% !important;
+        &.col:not(.-fixed){
+          width: auto !important;
+          grid-column-end: span resolve( $(size) * 0.1);
+        }
+      }
     
-  }
- }
- .-vw-$(size) {
-  width: $(size)% !important;
- }
- .-vh-$(size) {
-  height: $(size)% !important;
- }
- @each $direction in 
-  top,
-  right,
-  bottom,
-  left{
-    .-offset-$(direction)-$(size) {
-      grid-column-start: resolve( $(size) * 0.1);
+    .-h-$(size) {
+      height: $(size)% !important;
+      &.col:not(.-fixed){
+        height: auto !important;
+        grid-row-end: span resolve( $(size) * 0.1);
+      }
     }
-    .-m-offset-$(direction)-$(size) {
-      margin-$(direction): $(size)%;
+  
+  .-vw-$(size) {
+    width: $(size)% !important;
+  }
+  .-vh-$(size) {
+    height: $(size)% !important;
+  }
+
+  @each $direction in 
+    top,
+    right,
+    bottom,
+    left{
+      .-offset-$(direction)-$(size) {
+        grid-column-start: resolve( $(size) * 0.1);
+      }
+      .-m-offset-$(direction)-$(size) {
+        margin-$(direction): $(size)%;
+      }
     }
   }
 }
 
-.-w-100{
-  grid-column: 1 / -1 !important;
+@supports (display: grid){
+  .-w-100{
+    grid-column: 1 / -1 !important;
+  }
 }
+
 
 @each $size in 
 1,
@@ -80,9 +89,15 @@
 15,
 16{
   .-span-cols-$(size){
-    grid-column-end: span $(size);
+    width: resolve($(size) * 10)%;
   }
-  .-span-rows-$(size){
-    grid-row-end: span span $(size);
+  @supports (display: grid){
+    .-span-cols-$(size){
+      width: auto;
+      grid-column-end: span $(size);
+    }
+    .-span-rows-$(size){
+      grid-row-end: span span $(size);
+    }
   }
 }

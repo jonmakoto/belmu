@@ -2,63 +2,90 @@
    ––––––– */
 
 .grid{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(calc(10% - 1em), 1fr));
-  grid-gap: 1em 1em;
-  grid-auto-flow: dense;
+  display: block;
 }
-.grid.gutterless{
-  grid-template-columns: repeat(auto-fit, minmax(10%, 1fr));
-  grid-gap: 0;
+.grid .col{
+  float: left;
 }
 
-.grid-12{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(calc(8.3333% - 1em), 1fr));
-  grid-gap: 1em 1em;
-  grid-auto-flow: dense;
-}
-.grid-12s.gutterless{
-   grid-template-columns: repeat(auto-fit, minmax(8.3333%, 1fr));
-   grid-gap: 0;
-}
+@supports (display: grid){
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(calc(10% - 1em), 1fr));
+    grid-gap: 1em 1em;
+    grid-auto-flow: dense;
+  }
+  .grid .col{
+    float: none;
+  }
+  .grid.gutterless{
+    grid-template-columns: repeat(auto-fit, minmax(10%, 1fr));
+    grid-gap: 0;
+  }
 
-.grid-16{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(calc(6.25% - 1em), 1fr));
-  grid-gap: 1em 1em;
-  grid-auto-flow: dense;
-}
-.grid-16.gutterless{
-   grid-template-columns: repeat(auto-fit, minmax(6.25%, 1fr));
-   grid-gap: 0;
-}
+  .grid-12{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(calc(8.3333% - 1em), 1fr));
+    grid-gap: 1em 1em;
+    grid-auto-flow: dense;
+  }
+  .grid-12s.gutterless{
+    grid-template-columns: repeat(auto-fit, minmax(8.3333%, 1fr));
+    grid-gap: 0;
+  }
 
-.grid-auto{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  grid-gap: 1em 1em;
-  grid-auto-flow: dense;
-}
+  .grid-16{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(calc(6.25% - 1em), 1fr));
+    grid-gap: 1em 1em;
+    grid-auto-flow: dense;
+  }
+  .grid-16.gutterless{
+    grid-template-columns: repeat(auto-fit, minmax(6.25%, 1fr));
+    grid-gap: 0;
+  }
 
+  .grid-auto{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 1em 1em;
+    grid-auto-flow: dense;
+  }
 
+  /* experimental features */
+  @media (max-width: 34em) {
+    .grid.mq-small-full > .col, 
+    .grid-12.mq-small-full > .col, 
+    .grid-16.mq-small-full > .col{
+      grid-column: 1 / -1 !important;
+      width: auto !important;
+      margin: 0 !important;
+    }
 
-/* experimental features */
-@media (max-width: 34em) {
-  .grid.mq-small-full > .col{
-    grid-column: 1 / -1 !important;
-    width: auto !important;
-    margin: 0 !important;
+    .grid.mq-small-half > .col{
+      grid-column: span 5 !important;
+    } 
+    .grid-12.mq-small-half > .col{
+      grid-column: span 6 !important;
+    }
+    .grid-16.mq-small-half > .col{
+      grid-column: span 8 !important;
+    }
+    .grid.mq-small-full > .col, 
+    .grid-12.mq-small-full > .col, 
+    .grid-16.mq-small-full > .col{
+      width: auto !important;
+      margin: 0 !important;
+    }
   }
 }
- 
 
 
 /*
 @styleguide
 
 @title Layout Grid
-<div class="grid mq-small-full">
+<div class="grid mq-small-half">
   <div class="col">
     <div class="-bg-grey-300 -p-all-1">Hi I'm a column!</div>
   </div>
@@ -108,14 +135,50 @@
   <div class="col -span-cols-4">
     <div class="-bg-grey-300 -h-100 -p-all-1">4 cols</div>
   </div>
+  <div class="col -span-cols-1">
+    <div class="-bg-grey-300 -h-100 -p-all-1">1 col</div>
+  </div>
+   <div class="col -span-cols-1">
+    <div class="-bg-grey-300 -h-100 -p-all-1">1 col</div>
+  </div>
+   <div class="col -span-cols-1">
+    <div class="-bg-grey-300 -h-100 -p-all-1">1 col</div>
+  </div>
+   <div class="col -span-cols-1">
+    <div class="-bg-grey-300 -h-100 -p-all-1">1 col</div>
+  </div>
+  <div class="col -span-cols-2">
+    <div class="-bg-grey-300 -h-100 -p-all-1">2 cols</div>
+  </div>
+  <div class="col -span-cols-2">
+    <div class="-bg-grey-300 -h-100 -p-all-1">2 cols</div>
+  </div>
+  <div class="col -span-cols-2">
+    <div class="-bg-grey-300 -h-100 -p-all-1">2 cols</div>
+  </div>
+  <div class="col -span-cols-2">
+    <div class="-bg-grey-300 -h-100 -p-all-1">2 cols</div>
+  </div>
+  <div class="col -span-cols-2">
+    <div class="-bg-grey-300 -h-100 -p-all-1">2 cols</div>
+  </div>
+  <div class="col -span-cols-2">
+    <div class="-bg-grey-300 -h-100 -p-all-1">2 cols</div>
+  </div>
+  <div class="col -span-cols-2">
+    <div class="-bg-grey-300 -h-100 -p-all-1">2 cols</div>
+  </div>
+  <div class="col -span-cols-2">
+    <div class="-bg-grey-300 -h-100 -p-all-1">2 cols</div>
+  </div>
 </div>
 
 <strong>Fixed Width</strong>
-<div class="grid mq-small-auto mq-medium-full mq-large-full">
+<div class="grid">
   <div class="col -w-100">
     <div class="-bg-grey-300 -p-all-1 grid mq-small-full">
       <div class="col -w-10">
-        <div class="-bg-grey-100 -p-all-1">ALBI</div>
+        <div class="-bg-grey-100 -p-all-1">1</div>
       </div>
       <div class="col -w-10">
         <div class="-bg-grey-100 -p-all-1">2</div>
