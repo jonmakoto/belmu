@@ -5,7 +5,7 @@ module.exports = (ctx) => ({
     'postcss-partial-import': {},
     'postcss-cssnext': {
       features: {
-        customProperties: false
+        customProperties: true
       }
     },
     'postcss-each': {},

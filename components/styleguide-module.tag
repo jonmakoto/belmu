@@ -1,5 +1,5 @@
 <styleguide-module>
-  <div class="{ opts.state }" onclick="{ toggleState }">
+  <div class="{ opts.state }">
     <yield/>
   </div>
   <script>

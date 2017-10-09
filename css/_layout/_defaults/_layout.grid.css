@@ -3,9 +3,11 @@
 
 .grid{
   display: block;
+  clear: both;
 }
 .grid .col{
   float: left;
+  border: 0.5em solid #fff;
 }
 
 @supports (display: grid){
@@ -17,6 +19,7 @@
   }
   .grid .col{
     float: none;
+    border: 0;
   }
   .grid.gutterless{
     grid-template-columns: repeat(auto-fit, minmax(10%, 1fr));

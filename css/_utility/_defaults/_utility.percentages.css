@@ -42,26 +42,26 @@
       }
     }
   
-  .-vw-$(size) {
-    width: $(size)% !important;
-  }
-  .-vh-$(size) {
-    height: $(size)% !important;
-  }
+    .-vw-$(size) {
+      width: $(size)% !important;
+    }
+    .-vh-$(size) {
+      height: $(size)% !important;
+    }
 
-  @each $direction in 
-    top,
-    right,
-    bottom,
-    left{
-      .-offset-$(direction)-$(size) {
-        grid-column-start: resolve( $(size) * 0.1);
-      }
-      .-m-offset-$(direction)-$(size) {
-        margin-$(direction): $(size)%;
+    @each $direction in 
+      top,
+      right,
+      bottom,
+      left{
+        .-offset-$(direction)-$(size) {
+          grid-column-start: resolve( $(size) * 0.1);
+        }
+        .-m-offset-$(direction)-$(size) {
+          margin-$(direction): $(size)%;
+        }
       }
     }
-  }
 }
 
 @supports (display: grid){

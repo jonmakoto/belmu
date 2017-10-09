@@ -32,6 +32,7 @@
 .resting{
   opacity: 0;
   height: 0;
+  overflow: hidden;
 }
 .belmu{
   max-width: 268px;
