@@ -1,6 +1,6 @@
 {
   "name": "belmu",
-  "version": "1.0.23",
+  "version": "1.0.24",
   "description": "B.E.L.M.U npm module",
   "scripts": {
     "postinstall": "node ./bin/postinstall.js",
@@ -18,7 +18,7 @@
     "one-ui"
   ],
   "author": "Tim Clulow",
-  "url" : "https://github.com/jonmakoto/belmu",
+  "url": "https://github.com/jonmakoto/belmu",
   "license": "MIT",
   "devDependencies": {
     "express": "^4.13.4",

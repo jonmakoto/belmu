@@ -19,20 +19,13 @@
    –––––– */
 @import '_layout/_defaults/_layout.grid.css';
 @import '_layout/_defaults/_layout.flex.css';
-/*@import '_layout/_defaults/_layout.masonry.css';*/
 
 /* MODULE 
    –––––– */
-
-/*@import '_module/_defaults/_helpertext.css';*/
 @import '_module/_defaults/_module.button.colours.css';
 @import '_module/_defaults/_module.button.sizes.css';
 @import '_module/_defaults/_module.button.states.css';
 @import '_module/_defaults/_module.button.css';
-/*@import '_module/_defaults/_module.input-autocomplete.css';
-@import '_module/_defaults/_module.input-select.css';
-@import '_module/_defaults/_module.input-switch.css';
-@import '_module/_defaults/_module.messaging.css';*/
 @import '_module/_defaults/_module.modal.css';
 
 /* UTILITY 
@@ -46,5 +39,4 @@
 @import '_utility/_defaults/_utility.text.css';
 @import '_utility/_defaults/_utility.typesizes.css';
 @import '_utility/_defaults/_utility.shame.css';
-/*@import '_utility/_utility.icons.css';*/
 
