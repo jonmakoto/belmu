@@ -13,7 +13,6 @@ module.exports = (ctx) => ({
     'postcss-math': {},
     'postcss-custom-media': {},
     'postcss-media-minmax': {},
-    "postcss-svg": { "utf8": true },
     "postcss-style-guide": {
       "project": "BELMU",
       "dest": "index.html",
