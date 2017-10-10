@@ -30,7 +30,7 @@ if (cluster.isMaster && app.get('env') === 'production') {
 
   app.listen('8888', function(err) {
     if (err) throw err;
-    console.log('Vocus UI started on port ' + '8888' + ' (' + app.get('env') + ') cluster.worker.id:', workerId);
+    console.log('BELMU started on port ' + '8888' + ' (' + app.get('env') + ') cluster.worker.id:', workerId);
   });
   module.exports = app;
 }
