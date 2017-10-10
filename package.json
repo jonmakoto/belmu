@@ -1,6 +1,6 @@
 {
   "name": "belmu",
-  "version": "1.0.2",
+  "version": "1.0.23",
   "description": "B.E.L.M.U npm module",
   "scripts": {
     "postinstall": "node ./bin/postinstall.js",
@@ -18,13 +18,13 @@
     "one-ui"
   ],
   "author": "Tim Clulow",
+  "url" : "https://github.com/jonmakoto/belmu",
   "license": "MIT",
   "devDependencies": {
     "express": "^4.13.4",
     "node-cmd": "^1.1.1",
     "nodemon": "^1.11.0",
-    "postcss-math": "0.0.8",
-    "shelljs": "^0.7.8"
+    "postcss-math": "0.0.8"
   },
   "dependencies": {
     "autoprefixer": "^6.3.1",
@@ -40,6 +40,7 @@
     "postcss-partial-import": "^4.1.0",
     "postcss-secmodify": "^1.0.1",
     "postcss-style-guide": "^0.13.0",
+    "shelljs": "^0.7.8",
     "stylelint": "^7.7.1"
   }
 }
