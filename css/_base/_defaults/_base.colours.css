@@ -5,15 +5,15 @@
   --core-white:           0, 100%;
   --core-black:           0, 0%;
   --core-grey:            220, 2%;
-  --core-secondary:       65, 77%;
-  --core-primary:         200, 48%;
-  --core-highlight:       349, 57%;
+  --core-secondary:       148, 40%;
+  --core-primary:         192, 56%;
+  --core-highlight:       350, 67%;
 
   --white:                hsl( var(--core-white),     100% );
   --black:                hsl( var(--core-black),     0%   );
 
-  --secondary:	          hsl( var(--core-secondary), 46%  );
-  --primary:	            hsl( var(--core-primary),   53%  );
+  --secondary:	          hsl( var(--core-secondary), 61%  );
+  --primary:	            hsl( var(--core-primary),   61%  );
   --highlight:			      hsl( var(--core-highlight), 58%  );
 
   --grey:			            hsl( var(--core-grey),      61%  );
@@ -103,9 +103,9 @@
   black:		      #131834;
   white:	        #093f78;
   grey:	          #9C9C9C;
-  secondary:			#BFCE1B;
-  primary:	      #4D9BC1;
-  highlight:		  #D1566D;
+  secondary:			#74C399;
+  primary:	      #64BCD3;
+  highlight:		  #FD5371;
 
   grey:			      #9C9C9C;
   grey-500:	      #b2b2b2;

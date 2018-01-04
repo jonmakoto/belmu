@@ -132,15 +132,15 @@ button {
   --core-white:           0, 100%;
   --core-black:           0, 0%;
   --core-grey:            220, 2%;
-  --core-secondary:       65, 77%;
-  --core-primary:         200, 48%;
-  --core-highlight:       349, 57%;
+  --core-secondary:       148, 40%;
+  --core-primary:         192, 56%;
+  --core-highlight:       350, 67%;
 
   --white:                hsl( var(--core-white),     100% );
   --black:                hsl( var(--core-black),     0%   );
 
-  --secondary:	          hsl( var(--core-secondary), 46%  );
-  --primary:	            hsl( var(--core-primary),   53%  );
+  --secondary:	          hsl( var(--core-secondary), 61%  );
+  --primary:	            hsl( var(--core-primary),   61%  );
   --highlight:			      hsl( var(--core-highlight), 58%  );
 
   --grey:			            hsl( var(--core-grey),      61%  );
@@ -232,9 +232,9 @@ button {
   black:		      #131834;
   white:	        #093f78;
   grey:	          #9C9C9C;
-  secondary:			#BFCE1B;
-  primary:	      #4D9BC1;
-  highlight:		  #D1566D;
+  secondary:			#74C399;
+  primary:	      #64BCD3;
+  highlight:		  #FD5371;
 
   grey:			      #9C9C9C;
   grey-500:	      #b2b2b2;
@@ -294,8 +294,7 @@ button {
    ––––––––––––– */
 
 :root{
-  --slab: 'Zilla Slab', Serif;
-  --sans: 'Dosis', sans-serif;
+  --sans: 'Lato', sans-serif;
   --bookweight: 500;
   --heavyweight: 600;
   --boldweight: 700;
@@ -323,7 +322,7 @@ button {
 }
 
 body{
-  font-family: var(--slab);
+  font-family: var(--sans);
   font-weight: var(--bookweight);
 }
 
@@ -368,13 +367,13 @@ h6{
 }
 
 p{
-  font-family: var(--slab);
+  font-family: var(--sans);
   font-weight: var(--bookweight);
 }
 
 label{
   display: block;
-  font-family: var(--slab);
+  font-family: var(--sans);
   font-weight: var(--heavyweight);
   font-size: var(--rem-08);
   font-size: var(--rem-08);
@@ -825,12 +824,8 @@ Mixins and other generated styles live here
 </div>
 */
 
-/*@import '_layout/_defaults/_layout.masonry.css';*/
-
 /* MODULE 
    –––––– */
-
-/*@import '_module/_defaults/_helpertext.css';*/
 
 /* -- BUTTON Colours
    ––––––––––––––––– */
@@ -1226,37 +1221,37 @@ o-button.col{
 @styleguide
 
 @title Module Buttons
-<div class="grid mq-small-full">
+<div class="grid mq-small-full -m-bottom-1">
 <button class="o-button col rounded tiny"><span class="text">I'm a tiny button</span></button>
 <button class="o-button col rounded small"><span class="text">I'm a small button</span></button>
 <button class="o-button col rounded medium"><span class="text">I'm a medium button</span></button>
 <button class="o-button col rounded large"><span class="text">I'm a large button</span></button>
 </div>
-<div class="grid mq-small-full">
+<div class="grid mq-small-full -m-bottom-1">
 <button class="o-button col rounded tiny loud"><span class="text">I'm a loud tiny button</span></button>
 <button class="o-button col rounded small loud"><span class="text">I'm a loud small button</span></button>
 <button class="o-button col rounded medium loud"><span class="text">I'm a loud medium button</span></button>
 <button class="o-button col rounded large loud"><span class="text">I'm a loud large button</span></button>
 </div>
-<div class="grid mq-small-full">
+<div class="grid mq-small-full -m-bottom-1">
 <button class="o-button col rounded tiny mid"><span class="text">I'm a mid tiny button</span></button>
 <button class="o-button col rounded small mid"><span class="text">I'm a mid small button</span></button>
 <button class="o-button col rounded medium mid"><span class="text">I'm a mid medium button</span></button>
 <button class="o-button col rounded large mid"><span class="text">I'm a mid large button</span></button>
 </div>
-<div class="grid mq-small-full">
+<div class="grid mq-small-full -m-bottom-1">
 <button class="o-button col rounded tiny muted"><span class="text">I'm a muted tiny button</span></button>
 <button class="o-button col rounded small muted"><span class="text">I'm a muted small button</span></button>
 <button class="o-button col rounded medium muted"><span class="text">I'm a muted medium button</span></button>
 <button class="o-button col rounded large muted"><span class="text">I'm a muted large button</span></button>
 </div>
 <p>There are different states:</p>
-<div class="grid mq-small-full">
+<div class="grid mq-small-full -m-bottom-1">
 <button class="o-button col rounded danger medium"><span class="text">Danger</span></button>
 <button class="o-button col rounded success medium"><span class="text">Success</span></button>
 </div>
 <p>And buttons that animate:</p>
-<div class="grid mq-small-full">
+<div class="grid mq-small-full -m-bottom-1">
 <button class="o-button col rounded medium dark">
   <span class="text">Meep</span>
   <span class="loader"></span>
@@ -1267,11 +1262,6 @@ o-button.col{
 </button>
 </div>
 */
-
-/*@import '_module/_defaults/_module.input-autocomplete.css';
-@import '_module/_defaults/_module.input-select.css';
-@import '_module/_defaults/_module.input-switch.css';
-@import '_module/_defaults/_module.messaging.css';*/
 
 /* MESSAGING Modal
    –––––––––––––––
@@ -3169,7 +3159,5 @@ All Utility classes go here.
 @media \0screen\,screen\9 {
     .ie678 {display: block;}
 }
-
-/*@import '_utility/_utility.icons.css';*/
 
 /* END of css */

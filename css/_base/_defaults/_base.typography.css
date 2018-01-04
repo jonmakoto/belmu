@@ -2,8 +2,7 @@
    ––––––––––––– */
 
 :root{
-  --slab: 'Zilla Slab', Serif;
-  --sans: 'Dosis', sans-serif;
+  --sans: 'Lato', sans-serif;
   --bookweight: 500;
   --heavyweight: 600;
   --boldweight: 700;
@@ -22,7 +21,7 @@
 }
 
 body{
-  font-family: var(--slab);
+  font-family: var(--sans);
   font-weight: var(--bookweight);
 }
 
@@ -61,13 +60,13 @@ h6{
 }
 
 p{
-  font-family: var(--slab);
+  font-family: var(--sans);
   font-weight: var(--bookweight);
 }
 
 label{
   display: block;
-  font-family: var(--slab);
+  font-family: var(--sans);
   font-weight: var(--heavyweight);
   font-size: var(--rem-08);
   color: var(--black);
