@@ -5,7 +5,7 @@
   background: var(--grey-300);
   z-index: 9;
   font-size: 0.9rem;
-  border-bottom: 6px solid var(--white);
+  border-bottom: 6px solid var(--black);
 }
 .nav .flex .item{
   text-align: center;

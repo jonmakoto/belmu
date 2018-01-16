@@ -9,7 +9,7 @@
   --extraboldweight: 800;
 
   /* Font size helpers */
-  --rem-h1: 2rem;
+  --rem-2: 2rem;
   --rem-1: 1rem;
   --rem-1-2: 1.2rem;
   --rem-09: 0.9rem;
@@ -36,7 +36,7 @@ p{
 }
 
 h1{
-  font-size: var(--rem-h1);
+  font-size: var(--rem-2);
 }
 
 h2{
@@ -75,12 +75,4 @@ label{
 
 a:link, a:active, a:link {
   color: var(--primary);
-}
-
-/* icons */
-[class^="icon-"], [class*=" icon-"] {
-    display: inline-block;
-    width: 1.2em;
-    height: 1.2em;
-    background-repeat: no-repeat;
 }

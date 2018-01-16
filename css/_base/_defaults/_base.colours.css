@@ -7,14 +7,14 @@
   --core-grey:            220, 2%;
   --core-secondary:       148, 40%;
   --core-primary:         192, 56%;
-  --core-highlight:       350, 67%;
+  --core-highlight:       350, 98%;
 
   --white:                hsl( var(--core-white),     100% );
   --black:                hsl( var(--core-black),     0%   );
 
   --secondary:	          hsl( var(--core-secondary), 61%  );
   --primary:	            hsl( var(--core-primary),   61%  );
-  --highlight:			      hsl( var(--core-highlight), 58%  );
+  --highlight:			      hsl( var(--core-highlight), 66%  );
 
   --grey:			            hsl( var(--core-grey),      61%  );
   --grey-900:	            hsl( var(--core-grey),      30%  );
@@ -99,12 +99,9 @@
 
 /* TODO: figure out how to set colour pallette options without outputting to code */
 /* @start color */
-.----colours { 
-  black:		      #131834;
-  white:	        #093f78;
-  grey:	          #9C9C9C;
-  secondary:			#74C399;
+.----colours {
   primary:	      #64BCD3;
+  secondary:			#74C399;
   highlight:		  #FD5371;
 
   grey:			      #9C9C9C;

@@ -70,44 +70,8 @@
 @styleguide
 
 @title Module Buttons
-<div class="grid mq-small-full -m-bottom-1">
-<button class="o-button col rounded tiny"><span class="text">I'm a tiny button</span></button>
-<button class="o-button col rounded small"><span class="text">I'm a small button</span></button>
-<button class="o-button col rounded medium"><span class="text">I'm a medium button</span></button>
-<button class="o-button col rounded large"><span class="text">I'm a large button</span></button>
-</div>
-<div class="grid mq-small-full -m-bottom-1">
-<button class="o-button col rounded tiny loud"><span class="text">I'm a loud tiny button</span></button>
-<button class="o-button col rounded small loud"><span class="text">I'm a loud small button</span></button>
-<button class="o-button col rounded medium loud"><span class="text">I'm a loud medium button</span></button>
-<button class="o-button col rounded large loud"><span class="text">I'm a loud large button</span></button>
-</div>
-<div class="grid mq-small-full -m-bottom-1">
-<button class="o-button col rounded tiny mid"><span class="text">I'm a mid tiny button</span></button>
-<button class="o-button col rounded small mid"><span class="text">I'm a mid small button</span></button>
-<button class="o-button col rounded medium mid"><span class="text">I'm a mid medium button</span></button>
-<button class="o-button col rounded large mid"><span class="text">I'm a mid large button</span></button>
-</div>
-<div class="grid mq-small-full -m-bottom-1">
-<button class="o-button col rounded tiny muted"><span class="text">I'm a muted tiny button</span></button>
-<button class="o-button col rounded small muted"><span class="text">I'm a muted small button</span></button>
-<button class="o-button col rounded medium muted"><span class="text">I'm a muted medium button</span></button>
-<button class="o-button col rounded large muted"><span class="text">I'm a muted large button</span></button>
-</div>
-<p>There are different states:</p>
-<div class="grid mq-small-full -m-bottom-1">
-<button class="o-button col rounded danger medium"><span class="text">Danger</span></button>
-<button class="o-button col rounded success medium"><span class="text">Success</span></button>
-</div>
-<p>And buttons that animate:</p>
-<div class="grid mq-small-full -m-bottom-1">
-<button class="o-button col rounded medium dark">
-  <span class="text">Meep</span>
-  <span class="loader"></span>
-</button>
-<button class="o-button col rounded medium">
-  <span class="text">Moop</span>
-  <span class="loader"></span>
-</button>
-</div>
+<h1 class="-upcase">
+Modules
+</h1>
+<p>CSS for your Modules lives here</p>
 */

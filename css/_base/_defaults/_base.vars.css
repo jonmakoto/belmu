@@ -6,3 +6,16 @@
   --border-radius: 0.3rem;
   --transition-all: 0.36s all;
 }
+html {
+     overflow: -moz-scrollbars-vertical;
+     overflow: scroll;
+}
+/*
+@styleguide
+
+@title Base 
+<h1 class="-upcase">
+Base
+</h1>
+<p>We have some base stuff here </p>
+*/

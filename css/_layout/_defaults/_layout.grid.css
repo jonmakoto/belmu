@@ -88,6 +88,9 @@
 @styleguide
 
 @title Layout Grid
+<h1 class="-upcase">
+Layout
+</h1>
 <div class="grid mq-small-half">
   <div class="col">
     <div class="-bg-grey-300 -p-all-1">Hi I'm a column!</div>
