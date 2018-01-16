@@ -24,7 +24,7 @@
     "express": "^4.13.4",
     "node-cmd": "^1.1.1",
     "nodemon": "^1.11.0",
-    "postcss-math": "0.0.8"
+    "postcss-math": "0.0.10"
   },
   "dependencies": {
     "autoprefixer": "^6.3.1",
