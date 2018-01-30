@@ -135,15 +135,16 @@ button {
   --core-secondary:       148, 40%;
   --core-primary:         192, 56%;
   --core-highlight:       350, 98%;
+  --core-luminance:       63%;
 
   --white:                hsl( var(--core-white),     100% );
   --black:                hsl( var(--core-black),     0%   );
 
-  --secondary:	          hsl( var(--core-secondary), 61%  );
-  --primary:	            hsl( var(--core-primary),   61%  );
-  --highlight:			      hsl( var(--core-highlight), 66%  );
+  --secondary:	          hsl( var(--core-secondary), var(--core-luminance)  );
+  --primary:	            hsl( var(--core-primary),   var(--core-luminance)  );
+  --highlight:			      hsl( var(--core-highlight), var(--core-luminance)  );
 
-  --grey:			            hsl( var(--core-grey),      61%  );
+  --grey:			            hsl( var(--core-grey),      var(--core-luminance)  );
   --grey-900:	            hsl( var(--core-grey),      30%  );
   --grey-800:	            hsl( var(--core-grey),      40%  );
   --grey-700:			        hsl( var(--core-grey),      50%  );
@@ -291,7 +292,7 @@ button {
    ––––––––––––– */
 
 :root{
-  --sans: 'Lato', sans-serif;
+  --sans: sans-serif;
   --bookweight: 500;
   --heavyweight: 600;
   --boldweight: 700;
@@ -386,8 +387,8 @@ a:link, a:active, a:link {
    ––––––– */
 
 :root{
-  --spacing:  15px;
-  --spacing:  0.9375rem;
+  --spacing: 15px;
+  --spacing: 0.9375rem;
   --border-radius: 4.8px;
   --border-radius: 0.3rem;
   --transition-all: 0.36s all;
@@ -836,396 +837,6 @@ Layout
 /* MODULE 
    –––––– */
 
-/* -- BUTTON Colours
-   ––––––––––––––––– */
-
-.o-button:hover           { background: hsl( var(--core-primary), 70%);     }
-
-.o-button.loud            { background: var(--highlight);                   }
-
-.o-button.white           { background: var(--white);                       }
-
-.o-button.white .text     { color: var(--black);                            }
-
-.o-button.white:hover     { background: var(--grey-300);                    }
-
-.o-button.loud:hover      { background: hsl( var(--core-highlight), 80%);   }
-
-.o-button.muted           { background: var(--grey);                    }
-
-.o-button.muted:hover     { background: hsl( var(--core-grey), 80%);        }
-
-.o-button.mid             { background: var(--secondary);                        }
-
-.o-button.mid:hover       { background: hsl( var(--core-secondary), 43%);   }
-
-.o-button.success         { background: var(--secondary);                        }
-
-.o-button.success:hover   { background: hsl(var(--core-secondary), 45%);    }
-
-.o-button.danger          { background: var(--highlight);                   }
-
-.o-button.danger:hover    { background: hsl( var(--core-highlight), 77%);   }
-
-.o-button.dark            { background: var(--black);                       }
-
-.o-button.dark:hover      { background: var(--primary);                     }
-
-.borderless{
-  border: 0 !important;
-  padding: 8px !important;
-}
-
-.boxshadow{
-  -webkit-box-shadow: 1px 0px rgba(0, 0, 0, .1);
-          box-shadow: 1px 0px rgba(0, 0, 0, .1);
-}
-
-.bg-greyblue-100 .input-autocomplete, .bg-greyblue-100 .input-select{
-  background-color: var(--white);
-}
-
-/* -- BUTTON Sizes
-   ––––––––––––––– */
-
-.o-button.tiny{ 
-  font-size: 12.8px; 
-  font-size: 0.8rem;
-  padding: calc(var(--spacing) * 0.4) calc(var(--spacing) * 0.4) calc(var(--spacing) * 0.3);
-}
-
-.o-button.small{ 
-  font-size: 15.2px; 
-  font-size: 0.95rem;
-  padding: calc(var(--spacing) * 0.5) calc(var(--spacing) * 0.5) calc(var(--spacing) * 0.4);
-}
-
-.o-button.medium{
-  font-size: 19.2px;
-  font-size: 1.2rem;
-  padding: calc(var(--spacing) * 0.5) calc(var(--spacing) * 0.5) calc(var(--spacing) * 0.5);
-}
-
-.o-button.large{
-  font-size: 24px;
-  font-size: 1.5rem;
-  padding: calc(var(--spacing) * 0.8) calc(var(--spacing) * 0.8) calc(var(--spacing) * 0.6);
-}
-
-/* -- ACTIVE 
-   ––––––––– */
-
-/* -- PROCESSED  
-   –––––––––––– */
-
-.o-button.processed{
-  z-index: 9;
-}
-
-.o-button.processed .text{
-  opacity: 0;
-  -webkit-animation: delayedfade 2.6s 1.8s forwards;
-          animation: delayedfade 2.6s 1.8s forwards;
-}
-
-.o-button.processed .loader{
-  -webkit-animation: finishloader 0.4s forwards;
-          animation: finishloader 0.4s forwards;
-}
-
-.o-button.processed .success{
-  -webkit-animation: fadeout 1.4s 0.4s forwards;
-          animation: fadeout 1.4s 0.4s forwards;
-}
-
-@-webkit-keyframes delayedfade {
-  0%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
-}
-
-@keyframes delayedfade {
-  0%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes finishloader {
-  0%{
-    width: 100%;
-  }
-  100%{
-    width: 100%;
-    opacity: 0;
-  }
-}
-
-@keyframes finishloader {
-  0%{
-    width: 100%;
-  }
-  100%{
-    width: 100%;
-    opacity: 0;
-  }
-}
-
-@-webkit-keyframes fadeout {
-  0%{
-    opacity: .4;
-    -webkit-transform: scale(0.6);
-            transform: scale(0.6);
-  }
-  50%{
-    opacity: 1;
-    -webkit-transform: scale(1.3);
-            transform: scale(1.3);
-  }
-  100%{
-    opacity: 0;
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
-  }
-}
-
-@keyframes fadeout {
-  0%{
-    opacity: .4;
-    -webkit-transform: scale(0.6);
-            transform: scale(0.6);
-  }
-  50%{
-    opacity: 1;
-    -webkit-transform: scale(1.3);
-            transform: scale(1.3);
-  }
-  100%{
-    opacity: 0;
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
-  }
-}
-
-/* -- SUCCESSFUL 
-   ––––––––––––– */
-
-.successful .o-button{
-  -webkit-transform: translateY(0) scale(1);
-          transform: translateY(0) scale(1);
-  opacity: 1;
-  -webkit-transition: 0.3s all;
-  transition: 0.3s all;
-}
-
-.o-button.successful{ pointer-events: auto; background: var(--green) !important;}
-
-.o-button .success{
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cg class='st0'%3E%3Cpath class='st1' style='fill:%23ffffff' d='M13.1 19.3L27.3 5.2l3.9 3.9-18.1 18-11-11L6 12.2l7.1 7.1z'/%3E%3C/g%3E%3C/svg%3E");
-  -webkit-filter: var(--filterwhite);
-          filter: var(--filterwhite);
-  display: block;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-left: -0.75em;
-  margin-top: -0.75em;
-  opacity: 0;
-  display: inline-block;
-  width: 1.3em;
-  height: 1.3em;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 9px;
-}
-
-/* LOADING 
-   ––––––– */
-
-.o-button.loading         { max-height: 16px; max-height: 1rem; padding-top: 0; padding-bottom: 0}
-
-.o-button.loading .text   { opacity: 0; }
-
-.o-button.loading .loader { -webkit-animation: loadit 3s linear forwards; animation: loadit 3s linear forwards;}
-
-@-webkit-keyframes loadit {
-  0%{
-    width: 0;
-  }
-  33%{
-    width: 66%;
-  }
-  100%{
-    width: 99%;
-  }
-}
-
-@keyframes loadit {
-  0%{
-    width: 0;
-  }
-  33%{
-    width: 66%;
-  }
-  100%{
-    width: 99%;
-  }
-}
-
-/* -- DESTROYED 
-   –––––––––––– */
-
-.destroyed {
-  pointer-events: none;
-}
-
-.destroyed .o-button.active{
-  pointer-events: auto;
-  -webkit-animation: none;
-          animation: none;
-  background: hsl(200, 50%, 10%);
-  opacity: 1;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-}
-
-.destroyed .o-button{
-  opacity: 0;
-  -webkit-transform: scaleY(0);
-          transform: scaleY(0);
-  -webkit-transition-timing-function: cubic-bezier(0.91, 0.13, 1, 0.15);
-          transition-timing-function: cubic-bezier(0.91, 0.13, 1, 0.15);
-}
-
-/* -- DISABLED 
-   ––––––––––– */
-
-.disabled .o-button:not(.cancel){
-  pointer-events: none;
-  /*animation: shake 0.8s infinite;*/
-}
-
-.disabled .o-button.active, .disabled .o-button.cancel  {
-  pointer-events: auto;
-  -webkit-animation: none;
-          animation: none;
-}
-
-.disabled .o-button                 { background: var(--grey-300);}
-
-.disabled .o-button.active          { background: var(--primary);}
-
-.disabled .o-button.active.success  { background: var(--secondary);}
-
-.disabled .o-button.active.mid      { background: var(--secondary);}
-
-.disabled .o-button.active.muted    { background: var(--grey);}
-
-.disabled .o-button.active.loud     { background: var(--secondary);}
-
-.disabled .o-button.cancel          { background: var(--white);}
-
-.disabled .input-switch{
-  pointer-events: none;
-}
-
-.disabled .input-switch .switch-base,
-.disabled .input-switch .switch-base:before,
-.disabled .input-switch .switch-base:after{ 
-  background: var(--grey-100) !important;
-}
-
-.disabled .input-switch input{
-  pointer-events: none;
-}
-
-.disabled .input-autocomplete, .disabled .input-select, .disabled .input-switch, .disabled textarea{
-  pointer-events: none;
-  opacity: 0.3;
-}
-
-/* BUTTON Module
-   –––––––––––––
-   written by:
-   tim.clulow@vocus.co.nz */
-
-.o-button{
-  font-weight: var(--boldweight);
-  text-align: center;
-  
-  color: var(--white);
-  background-color: var(--primary);
-
-  border: 0;
-  outline: 0 !important;
-  border-radius: 0.5em;
-  border: 1px solid rgba(0, 0, 0, .07);
-  border-bottom-width: 2px;
-  width: 100%;
-
-  position: relative;
-  overflow: hidden;
-
-  -webkit-transition: var(--transition-all);
-
-  transition: var(--transition-all);
-  cursor: pointer;
-  
-}
-
-.o-button:hover { border-color: rgba(0, 0, 0, .23); }
-
-.o-button:focus { outline: none;                  }
-
-.o-button.col{
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-item-align: center;
-        align-self: center;
-  }
-
-.o-button.rounded{
-    border-radius: 0.2em;
-  }
-
-.o-button .loader{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 100%;
-    width: 0;
-    background: var(--white-300a)
-  }
-
-.o-button .text{
-    margin: auto;
-    letter-spacing: -0.02em;
-  }
-
-/* RESPONSIVE 
-  .o-button:container(width <= 9em){
-    padding: 0.5em;
-  }
-  .o-button:container(width <= 9em) .text{
-    padding: 5px 5px 0;
-    white-space: normal;
-    font-size: 0.67rem;
-  }*/
-
-/* SHAME */
-
-o-button.col{
-    -ms-flex-item-align: center !important;
-        align-self: center !important;
-  }
-
 /*
 @styleguide
 
@@ -1235,113 +846,6 @@ Modules
 </h1>
 <p>CSS for your Modules lives here</p>
 */
-
-/* MESSAGING Modal
-   –––––––––––––––
-   written by:
-   tim.clulow@vocus.co.nz */
-
-.o-modal{
-  
-  background: var(--white);
-  opacity: 0;
-
-  display: -webkit-box;
-
-  display: -ms-flexbox;
-
-  display: flex;
-  width: 80vw;
-  height: 80vh;
-  max-height: 0;
-  
-  margin: -40vh -40vw;
-  padding: calc(var(--spacing) * 2);
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  
-  
-  z-index: 1001;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: distribute;
-      align-content: space-around;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  overflow: hidden;
-
-  pointer-events: none;
-  -webkit-transition: var(--transition-all);
-  transition: var(--transition-all);
-}
-
-.o-modal.active{
-  pointer-events: all;
-  max-height: 80vh;
-  opacity: 1;
-}
-
-.o-modal .contents{
-  opacity: 0;
-  width: 88%;
-  text-align: center;
-  -webkit-transition: 0.2s opacity;
-  transition: 0.2s opacity;
-}
-
-.o-modal.active .contents{
-  -webkit-animation: modal-showme 1s forwards;
-          animation: modal-showme 1s forwards;
-}
-
-.modal-bg{
-  opacity: 0;
-  position: fixed;
-  top: 0; left: 0;
-  height: 100%;
-  width: 100%;
-  background: var(--black-800a);
-  z-index: 1000;
-  pointer-events: none;
-  -webkit-transition: var(--transition-all);
-  transition: var(--transition-all);
-}
-
-.modal-bg.active{
-  opacity: 1;
-  pointer-events: all;
-}
-
-/* animation for show/hide. */
-
-@-webkit-keyframes modal-showme{
-  0%{
-    opacity: 0;
-    -webkit-transform: translateY(6px);
-            transform: translateY(6px);
-  }
-  100%{
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-@keyframes modal-showme{
-  0%{
-    opacity: 0;
-    -webkit-transform: translateY(6px);
-            transform: translateY(6px);
-  }
-  100%{
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
 
 /* UTILITY 
    ––––––– */
@@ -1376,6 +880,8 @@ Modules
    –––––––––– */
 
 .-white                         { color: var(--white);              }
+
+.-primary                       { color: var(--primary);            }
 
 .-secondary                     { color: var(--secondary);          }
 
@@ -3135,6 +2641,18 @@ All Utility classes go here.
 
 @media \0screen\,screen\9 {
     .ie678 {display: block;}
+}
+
+/* override/set vars here */
+
+:root{
+  /* sans typeface */
+  --sans: 'Lato', sans-serif;
+
+  /* colours (main HSL values) */
+  --core-secondary: 148, 40%;
+  --core-primary: 192, 56%;
+  --core-highlight: 350, 98%;
 }
 
 /* END of css */

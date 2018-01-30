@@ -1,3 +1,13 @@
 @import 'belmu.css';
 
+/* override/set vars here */
+:root{
+  /* sans typeface */
+  --sans: 'Lato', sans-serif;
+
+  /* colours (main HSL values) */
+  --core-secondary: 148, 40%;
+  --core-primary: 192, 56%;
+  --core-highlight: 350, 98%;
+}
 /* END of css */

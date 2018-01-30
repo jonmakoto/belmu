@@ -22,11 +22,8 @@
 
 /* MODULE 
    –––––– */
-@import '_module/_defaults/_module.button.colours.css';
-@import '_module/_defaults/_module.button.sizes.css';
-@import '_module/_defaults/_module.button.states.css';
-@import '_module/_defaults/_module.button.css';
-@import '_module/_defaults/_module.modal.css';
+@import '_module/_defaults/_module.intro.css';
+
 
 /* UTILITY 
    ––––––– */

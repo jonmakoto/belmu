@@ -8,15 +8,16 @@
   --core-secondary:       148, 40%;
   --core-primary:         192, 56%;
   --core-highlight:       350, 98%;
+  --core-luminance:       63%;
 
   --white:                hsl( var(--core-white),     100% );
   --black:                hsl( var(--core-black),     0%   );
 
-  --secondary:	          hsl( var(--core-secondary), 61%  );
-  --primary:	            hsl( var(--core-primary),   61%  );
-  --highlight:			      hsl( var(--core-highlight), 66%  );
+  --secondary:	          hsl( var(--core-secondary), var(--core-luminance)  );
+  --primary:	            hsl( var(--core-primary),   var(--core-luminance)  );
+  --highlight:			      hsl( var(--core-highlight), var(--core-luminance)  );
 
-  --grey:			            hsl( var(--core-grey),      61%  );
+  --grey:			            hsl( var(--core-grey),      var(--core-luminance)  );
   --grey-900:	            hsl( var(--core-grey),      30%  );
   --grey-800:	            hsl( var(--core-grey),      40%  );
   --grey-700:			        hsl( var(--core-grey),      50%  );

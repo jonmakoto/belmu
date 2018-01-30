@@ -2,7 +2,7 @@
    ––––––––––––– */
 
 :root{
-  --sans: 'Lato', sans-serif;
+  --sans: sans-serif;
   --bookweight: 500;
   --heavyweight: 600;
   --boldweight: 700;

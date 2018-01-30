@@ -2,6 +2,7 @@
    –––––––––– */
 
 .-white                         { color: var(--white);              }
+.-primary                       { color: var(--primary);            }
 .-secondary                     { color: var(--secondary);          }
 .-highlight                     { color: var(-highlight);           }
 .-bg-primary                    { background: var(--primary);       }
