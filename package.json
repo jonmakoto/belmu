@@ -1,10 +1,10 @@
 {
   "name": "belmu",
-  "version": "1.0.25",
+  "version": "1.0.26",
   "description": "B.E.L.M.U npm module",
   "scripts": {
     "postinstall": "node ./bin/postinstall.js",
-    "postcss": "postcss css/app.css -o css/dist/belmu.css --no-map -c ./config/ --watch",
+    "postcss": "postcss css/app.css -o css/dist/belmu.css --no-map -c ./config/postcss.config.js --watch",
     "start": "npm run postcss | browser-sync start --server --files './'"
   },
   "repository": {
@@ -30,7 +30,7 @@
     "autoprefixer": "^6.3.1",
     "browser-sync": "^2.23.6",
     "postcss-calc-function": "^1.1.0",
-    "postcss-cli": "^3.0.0",
+    "postcss-cli": "^4.1.1",
     "postcss-cssnext": "^3.1.0",
     "postcss-custom-media": "^5.0.0",
     "postcss-each": "^0.9.3",
