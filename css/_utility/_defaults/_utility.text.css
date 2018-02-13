@@ -2,6 +2,9 @@
    –––––––––––– */
 
 /* FONT WEIGHTS */
+.-lightweight{
+  font-weight: 300;
+}
 .-bookweight{
   font-weight: 500;
 }
@@ -19,4 +22,19 @@
 }
 .-nocase{
   text-transform: none;
+}
+.-lineheight-1{
+  line-height: 1em;
+}
+.-lineheight-1-2{
+  line-height: 1.2em;
+}
+.-lineheight-1-3{
+  line-height: 1.3em;
+}
+.-lineheight-1-4{
+  line-height: 1.4em;
+}
+.-lineheight-1-5{
+  line-height: 1.5rem;
 }

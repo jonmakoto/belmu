@@ -3,7 +3,7 @@
 
 /* BASE 
    –––– */
-@import '_base/_defaults/_base.reset.css';
+@import '_base/_defaults/_base.fix.css';
 @import '_base/_defaults/_base.colours.css';
 @import '_base/_defaults/_base.fonts.css';
 @import '_base/_defaults/_base.forms.css';

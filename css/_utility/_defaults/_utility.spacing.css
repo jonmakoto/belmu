@@ -1,5 +1,22 @@
 /* -- Spacing
    –––––––––– */
+.-m-all{
+  margin: var(--spacing);
+}
+.-p-all{
+  padding: var(--spacing);
+}
+
+.-m-0, .-m-all-0{
+  margin: 0 !important;
+}
+.-p-0, .-p-all-0{
+  padding: 0 !important;
+}
+
+.-m-auto {
+    margin: auto;
+}
 
 @each $direction in 
 top,
@@ -150,20 +167,3 @@ left{
 }
 
 
-.-m-all{
-  margin: var(--spacing);
-}
-.-p-all{
-  padding: var(--spacing);
-}
-
-.-m-0, .-m-all-0{
-  margin: 0 !important;
-}
-.-p-0, .-p-all-0{
-  padding: 0 !important;
-}
-
-.-m-auto {
-    margin: auto;
-}

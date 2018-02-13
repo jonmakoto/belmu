@@ -6,10 +6,7 @@
   --border-radius: 0.3rem;
   --transition-all: 0.36s all;
 }
-html {
-     overflow: -moz-scrollbars-vertical;
-     overflow: scroll;
-}
+
 /*
 @styleguide
 
