@@ -2572,6 +2572,56 @@ All Utility classes go here.
   font-size: 0.6rem;
 }
 
+/* Ems */
+
+.-em-3 {
+  font-size: 3em;
+}
+
+.-em-2 {
+  font-size: 2em;
+}
+
+.-em-1-75 {
+  font-size: 1.75em;
+}
+
+.-em-1-5 {
+  font-size: 1.5em;
+}
+
+.-em-1-2 {
+  font-size: 1.2em;
+}
+
+.-em-1 {
+  font-size: 1em;
+}
+
+.-em-09 {
+  font-size: 0.9em;
+}
+
+.-em-085 {
+  font-size: 0.85em;
+}
+
+.-em-08 {
+  font-size: 0.8em;
+}
+
+.-em-075 {
+  font-size: 0.7em;
+}
+
+.-em-07 {
+  font-size: 0.7em;
+}
+
+.-em-06 {
+  font-size: 0.6em;
+}
+
 .unsupported, .ie11, .ie10, .ie678{
   display: none;
 }
