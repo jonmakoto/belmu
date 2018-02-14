@@ -1,6 +1,8 @@
 /* -- Typesizes
    –––––––––––– */
-
+.-rem-3 {
+  font-size: 3rem;
+}
 .-rem-2 {
   font-size: 2rem;
 }
@@ -9,6 +11,9 @@
 }
 .-rem-1-5 {
   font-size: 1.5rem;
+}
+.-rem-1-2 {
+  font-size: 1.2rem;
 }
 .-rem-1 {
   font-size: 1rem;

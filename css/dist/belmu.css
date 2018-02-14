@@ -755,7 +755,7 @@ Layout
 
 @title Module
 <h1 class="-upcase -lightweight">
-Modules
+Module
 </h1>
 <p>CSS for your Modules/Molecules live here, What is a molecule in css? - check out Brad Frost's pattern lab (http://patternlab.io/)</p>
 */
@@ -2497,8 +2497,25 @@ All Utility classes go here.
   line-height: 1.5rem;
 }
 
+.-text-left{
+  text-align: left;
+}
+
+.-text-center{
+  text-align: center;
+}
+
+.-text-right{
+  text-align: right;
+}
+
 /* -- Typesizes
    –––––––––––– */
+
+.-rem-3 {
+  font-size: 48px;
+  font-size: 3rem;
+}
 
 .-rem-2 {
   font-size: 32px;
@@ -2513,6 +2530,11 @@ All Utility classes go here.
 .-rem-1-5 {
   font-size: 24px;
   font-size: 1.5rem;
+}
+
+.-rem-1-2 {
+  font-size: 19.2px;
+  font-size: 1.2rem;
 }
 
 .-rem-1 {
