@@ -1,0 +1,52 @@
+/* -- Flex
+   ––––––– */
+
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+  /*padding-top: 1px;*/
+  &.gutterless .item{
+    padding: 0;
+  }
+
+  & .item{
+    flex-grow: 1;
+    align-self: stretch;
+    padding: calc(var(--spacing) * 0.5);
+    &.gutterless{
+      padding: 0;
+    }
+  }
+} 
+/*
+@styleguide
+
+@title Flex
+<div class="flex">
+  <div class="item">
+    <div class="-bg-grey-300 -p-all-1">Hi I'm a item!</div>
+  </div>
+  <div class="item">
+    <div class="-bg-grey-300 -p-all-1">Hi I'm a item!</div>
+  </div>
+  <div class="item">
+    <div class="-bg-grey-300 -p-all-1">Hi I'm a item!</div>
+  </div>
+  <div class="item">
+    <div class="-bg-grey-300 -p-all-1">Hi I'm a item!</div>
+  </div>
+</div> 
+
+<strong>Gutterless Flex</strong>
+<div class="flex gutterless">
+  <div class="item -w-80">
+    <div class="-bg-grey-300 -p-all-1">Hi I'm an 80% item!</div>
+  </div>
+  <div class="item -w-20">
+    <div class="-bg-grey-100 -p-all-1">Hi I'm a 20% item!</div>
+  </div>
+  <div class="item -w-100">
+    <div class="-bg-grey-500 -p-all-1">Hi I'm a 100% item!</div>
+  </div>
+</div>
+*/ 

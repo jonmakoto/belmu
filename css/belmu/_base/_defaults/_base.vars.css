@@ -1,0 +1,18 @@
+/* -- Vars
+   ––––––– */
+
+:root{
+  --spacing: 0.9375rem;
+  --border-radius: 0.3rem;
+  --transition-all: 0.36s all;
+}
+
+/*
+@styleguide
+
+@title Base 
+<h1 class="-upcase -lightweight">
+Base
+</h1>
+<p>Base contains a normalize in the form of fix (https://github.com/jaydenseric/Fix). Base typography, forms and variables declared here.</p>
+*/
