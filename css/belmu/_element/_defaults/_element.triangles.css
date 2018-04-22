@@ -15,7 +15,7 @@
   }
 }*/
 
-@define-mixin carrat-left, $colour: var(--black){
+@define-mixin triangle-left, $colour: var(--black){
   border-radius: 2rem;
   &:before {
     content: "";
@@ -28,7 +28,7 @@
   }
 }
 
-@define-mixin carrat-bottom, $colour: var(--black){
+@define-mixin triangle-bottom, $colour: var(--black){
   border-radius: 2rem;
   &:before {
     content: "";

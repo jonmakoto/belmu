@@ -10,10 +10,10 @@
 @import 'belmu/_base/_defaults/_base.typography.css';
 @import 'belmu/_base/_defaults/_base.vars.css';
 
-/* ENGINE 
-   –––––– */
-@import 'belmu/_engine/_defaults/_engine.icons.css';
-@import 'belmu/_engine/_defaults/_engine.triangles.css';
+/* ELEMENT 
+   ––––––- */
+@import 'belmu/_element/_defaults/_element.icons.css';
+@import 'belmu/_element/_defaults/_element.triangles.css';
 
 /* LAYOUT 
    –––––– */
