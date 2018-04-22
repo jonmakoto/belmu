@@ -355,9 +355,9 @@ Base
 /*
 @styleguide
 
-@title Engine
+@title Element
 <h1 class="-upcase -lightweight">
-Engine
+Element
 </h1>
 <p>The ideal is to have no Engine and just go completely vanila. But when you need things like svg icons, or other useful mixins you can define them here and build with postcss.</p>
 */
