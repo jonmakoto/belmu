@@ -3,7 +3,7 @@
 </svelte:head>
 
 <Scroller {top} {threshold} {bottom} bind:count bind:index bind:offset bind:progress>
-<div slot="background">
+<div slot="background" class="cuurent-section">
 	<p>current section: <strong>{index + 1}/{count}</strong></p>
 	<progress value="{count ? (index + 1) / count : 0}"></progress>
 
@@ -13,7 +13,6 @@
 	<p>total progress</p>
 	<progress value={progress || 0}></progress>
 	<nav>
-			<img src="https://i.imgur.com/3rqeZXi.png" alt="Style Guide">
 			
 				<ul>
 							<li>
@@ -62,7 +61,7 @@
 		</nav>
 </div>
 
-<div slot="foreground" style="padding: 0 0 0 50%;">
+<div slot="foreground">
 
 
 			<section id="base">
@@ -112,210 +111,215 @@
 			<section>
 				<div>
 					<h1 id="layout-grid">Layout Grid</h1>
-<pre><code>&lt;div class=&quot;grid mq-small-half&quot;&gt;
-  &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;Hi I&#39;m a column!&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;Hi I&#39;m a column!&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;Hi I&#39;m a column!&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;Hi I&#39;m a column!&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt; 
-&lt;div class=&quot;grid -m-top-3 mq-small-full&quot;&gt;
-  &lt;div class=&quot;col -span-cols-8&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -h-100 -p-all-1&quot;&gt;Hi I&#39;m an 80% column!&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col -span-cols-2&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -h-100 -p-all-1&quot;&gt;Hi I&#39;m a 20% column!&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col -w-100 m-top-1&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;Hi I&#39;m a 100% column!&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col -w-80 -offset-left-20 m-top-1&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;Hi I&#39;m an offset colum&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</code></pre><h2 id="12-column-grid">12 column grid</h2>
-<pre><code>&lt;div class=&quot;grid-12 mq-small-full&quot;&gt;
-  &lt;div class=&quot;col -span-cols-9&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -h-100 -p-all-1&quot;&gt;9 cols&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col -span-cols-3&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -h-100 -p-all-1&quot;&gt;3 cols!&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</code></pre><h2 id="16-column-grid">16 column grid</h2>
-<pre><code>&lt;div class=&quot;grid-16 mq-small-full&quot;&gt;
-  &lt;div class=&quot;col -span-cols-4&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -h-100 -p-all-1&quot;&gt;4 cols&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col -span-cols-4&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -h-100 -p-all-1&quot;&gt;4 cols&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col -span-cols-4&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -h-100 -p-all-1&quot;&gt;4 cols&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col -span-cols-1&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -h-100 -p-all-1&quot;&gt;1 col&lt;/div&gt;
-  &lt;/div&gt;
-   &lt;div class=&quot;col -span-cols-1&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -h-100 -p-all-1&quot;&gt;1 col&lt;/div&gt;
-  &lt;/div&gt;
-   &lt;div class=&quot;col -span-cols-1&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -h-100 -p-all-1&quot;&gt;1 col&lt;/div&gt;
-  &lt;/div&gt;
-   &lt;div class=&quot;col -span-cols-1&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -h-100 -p-all-1&quot;&gt;1 col&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col -span-cols-2&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -h-100 -p-all-1&quot;&gt;2 cols&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col -span-cols-2&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -h-100 -p-all-1&quot;&gt;2 cols&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col -span-cols-2&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -h-100 -p-all-1&quot;&gt;2 cols&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col -span-cols-2&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -h-100 -p-all-1&quot;&gt;2 cols&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col -span-cols-2&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -h-100 -p-all-1&quot;&gt;2 cols&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col -span-cols-2&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -h-100 -p-all-1&quot;&gt;2 cols&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col -span-cols-2&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -h-100 -p-all-1&quot;&gt;2 cols&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col -span-cols-2&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -h-100 -p-all-1&quot;&gt;2 cols&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</code></pre><h2 id="fixed-width">Fixed Width</h2>
-<pre><code>&lt;div class=&quot;grid&quot;&gt;
-  &lt;div class=&quot;col -w-100&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -p-all-1 grid mq-small-full&quot;&gt;
-      &lt;div class=&quot;col -w-10&quot;&gt;
-        &lt;div class=&quot;-bg-grey-100 -p-all-1&quot;&gt;1&lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;col -w-10&quot;&gt;
-        &lt;div class=&quot;-bg-grey-100 -p-all-1&quot;&gt;2&lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;col -w-10&quot;&gt;
-        &lt;div class=&quot;-bg-grey-100 -p-all-1&quot;&gt;3&lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;col -w-10&quot;&gt;
-        &lt;div class=&quot;-bg-grey-100 -p-all-1&quot;&gt;4&lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;col -w-10&quot;&gt;
-        &lt;div class=&quot;-bg-grey-100 -p-all-1&quot;&gt;5&lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;col -w-10&quot;&gt;
-        &lt;div class=&quot;-bg-grey-100 -p-all-1&quot;&gt;6&lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;col -w-10&quot;&gt;
-        &lt;div class=&quot;-bg-grey-100 -p-all-1&quot;&gt;7&lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;col -w-10&quot;&gt;
-        &lt;div class=&quot;-bg-grey-100 -p-all-1&quot;&gt;8&lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;col -w-10&quot;&gt;
-        &lt;div class=&quot;-bg-grey-100 -p-all-1&quot;&gt;9&lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;col -w-10&quot;&gt;
-        &lt;div class=&quot;-bg-grey-100 -p-all-1&quot;&gt;10&lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col -w-10&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;1&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col -w-10&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;2&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col -w-10&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;3&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col -w-10&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;4&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col -w-10&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;5&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col -w-10&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;6&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col -w-10&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;7&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col -w-10&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;8&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col -w-10&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;9&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col -w-10&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;10&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</code></pre><h2 id="auto-width">Auto Width</h2>
-<pre><code>&lt;div class=&quot;grid-auto&quot;&gt;
-  &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;1&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;2&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;3&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;4&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;5&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;6&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;7&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;8&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;9&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;10&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;11&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;12&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</code></pre><h2 id="gutterless-grid">Gutterless Grid</h2>
-<pre><code>&lt;div class=&quot;grid gutterless&quot;&gt;
-  &lt;div class=&quot;col -w-80&quot;&gt;
-    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;Hi I&#39;m an 80% column!&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col -w-20&quot;&gt;
-    &lt;div class=&quot;-bg-grey-100 -p-all-1&quot;&gt;Hi I&#39;m a 20% column!&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col -w-100&quot;&gt;
-    &lt;div class=&quot;-bg-grey-500 -p-all-1&quot;&gt;Hi I&#39;m a 100% column!&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+<div class="grid mq-small-half">
+  <div class="col">
+    <div class="-bg-grey-300 -p-all-1">Hi I&#39;m a column!</div>
+  </div>
+  <div class="col">
+    <div class="-bg-grey-300 -p-all-1">Hi I&#39;m a column!</div>
+  </div>
+  <div class="col">
+    <div class="-bg-grey-300 -p-all-1">Hi I&#39;m a column!</div>
+  </div>
+  <div class="col">
+    <div class="-bg-grey-300 -p-all-1">Hi I&#39;m a column!</div>
+  </div>
+</div> 
+<div class="grid -m-top-3 mq-small-full">
+  <div class="col -span-cols-8">
+    <div class="-bg-grey-300 -h-100 -p-all-1">Hi I&#39;m an 80% column!</div>
+  </div>
+  <div class="col -span-cols-2">
+    <div class="-bg-grey-300 -h-100 -p-all-1">Hi I&#39;m a 20% column!</div>
+  </div>
+  <div class="col -w-100 m-top-1">
+    <div class="-bg-grey-300 -p-all-1">Hi I&#39;m a 100% column!</div>
+  </div>
+  <div class="col -w-80 -offset-left-20 m-top-1">
+    <div class="-bg-grey-300 -p-all-1">Hi I&#39;m an offset colum</div>
+  </div>
+</div>
+
+
+<h2 id="12-column-grid">12 column grid</h2>
+<div class="grid-12 mq-small-full">
+  <div class="col -span-cols-9">
+    <div class="-bg-grey-300 -h-100 -p-all-1">9 cols</div>
+  </div>
+  <div class="col -span-cols-3">
+    <div class="-bg-grey-300 -h-100 -p-all-1">3 cols!</div>
+  </div>
+</div>
+
+<h2 id="16-column-grid">16 column grid</h2>
+<div class="grid-16 mq-small-full">
+  <div class="col -span-cols-4">
+    <div class="-bg-grey-300 -h-100 -p-all-1">4 cols</div>
+  </div>
+  <div class="col -span-cols-4">
+    <div class="-bg-grey-300 -h-100 -p-all-1">4 cols</div>
+  </div>
+  <div class="col -span-cols-4">
+    <div class="-bg-grey-300 -h-100 -p-all-1">4 cols</div>
+  </div>
+  <div class="col -span-cols-1">
+    <div class="-bg-grey-300 -h-100 -p-all-1">1 col</div>
+  </div>
+   <div class="col -span-cols-1">
+    <div class="-bg-grey-300 -h-100 -p-all-1">1 col</div>
+  </div>
+   <div class="col -span-cols-1">
+    <div class="-bg-grey-300 -h-100 -p-all-1">1 col</div>
+  </div>
+   <div class="col -span-cols-1">
+    <div class="-bg-grey-300 -h-100 -p-all-1">1 col</div>
+  </div>
+  <div class="col -span-cols-2">
+    <div class="-bg-grey-300 -h-100 -p-all-1">2 cols</div>
+  </div>
+  <div class="col -span-cols-2">
+    <div class="-bg-grey-300 -h-100 -p-all-1">2 cols</div>
+  </div>
+  <div class="col -span-cols-2">
+    <div class="-bg-grey-300 -h-100 -p-all-1">2 cols</div>
+  </div>
+  <div class="col -span-cols-2">
+    <div class="-bg-grey-300 -h-100 -p-all-1">2 cols</div>
+  </div>
+  <div class="col -span-cols-2">
+    <div class="-bg-grey-300 -h-100 -p-all-1">2 cols</div>
+  </div>
+  <div class="col -span-cols-2">
+    <div class="-bg-grey-300 -h-100 -p-all-1">2 cols</div>
+  </div>
+  <div class="col -span-cols-2">
+    <div class="-bg-grey-300 -h-100 -p-all-1">2 cols</div>
+  </div>
+  <div class="col -span-cols-2">
+    <div class="-bg-grey-300 -h-100 -p-all-1">2 cols</div>
+  </div>
+</div>
+
+<h2 id="fixed-width">Fixed Width</h2>
+<div class="grid">
+  <div class="col -w-100">
+    <div class="-bg-grey-300 -p-all-1 grid mq-small-full">
+      <div class="col -w-10">
+        <div class="-bg-grey-100 -p-all-1">1</div>
+      </div>
+      <div class="col -w-10">
+        <div class="-bg-grey-100 -p-all-1">2</div>
+      </div>
+      <div class="col -w-10">
+        <div class="-bg-grey-100 -p-all-1">3</div>
+      </div>
+      <div class="col -w-10">
+        <div class="-bg-grey-100 -p-all-1">4</div>
+      </div>
+      <div class="col -w-10">
+        <div class="-bg-grey-100 -p-all-1">5</div>
+      </div>
+      <div class="col -w-10">
+        <div class="-bg-grey-100 -p-all-1">6</div>
+      </div>
+      <div class="col -w-10">
+        <div class="-bg-grey-100 -p-all-1">7</div>
+      </div>
+      <div class="col -w-10">
+        <div class="-bg-grey-100 -p-all-1">8</div>
+      </div>
+      <div class="col -w-10">
+        <div class="-bg-grey-100 -p-all-1">9</div>
+      </div>
+      <div class="col -w-10">
+        <div class="-bg-grey-100 -p-all-1">10</div>
+      </div>
+    </div>
+  </div>
+  <div class="col -w-10">
+    <div class="-bg-grey-300 -p-all-1">1</div>
+  </div>
+  <div class="col -w-10">
+    <div class="-bg-grey-300 -p-all-1">2</div>
+  </div>
+  <div class="col -w-10">
+    <div class="-bg-grey-300 -p-all-1">3</div>
+  </div>
+  <div class="col -w-10">
+    <div class="-bg-grey-300 -p-all-1">4</div>
+  </div>
+  <div class="col -w-10">
+    <div class="-bg-grey-300 -p-all-1">5</div>
+  </div>
+  <div class="col -w-10">
+    <div class="-bg-grey-300 -p-all-1">6</div>
+  </div>
+  <div class="col -w-10">
+    <div class="-bg-grey-300 -p-all-1">7</div>
+  </div>
+  <div class="col -w-10">
+    <div class="-bg-grey-300 -p-all-1">8</div>
+  </div>
+  <div class="col -w-10">
+    <div class="-bg-grey-300 -p-all-1">9</div>
+  </div>
+  <div class="col -w-10">
+    <div class="-bg-grey-300 -p-all-1">10</div>
+  </div>
+</div>
+
+<h2 id="auto-width">Auto Width</h2>
+<div class="grid-auto">
+  <div class="col">
+    <div class="-bg-grey-300 -p-all-1">1</div>
+  </div>
+  <div class="col">
+    <div class="-bg-grey-300 -p-all-1">2</div>
+  </div>
+  <div class="col">
+    <div class="-bg-grey-300 -p-all-1">3</div>
+  </div>
+  <div class="col">
+    <div class="-bg-grey-300 -p-all-1">4</div>
+  </div>
+  <div class="col">
+    <div class="-bg-grey-300 -p-all-1">5</div>
+  </div>
+  <div class="col">
+    <div class="-bg-grey-300 -p-all-1">6</div>
+  </div>
+  <div class="col">
+    <div class="-bg-grey-300 -p-all-1">7</div>
+  </div>
+  <div class="col">
+    <div class="-bg-grey-300 -p-all-1">8</div>
+  </div>
+  <div class="col">
+    <div class="-bg-grey-300 -p-all-1">9</div>
+  </div>
+  <div class="col">
+    <div class="-bg-grey-300 -p-all-1">10</div>
+  </div>
+  <div class="col">
+    <div class="-bg-grey-300 -p-all-1">11</div>
+  </div>
+  <div class="col">
+    <div class="-bg-grey-300 -p-all-1">12</div>
+  </div>
+</div>
+
+<h2 id="gutterless-grid">Gutterless Grid</h2>
+<div class="grid gutterless">
+  <div class="col -w-80">
+    <div class="-bg-grey-300 -p-all-1">Hi I&#39;m an 80% column!</div>
+  </div>
+  <div class="col -w-20">
+    <div class="-bg-grey-100 -p-all-1">Hi I&#39;m a 20% column!</div>
+  </div>
+  <div class="col -w-100">
+    <div class="-bg-grey-500 -p-all-1">Hi I&#39;m a 100% column!</div>
+  </div>
+</div>
 					
 				</div>
 			</section>
@@ -423,26 +427,3 @@ Where are my Utilities?</p>
 		}
 	};
 </script>
-
-
-<style>
-	[slot="background"] {
-		background-color: rgb(170,30,30);
-		color: white;
-		font-size: 1.4em;
-		overflow: hidden;
-		padding: 1em;
-	}
-	
-	[slot="background"] p {
-		margin: 0;
-	}
-	
-	section {
-		height: 80vh;
-		background-color: rgba(0,0,0,0.5);
-		color: white;
-		padding: 1em;
-		margin: 0 0 2em 0;
-	}
-</style>

@@ -89,7 +89,6 @@ section: Layout
 ---
 
 # Layout Grid
-```
 <div class="grid mq-small-half">
   <div class="col">
     <div class="-bg-grey-300 -p-all-1">Hi I'm a column!</div>
@@ -118,10 +117,10 @@ section: Layout
     <div class="-bg-grey-300 -p-all-1">Hi I'm an offset colum</div>
   </div>
 </div>
-```
+
 
 ## 12 column grid
-```
+
 <div class="grid-12 mq-small-full">
   <div class="col -span-cols-9">
     <div class="-bg-grey-300 -h-100 -p-all-1">9 cols</div>
@@ -130,10 +129,8 @@ section: Layout
     <div class="-bg-grey-300 -h-100 -p-all-1">3 cols!</div>
   </div>
 </div>
-```
 
 ## 16 column grid
-```
 <div class="grid-16 mq-small-full">
   <div class="col -span-cols-4">
     <div class="-bg-grey-300 -h-100 -p-all-1">4 cols</div>
@@ -181,10 +178,8 @@ section: Layout
     <div class="-bg-grey-300 -h-100 -p-all-1">2 cols</div>
   </div>
 </div>
-```
 
 ## Fixed Width
-```
 <div class="grid">
   <div class="col -w-100">
     <div class="-bg-grey-300 -p-all-1 grid mq-small-full">
@@ -251,10 +246,8 @@ section: Layout
     <div class="-bg-grey-300 -p-all-1">10</div>
   </div>
 </div>
-```
 
 ## Auto Width
-```
 <div class="grid-auto">
   <div class="col">
     <div class="-bg-grey-300 -p-all-1">1</div>
@@ -293,10 +286,8 @@ section: Layout
     <div class="-bg-grey-300 -p-all-1">12</div>
   </div>
 </div>
-```
 
 ## Gutterless Grid
-```
 <div class="grid gutterless">
   <div class="col -w-80">
     <div class="-bg-grey-300 -p-all-1">Hi I'm an 80% column!</div>
@@ -308,5 +299,4 @@ section: Layout
     <div class="-bg-grey-500 -p-all-1">Hi I'm a 100% column!</div>
   </div>
 </div>
-```
 */ 
