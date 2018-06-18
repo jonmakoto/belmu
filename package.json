@@ -3,41 +3,41 @@
   "version": "1.0.26",
   "description": "B.E.L.M.U npm module",
   "scripts": {
-    "postinstall": "node ./bin/postinstall.js",
-    "postcss": "postcss css/app.css -o css/dist/belmu.css --no-map -c ./config/postcss.config.js --watch",
-    "start": "npm run postcss | browser-sync start --server --files './'"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@git.vocus.net:npm-modules/one-ui.git"
-  },
-  "keywords": [
-    "css",
-    "postcss"
-  ],
-  "author": "Tim Clulow",
-  "url": "https://github.com/jonmakoto/belmu",
-  "license": "MIT",
-  "devDependencies": {
-    "express": "^4.16.2",
-    "node-cmd": "^1.1.1",
-    "nodemon": "^1.14.11",
-    "postcss-math": "0.0.10"
+    "dev": "npm run styleguide && sapper dev",
+    "build": "sapper build",
+    "export": "sapper export",
+    "start": "node build",
+    "cy:run": "cypress run",
+    "cy:open": "cypress open",
+    "styleguide": "postcss assets/belmu.css -o assets/belmu.out.css --no-map -c ./",
+    "test": "run-p --race dev cy:run"
   },
   "dependencies": {
-    "autoprefixer": "^6.3.1",
-    "browser-sync": "^2.23.6",
-    "postcss-calc-function": "^1.1.0",
+    "compression": "^1.7.1",
+    "fs-promise": "^2.0.3",
+    "git-user-info": "^1.0.1",
+    "inquirer": "^6.0.0",
+    "mdcss": "^1.5.2",
+    "mdcss-theme-sapper": "github:cssandstuff/mdcss-theme-sapper",
+    "polka": "^0.4.0",
+    "postcss": "^6.0.22",
     "postcss-cssnext": "^3.1.0",
-    "postcss-custom-media": "^5.0.0",
-    "postcss-each": "^0.9.3",
-    "postcss-media-minmax": "^2.1.1",
-    "postcss-mixins": "^5.4.1",
-    "postcss-modules": "^0.6.3",
+    "postcss-custom-media": "^6.0.0",
+    "postcss-each": "^0.10.0",
+    "postcss-math": "^0.0.10",
+    "postcss-media-minmax": "^3.0.0",
+    "postcss-mixins": "^6.2.0",
     "postcss-partial-import": "^4.1.0",
-    "postcss-secmodify": "^1.0.1",
-    "postcss-style-guide": "^0.13.0",
-    "shelljs": "^0.7.8",
-    "stylelint": "^7.7.1"
+    "sapper": "^0.13.0",
+    "sirv": "^0.1.1"
+  },
+  "devDependencies": {
+    "@sveltejs/svelte-scroller": "^1.0.4",
+    "npm-run-all": "^4.1.2",
+    "postcss-cli": "^5.0.0",
+    "svelte": "^2.0.0",
+    "svelte-loader": "^2.9.0",
+    "svelte-preprocess": "^2.0.6",
+    "webpack": "^4.12.0"
   }
 }

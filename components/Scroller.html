@@ -1,0 +1,75 @@
+<div class='demo'>
+	<Scroller
+		{top}
+		{threshold}
+		{bottom}
+		bind:count
+		bind:index
+		bind:offset
+		bind:progress
+	>
+		<div slot="background">
+			<p>current section: <strong>{index + 1}/{count}</strong></p>
+			<progress value="{count ? (index + 1) / count : 0}"></progress>
+
+			<p>offset in current section</p>
+			<progress value={offset || 0}></progress>
+
+			<p>total progress</p>
+			<progress value={progress || 0}></progress>
+		</div>
+
+		<div slot="foreground" style="padding: 0 0 0 50%;">
+			<section>section 1</section>
+			<section>section 2</section>
+			<section>section 3</section>
+			<section>section 4</section>
+			<section>section 5</section>
+		</div>
+	</Scroller>
+
+</div>
+
+<style>
+	.demo {
+		padding: 0 100px 0 0;
+	}
+	
+	[slot="background"] {
+		background-color: rgb(170,30,30);
+		color: white;
+		font-size: 1.4em;
+		overflow: hidden;
+		padding: 1em;
+	}
+	
+	[slot="background"] p {
+		margin: 0;
+	}
+	
+	section {
+		height: 80vh;
+		background-color: rgba(0,0,0,0.5);
+		color: white;
+		padding: 1em;
+		margin: 0 0 2em 0;
+	}
+</style>
+
+<script>
+	import Scroller from '@sveltejs/svelte-scroller';
+	
+	export default {
+    data(){
+      return{
+        // you can drag the markers in the right rail
+        top: 0.2,
+        threshold: 0.5,
+        bottom: 0.8
+      }
+    },
+		components: {
+			Scroller
+		}
+	};
+</script>

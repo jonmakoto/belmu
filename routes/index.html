@@ -1,0 +1,448 @@
+<svelte:head>
+	<title>Sapper Styleguide template</title>
+</svelte:head>
+
+<Scroller {top} {threshold} {bottom} bind:count bind:index bind:offset bind:progress>
+<div slot="background">
+	<p>current section: <strong>{index + 1}/{count}</strong></p>
+	<progress value="{count ? (index + 1) / count : 0}"></progress>
+
+	<p>offset in current section</p>
+	<progress value={offset || 0}></progress>
+
+	<p>total progress</p>
+	<progress value={progress || 0}></progress>
+	<nav>
+			<img src="https://i.imgur.com/3rqeZXi.png" alt="Style Guide">
+			
+				<ul>
+							<li>
+								<a href="#base"><span>Base</span></a>
+								
+				<ul></ul>
+			
+							</li>
+							
+							<li>
+								<a href="#element"><span>Element</span></a>
+								
+				<ul></ul>
+			
+							</li>
+							
+							<li>
+								<a href="#layout"><span>Layout</span></a>
+								
+				<ul></ul>
+			
+							</li>
+							
+							<li>
+								<a href="#flex"><span>Flex</span></a>
+								
+				<ul></ul>
+			
+							</li>
+							
+							<li>
+								<a href="#module"><span>Module</span></a>
+								
+				<ul></ul>
+			
+							</li>
+							
+							<li>
+								<a href="#utility"><span>Utility</span></a>
+								
+				<ul></ul>
+			
+							</li>
+							</ul>
+			
+		</nav>
+</div>
+
+<div slot="foreground" style="padding: 0 0 0 50%;">
+
+
+			<section id="base">
+				<h2 class="doc-section-heading">Base</h2>
+
+				<div>
+					
+					
+			<section>
+				<div>
+					<h1 id="base">Base</h1>
+<p>Base contains a normalize in the form of fix (<a href="https://github.com/jaydenseric/Fix)">https://github.com/jaydenseric/Fix)</a>. Base typography, forms and variables declared here.</p>
+
+					
+				</div>
+			</section>
+		
+				</div>
+			</section>
+		
+			<section id="element">
+				<h2 class="doc-section-heading">Element</h2>
+
+				<div>
+					
+					
+			<section>
+				<div>
+					<p>The ideal is to have no Engine and just go completely vanila. But when you need things like svg icons, or other useful mixins you can define them here and build with postcss.</p>
+<pre><code class="lang-example:html">&lt;button class=&quot;btn&quot;&gt;Click&lt;/button&gt;
+&lt;a class=&quot;btn&quot; href=&quot;/some-page&quot;&gt;Some Page&lt;/a&gt;
+</code></pre>
+
+					
+				</div>
+			</section>
+		
+				</div>
+			</section>
+		
+			<section id="layout">
+				<h2 class="doc-section-heading">Layout</h2>
+
+				<div>
+					
+					
+			<section>
+				<div>
+					<h1 id="layout-grid">Layout Grid</h1>
+<pre><code>&lt;div class=&quot;grid mq-small-half&quot;&gt;
+  &lt;div class=&quot;col&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;Hi I&#39;m a column!&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;Hi I&#39;m a column!&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;Hi I&#39;m a column!&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;Hi I&#39;m a column!&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt; 
+&lt;div class=&quot;grid -m-top-3 mq-small-full&quot;&gt;
+  &lt;div class=&quot;col -span-cols-8&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -h-100 -p-all-1&quot;&gt;Hi I&#39;m an 80% column!&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col -span-cols-2&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -h-100 -p-all-1&quot;&gt;Hi I&#39;m a 20% column!&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col -w-100 m-top-1&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;Hi I&#39;m a 100% column!&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col -w-80 -offset-left-20 m-top-1&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;Hi I&#39;m an offset colum&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre><h2 id="12-column-grid">12 column grid</h2>
+<pre><code>&lt;div class=&quot;grid-12 mq-small-full&quot;&gt;
+  &lt;div class=&quot;col -span-cols-9&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -h-100 -p-all-1&quot;&gt;9 cols&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col -span-cols-3&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -h-100 -p-all-1&quot;&gt;3 cols!&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre><h2 id="16-column-grid">16 column grid</h2>
+<pre><code>&lt;div class=&quot;grid-16 mq-small-full&quot;&gt;
+  &lt;div class=&quot;col -span-cols-4&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -h-100 -p-all-1&quot;&gt;4 cols&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col -span-cols-4&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -h-100 -p-all-1&quot;&gt;4 cols&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col -span-cols-4&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -h-100 -p-all-1&quot;&gt;4 cols&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col -span-cols-1&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -h-100 -p-all-1&quot;&gt;1 col&lt;/div&gt;
+  &lt;/div&gt;
+   &lt;div class=&quot;col -span-cols-1&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -h-100 -p-all-1&quot;&gt;1 col&lt;/div&gt;
+  &lt;/div&gt;
+   &lt;div class=&quot;col -span-cols-1&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -h-100 -p-all-1&quot;&gt;1 col&lt;/div&gt;
+  &lt;/div&gt;
+   &lt;div class=&quot;col -span-cols-1&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -h-100 -p-all-1&quot;&gt;1 col&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col -span-cols-2&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -h-100 -p-all-1&quot;&gt;2 cols&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col -span-cols-2&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -h-100 -p-all-1&quot;&gt;2 cols&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col -span-cols-2&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -h-100 -p-all-1&quot;&gt;2 cols&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col -span-cols-2&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -h-100 -p-all-1&quot;&gt;2 cols&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col -span-cols-2&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -h-100 -p-all-1&quot;&gt;2 cols&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col -span-cols-2&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -h-100 -p-all-1&quot;&gt;2 cols&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col -span-cols-2&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -h-100 -p-all-1&quot;&gt;2 cols&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col -span-cols-2&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -h-100 -p-all-1&quot;&gt;2 cols&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre><h2 id="fixed-width">Fixed Width</h2>
+<pre><code>&lt;div class=&quot;grid&quot;&gt;
+  &lt;div class=&quot;col -w-100&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -p-all-1 grid mq-small-full&quot;&gt;
+      &lt;div class=&quot;col -w-10&quot;&gt;
+        &lt;div class=&quot;-bg-grey-100 -p-all-1&quot;&gt;1&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col -w-10&quot;&gt;
+        &lt;div class=&quot;-bg-grey-100 -p-all-1&quot;&gt;2&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col -w-10&quot;&gt;
+        &lt;div class=&quot;-bg-grey-100 -p-all-1&quot;&gt;3&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col -w-10&quot;&gt;
+        &lt;div class=&quot;-bg-grey-100 -p-all-1&quot;&gt;4&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col -w-10&quot;&gt;
+        &lt;div class=&quot;-bg-grey-100 -p-all-1&quot;&gt;5&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col -w-10&quot;&gt;
+        &lt;div class=&quot;-bg-grey-100 -p-all-1&quot;&gt;6&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col -w-10&quot;&gt;
+        &lt;div class=&quot;-bg-grey-100 -p-all-1&quot;&gt;7&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col -w-10&quot;&gt;
+        &lt;div class=&quot;-bg-grey-100 -p-all-1&quot;&gt;8&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col -w-10&quot;&gt;
+        &lt;div class=&quot;-bg-grey-100 -p-all-1&quot;&gt;9&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col -w-10&quot;&gt;
+        &lt;div class=&quot;-bg-grey-100 -p-all-1&quot;&gt;10&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col -w-10&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;1&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col -w-10&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;2&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col -w-10&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;3&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col -w-10&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;4&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col -w-10&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;5&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col -w-10&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;6&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col -w-10&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;7&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col -w-10&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;8&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col -w-10&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;9&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col -w-10&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;10&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre><h2 id="auto-width">Auto Width</h2>
+<pre><code>&lt;div class=&quot;grid-auto&quot;&gt;
+  &lt;div class=&quot;col&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;1&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;2&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;3&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;4&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;5&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;6&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;7&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;8&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;9&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;10&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;11&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;12&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre><h2 id="gutterless-grid">Gutterless Grid</h2>
+<pre><code>&lt;div class=&quot;grid gutterless&quot;&gt;
+  &lt;div class=&quot;col -w-80&quot;&gt;
+    &lt;div class=&quot;-bg-grey-300 -p-all-1&quot;&gt;Hi I&#39;m an 80% column!&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col -w-20&quot;&gt;
+    &lt;div class=&quot;-bg-grey-100 -p-all-1&quot;&gt;Hi I&#39;m a 20% column!&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col -w-100&quot;&gt;
+    &lt;div class=&quot;-bg-grey-500 -p-all-1&quot;&gt;Hi I&#39;m a 100% column!&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+					
+				</div>
+			</section>
+		
+				</div>
+			</section>
+		
+			<section id="flex">
+				<h2 class="doc-section-heading">Flex</h2>
+
+				<div>
+					
+					
+			<section>
+				<div>
+					<h1 id="flex">Flex</h1>
+<div class="flex">
+  <div class="item">
+    <div class="-bg-grey-300 -p-all-1">Hi I&#39;m a item!</div>
+  </div>
+  <div class="item">
+    <div class="-bg-grey-300 -p-all-1">Hi I&#39;m a item!</div>
+  </div>
+  <div class="item">
+    <div class="-bg-grey-300 -p-all-1">Hi I&#39;m a item!</div>
+  </div>
+  <div class="item">
+    <div class="-bg-grey-300 -p-all-1">Hi I&#39;m a item!</div>
+  </div>
+</div> 
+
+<p><strong>Gutterless Flex</strong></p>
+<div class="flex gutterless">
+  <div class="item -w-80">
+    <div class="-bg-grey-300 -p-all-1">Hi I&#39;m an 80% item!</div>
+  </div>
+  <div class="item -w-20">
+    <div class="-bg-grey-100 -p-all-1">Hi I&#39;m a 20% item!</div>
+  </div>
+  <div class="item -w-100">
+    <div class="-bg-grey-500 -p-all-1">Hi I&#39;m a 100% item!</div>
+  </div>
+</div>
+					
+				</div>
+			</section>
+		
+				</div>
+			</section>
+		
+			<section id="module">
+				<h2 class="doc-section-heading">Module</h2>
+
+				<div>
+					
+					
+			<section>
+				<div>
+					<h1 id="module">Module</h1>
+<p>CSS for your Modules/Molecules live here, What is a molecule in css? - check out Brad Frost&#39;s pattern lab (<a href="http://patternlab.io/">http://patternlab.io/</a>)</p>
+
+					
+				</div>
+			</section>
+		
+				</div>
+			</section>
+		
+			<section id="utility">
+				<h2 class="doc-section-heading">Utility</h2>
+
+				<div>
+					
+					
+			<section>
+				<div>
+					<h1 id="utility">Utility</h1>
+<p>All Utility classes go here.
+Where are my Utilities?</p>
+
+					
+				</div>
+			</section>
+		
+				</div>
+			</section>
+		
+</div>
+</Scroller>	
+
+<script>
+	import Scroller from '@sveltejs/svelte-scroller';
+	
+	export default {
+    data(){
+      return{
+        // you can drag the markers in the right rail
+        top: 0.2,
+        threshold: 0.5,
+        bottom: 0.8
+      }
+    },
+		components: {
+			Scroller
+		}
+	};
+</script>
+
+
+<style>
+	[slot="background"] {
+		background-color: rgb(170,30,30);
+		color: white;
+		font-size: 1.4em;
+		overflow: hidden;
+		padding: 1em;
+	}
+	
+	[slot="background"] p {
+		margin: 0;
+	}
+	
+	section {
+		height: 80vh;
+		background-color: rgba(0,0,0,0.5);
+		color: white;
+		padding: 1em;
+		margin: 0 0 2em 0;
+	}
+</style>
