@@ -8,7 +8,35 @@
   --core-primary: 192, 56%;
   --core-highlight: 350, 98%;
 }
+html, body{
+  background: #071c38 linear-gradient(45deg, #3a355d, #3a3f73);
+}
 
+body:before, body:after{
+  content:'';
+  position: fixed;
+  width:100%;
+  height:100%;
+}
+
+body:before{
+  background: #8163A3;
+  box-shadow: 0 0 45vw 45vh #8163A3;
+  z-index: 2;
+  top: -96%;
+  left: -72%;
+  opacity: 0.7;
+  border-radius: 50em;
+}
+body:after {
+  background: #194782;
+  z-index: 3;
+  bottom: -96%;
+  right: -72%;
+  box-shadow: 0 0 45vw 45vh #194782;
+  opacity: 0.7;
+  border-radius: 100%;
+}
 .background-container{
   margin-left: -18%;
 }
@@ -16,26 +44,24 @@ html {
   overflow: -moz-scrollbars-vertical;
   overflow-y: scroll;
 }
-#belmu-logo{
-  width: 87px;
-  height: 100px;
-} 
+
 h1{
   border-top: 1px solid #efefef;
   padding-top: 1.5em;
 }
 h1, h2, h3, h4, h5, h6{
-  color: #636B8C;
+  color: rgba(255, 255, 255, 0.72);
 }
 .logo-container{
-  background: #fff;
-  border-radius: 1em;
+  z-index: 9;
   padding: 2em;
-  box-shadow: 1px 1px 3px #cfcfcf;
   width: 180px;
   margin: auto;
-  position: sticky;
+  position: relative;
   top: -1em;
+}
+.logo-container img{
+  width: 98px;
 }
 .wrapper{
   text-align: center; 

@@ -5,7 +5,7 @@ export const routes = [
 ];
 
 if (module.hot) {
-	import('/Users/me/Sites/OLD_Sites/belmu/node_modules/sapper/sapper-dev-client.js').then(client => {
-		client.connect(10000);
+	import('/Users/tim.clulow/Documents/_git/belmu/node_modules/sapper/sapper-dev-client.js').then(client => {
+		client.connect(10003);
 	});
 }

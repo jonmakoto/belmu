@@ -3,7 +3,7 @@
 </svelte:head>
 
 <Scroller {top} {threshold} {bottom} bind:count bind:index bind:offset bind:progress>
-<div slot="background" class="cuurent-section">
+<div slot="background">
 	<p>current section: <strong>{index + 1}/{count}</strong></p>
 	<progress value="{count ? (index + 1) / count : 0}"></progress>
 
@@ -37,13 +37,6 @@
 							</li>
 							
 							<li>
-								<a href="#flex"><span>Flex</span></a>
-								
-				<ul></ul>
-			
-							</li>
-							
-							<li>
 								<a href="#module"><span>Module</span></a>
 								
 				<ul></ul>
@@ -64,6 +57,13 @@
 <div slot="foreground">
 
 
+			<section>
+				<div>
+					<p class="-white -m-auto -w-80 -m-top-1 -lightweight -lineheight-1-4">B.E.L.M.U (Base, Element, Layout, Module, Utility) is a an organizational method for writing CSS, together with some layout helpers for grid and flexbox &amp; a collection of utility classes. Think tachyons CSS with a faster learning curve (simply because there&#39;s not as much to learn) </p>
+					
+				</div>
+			</section>
+		
 			<section id="base">
 				<h2 class="doc-section-heading">Base</h2>
 
@@ -72,8 +72,7 @@
 					
 			<section>
 				<div>
-					<h1 id="base">Base</h1>
-<p>Base contains a normalize in the form of fix (<a href="https://github.com/jaydenseric/Fix)">https://github.com/jaydenseric/Fix)</a>. Base typography, forms and variables declared here.</p>
+					<p>Base contains a normalize in the form of fix (<a href="https://github.com/jaydenseric/Fix)">https://github.com/jaydenseric/Fix)</a>. Base typography, forms and variables declared here.</p>
 
 					
 				</div>
@@ -327,49 +326,6 @@
 				</div>
 			</section>
 		
-			<section id="flex">
-				<h2 class="doc-section-heading">Flex</h2>
-
-				<div>
-					
-					
-			<section>
-				<div>
-					<h1 id="flex">Flex</h1>
-<div class="flex">
-  <div class="item">
-    <div class="-bg-grey-300 -p-all-1">Hi I&#39;m a item!</div>
-  </div>
-  <div class="item">
-    <div class="-bg-grey-300 -p-all-1">Hi I&#39;m a item!</div>
-  </div>
-  <div class="item">
-    <div class="-bg-grey-300 -p-all-1">Hi I&#39;m a item!</div>
-  </div>
-  <div class="item">
-    <div class="-bg-grey-300 -p-all-1">Hi I&#39;m a item!</div>
-  </div>
-</div> 
-
-<p><strong>Gutterless Flex</strong></p>
-<div class="flex gutterless">
-  <div class="item -w-80">
-    <div class="-bg-grey-300 -p-all-1">Hi I&#39;m an 80% item!</div>
-  </div>
-  <div class="item -w-20">
-    <div class="-bg-grey-100 -p-all-1">Hi I&#39;m a 20% item!</div>
-  </div>
-  <div class="item -w-100">
-    <div class="-bg-grey-500 -p-all-1">Hi I&#39;m a 100% item!</div>
-  </div>
-</div>
-					
-				</div>
-			</section>
-		
-				</div>
-			</section>
-		
 			<section id="module">
 				<h2 class="doc-section-heading">Module</h2>
 
@@ -378,8 +334,7 @@
 					
 			<section>
 				<div>
-					<h1 id="module">Module</h1>
-<p>CSS for your Modules/Molecules live here, What is a molecule in css? - check out Brad Frost&#39;s pattern lab (<a href="http://patternlab.io/">http://patternlab.io/</a>)</p>
+					<p>CSS for your Modules/Molecules live here, What is a molecule in css? - check out Brad Frost&#39;s pattern lab (<a href="http://patternlab.io/">http://patternlab.io/</a>)</p>
 
 					
 				</div>
@@ -396,8 +351,7 @@
 					
 			<section>
 				<div>
-					<h1 id="utility">Utility</h1>
-<p>All Utility classes go here.
+					<p>All Utility classes go here.
 Where are my Utilities?</p>
 
 					

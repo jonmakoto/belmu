@@ -1,6 +1,10 @@
 
 /* To learn how to use BELMU refer to the guide at -----  */
 
+/*---
+<p class="-white -m-auto -w-80 -m-top-1 -lightweight -lineheight-1-4">B.E.L.M.U (Base, Element, Layout, Module, Utility) is a an organizational method for writing CSS, together with some layout helpers for grid and flexbox &amp; a collection of utility classes. Think tachyons CSS with a faster learning curve (simply because there's not as much to learn) </p>
+*/
+
 /* BASE 
    –––– */
 
@@ -340,7 +344,6 @@ a:link, a:active, a:link {
 section: Base 
 ---
 
-# Base 
 Base contains a normalize in the form of fix (https://github.com/jaydenseric/Fix). Base typography, forms and variables declared here.
 */
 
@@ -714,7 +717,7 @@ section: Layout
   padding: 0;
 }
 
-/*---
+/* --
 section: Flex 
 ---
 
@@ -754,9 +757,6 @@ section: Flex
 /*---
 section: Module 
 ---
-
-
-# Module
 
 CSS for your Modules/Molecules live here, What is a molecule in css? - check out Brad Frost's pattern lab (http://patternlab.io/)
 */
@@ -812,8 +812,6 @@ CSS for your Modules/Molecules live here, What is a molecule in css? - check out
 /*---
 section: Utility 
 ---
-
-# Utility
 
 All Utility classes go here.
 Where are my Utilities?
