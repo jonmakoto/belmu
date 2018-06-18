@@ -17,3 +17,4 @@ src/img/sprites.css
 src/img/sprites.svg
 public/*
 Barebones
+yarn.lock
