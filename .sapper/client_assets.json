@@ -1,5 +1,8 @@
 {
-  "_": "7617d7eb457232145945/_._.js",
-  "main": "7617d7eb457232145945/main.js",
-  "vendors~_": "7617d7eb457232145945/vendors~_.vendors~_.js"
+  "_": "16dd3a17ead6cb1a9ad8/_._.js",
+  "main": [
+    "16dd3a17ead6cb1a9ad8/main.js",
+    "main.7617d7eb457232145945.hot-update.js"
+  ],
+  "vendors~_": "16dd3a17ead6cb1a9ad8/vendors~_.vendors~_.js"
 }

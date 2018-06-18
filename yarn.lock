@@ -2087,7 +2087,7 @@ mdcss-theme-github@^2.1.0:
 
 "mdcss-theme-sapper@github:cssandstuff/mdcss-theme-sapper":
   version "1.0.1"
-  resolved "https://codeload.github.com/cssandstuff/mdcss-theme-sapper/tar.gz/026675f4e1f43bbd78ca1b7da5ce33b4101eac5f"
+  resolved "https://codeload.github.com/cssandstuff/mdcss-theme-sapper/tar.gz/fb818e79b5d3cd181b3419d9a9a776c90480dca3"
   dependencies:
     ejs "^2.3.4"
     fs-extra "^0.26.1"
