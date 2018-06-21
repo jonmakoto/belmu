@@ -385,6 +385,40 @@ The ideal is to have no Engine and just go completely vanila. But when you need 
 /* LAYOUT 
    –––––– */
 
+/*---
+section: Layout
+---
+
+Left blank for you to use.
+*/
+
+/* MODULE 
+   –––––– */
+
+/*---
+section: Module 
+---
+
+CSS for your Modules/Molecules live here, What is a molecule in css? - check out Brad Frost's pattern lab (http://patternlab.io/)
+<div class="grid">
+  <div class="col">
+    <Switch on:switched='set({ inAgreement: true })'/>
+  </div>
+  <div class="col">
+    <Switch on:switched='set({ inAgreement: true })'/>
+  </div>
+  <div class="col">
+    <Switch on:switched='set({ inAgreement: true })'/>
+  </div>
+  <div class="col">
+    <Switch on:switched='set({ inAgreement: true })'/>
+  </div>
+</div>
+*/
+
+/* UTILITY 
+   ––––––– */
+
 /* -- Grid
    ––––––– */
 
@@ -750,19 +784,6 @@ section: Flex
   </div>
 </div>
 */
-
-/* MODULE 
-   –––––– */
-
-/*---
-section: Module 
----
-
-CSS for your Modules/Molecules live here, What is a molecule in css? - check out Brad Frost's pattern lab (http://patternlab.io/)
-*/
-
-/* UTILITY 
-   ––––––– */
 
 /* -- Display
    –––––––––– */

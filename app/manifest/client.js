@@ -3,3 +3,9 @@ export const routes = [
 	{ pattern: /^\/?$/, params: () => ({}), load: () => import(/* webpackChunkName: "_" */ '../../routes/index.html') },
 	{ pattern: /^\/style\/?$/, ignore: true }
 ];
+
+if (module.hot) {
+	import('/Users/tim.clulow/Documents/_git/belmu/node_modules/sapper/sapper-dev-client.js').then(client => {
+		client.connect(10000);
+	});
+}

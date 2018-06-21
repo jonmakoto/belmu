@@ -109,6 +109,14 @@
 					
 			<section>
 				<div>
+					<p>Left blank for you to use.</p>
+
+					
+				</div>
+			</section>
+		
+			<section>
+				<div>
 					<h1 id="layout-grid">Layout Grid</h1>
 <div class="grid mq-small-half">
   <div class="col">
@@ -335,7 +343,20 @@
 			<section>
 				<div>
 					<p>CSS for your Modules/Molecules live here, What is a molecule in css? - check out Brad Frost&#39;s pattern lab (<a href="http://patternlab.io/">http://patternlab.io/</a>)</p>
-
+<div class="grid">
+  <div class="col">
+    <Switch on:switched='set({ inAgreement: true })'/>
+  </div>
+  <div class="col">
+    <Switch on:switched='set({ inAgreement: true })'/>
+  </div>
+  <div class="col">
+    <Switch on:switched='set({ inAgreement: true })'/>
+  </div>
+  <div class="col">
+    <Switch on:switched='set({ inAgreement: true })'/>
+  </div>
+</div>
 					
 				</div>
 			</section>
@@ -366,7 +387,7 @@ Where are my Utilities?</p>
 
 <script>
 	import Scroller from '@sveltejs/svelte-scroller';
-	
+	import Switch from '../components/Switch.html';
 	export default {
     data(){
       return{
@@ -377,7 +398,8 @@ Where are my Utilities?</p>
       }
     },
 		components: {
-			Scroller
+			Scroller,
+			Switch
 		}
 	};
 </script>

@@ -1,0 +1,101 @@
+<div role="switch" aria-checked="true" class="-text-center -d-block -m-auto -m-top-half switch is-{check}">
+  <input type='checkbox' on:click='letsGo()' >
+  <span class="switch--core"></span>
+</div>
+
+<script>
+export default {
+	methods: {
+		letsGo() {
+      let _self = this;
+      const { check } = this.get();
+      const { state } = this.get();
+      _self.set({
+        check: check === true ? false : true,
+      });
+    
+      if(check == true){
+        window.clearTimeout(_self.startFade);
+        window.clearTimeout(_self.startSwitch);
+        _self.root.set({
+          state: ''
+        });
+      }else{
+        _self.startFade = window.setTimeout(function(){
+        _self.root.set({
+            state: 'fading'
+          });
+        },250);
+
+        _self.startSwitch = window.setTimeout(function(){
+          _self.fire('switched');
+        },700);
+      }
+    }
+	}
+};
+</script>
+
+<style>
+.switch{
+	align-items: center;
+	position: relative;
+	font-size: 14px;
+	line-height: 20px;
+	height: 20px;
+	vertical-align: middle;
+}
+.switch--core{
+	margin: 0;
+	display: inline-block;
+	position: relative;
+	width: 40px;
+	height: 20px;
+	outline: none;
+	border-radius: 10px;
+	box-sizing: border-box;
+	background: var(--grey-400);
+	cursor: pointer;
+	transition: border-color .3s,background-color .3s;
+	vertical-align: middle;
+}
+.switch:hover .switch--core{
+  background: var(--grey);
+}
+.switch:hover .switch--core:after{
+  box-shadow: 2px 1px 3px var(--grey-900);
+}
+
+.switch.is-true .switch--core{
+	background: var(--grey-900);
+}
+.switch.is-true .switch--core:after {
+    left: 100%;
+    margin-left: -18px;
+}
+.switch--core:after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    border-radius: 100%;
+    transition: all .3s;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+}
+.switch input{
+	border: none;
+	position: absolute;
+	height: 20px;
+	margin: 0;
+	width: 100%;
+	left: 0px;
+	top: 0px;
+	background: none;
+	z-index: 10;
+	cursor: pointer;
+	opacity: 0;
+}
+</style>
+  
