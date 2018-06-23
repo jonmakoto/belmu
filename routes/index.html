@@ -59,7 +59,7 @@
 
 			<section>
 				<div>
-					<p class="-white -m-auto -w-80 -m-top-1 -lightweight -lineheight-1-4">B.E.L.M.U (Base, Element, Layout, Module, Utility) is a an organizational method for writing CSS, together with some layout helpers for grid and flexbox &amp; a collection of utility classes. Think tachyons CSS with a faster learning curve (simply because there&#39;s not as much to learn) </p>
+					<p class="-white -m-auto -m-top-1 -lightweight -lineheight-1-4">B.E.L.M.U (Base, Element, Layout, Module, Utility) is a an organizational method for writing CSS, together with some layout helpers for grid and flexbox &amp; a collection of utility classes. Think tachyons CSS with a faster learning curve (simply because there&#39;s not as much to learn) </p>
 					
 				</div>
 			</section>
@@ -342,7 +342,7 @@
 					
 			<section>
 				<div>
-					<p>CSS for your Modules/Molecules live here, What is a molecule in css? - check out Brad Frost&#39;s pattern lab (<a href="http://patternlab.io/">http://patternlab.io/</a>)</p>
+					<p>I can write and include documentation for my modules right here in the comfort of CSS!</p>
 <div class="grid">
   <div class="col">
     <Switch on:switched='set({ inAgreement: true })'/>
@@ -357,6 +357,8 @@
     <Switch on:switched='set({ inAgreement: true })'/>
   </div>
 </div>
+
+<Svg objectfit="cover" bgcolor="#FE8822cc" largeSrc="iknow/guidelines-cover.png" on:loadingComplete="set({ p8: true })"/>
 					
 				</div>
 			</section>
@@ -388,6 +390,8 @@ Where are my Utilities?</p>
 <script>
 	import Scroller from '@sveltejs/svelte-scroller';
 	import Switch from '../components/Switch.html';
+	import Svg from '../components/Svg.html';
+
 	export default {
     data(){
       return{
@@ -398,8 +402,7 @@ Where are my Utilities?</p>
       }
     },
 		components: {
-			Scroller,
-			Switch
+			Scroller, Switch, Svg
 		}
 	};
 </script>

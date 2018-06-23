@@ -2,7 +2,7 @@
 section: Module 
 ---
 
-CSS for your Modules/Molecules live here, What is a molecule in css? - check out Brad Frost's pattern lab (http://patternlab.io/)
+I can write and include documentation for my modules right here in the comfort of CSS!
 <div class="grid">
   <div class="col">
     <Switch on:switched='set({ inAgreement: true })'/>
@@ -17,5 +17,8 @@ CSS for your Modules/Molecules live here, What is a molecule in css? - check out
     <Switch on:switched='set({ inAgreement: true })'/>
   </div>
 </div>
+
+<Svg objectfit="cover" bgcolor="#FE8822cc" largeSrc="iknow/guidelines-cover.png" on:loadingComplete="set({ p8: true })"/>
+
 */
 

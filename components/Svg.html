@@ -1,0 +1,28 @@
+<svg class="icon" width={width} height={height}>
+  <use xlink:href="{glyph}" class={css}/>
+</svg>
+
+<script>
+
+export default {
+  preload() {
+    //should go in here ideally
+  },
+  oncreate(){
+    var urly = '../svg-sprite.json'      
+    return fetch(urly) // <!-- note that we're *returning* the promise this time
+      .then(res => res.json())
+      .then(icons => {
+        console.log(icons)
+        return {svgData: icons}; // <!-- and we're returning the result, rather than this.set(...)
+      });
+  },
+  data() {
+    return {
+      width: '32px',
+      height: '32px',
+      css: ''
+    }
+  }
+};
+</script>
