@@ -7,7 +7,7 @@ module.exports = (ctx) => ({
       'theme': require('mdcss-theme-sapper'),
       'destination':'./routes'
     },
-    'postcss-cssnext': {
+    'postcss-preset-env': {
       features: {
         customProperties: false
       }

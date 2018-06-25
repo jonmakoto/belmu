@@ -1,21 +1,22 @@
 <svg class="icon" width={width} height={height}>
-  <use xlink:href="{glyph}" class={css}/>
+  <use xlink:href="/client/sprite.svg#{icon}" style="--color: {color}"/>
 </svg>
 
 <script>
 
+import '../img/icons/add.svg';
+import '../img/icons/copy.svg';
+import '../img/icons/info.svg';
+import '../img/icons/search.svg';
+import '../img/icons/share.svg';
+
 export default {
   preload() {
     //should go in here ideally
+    //console.log(GLYPHS);
   },
   oncreate(){
-    var urly = '../svg-sprite.json'      
-    return fetch(urly) // <!-- note that we're *returning* the promise this time
-      .then(res => res.json())
-      .then(icons => {
-        console.log(icons)
-        return {svgData: icons}; // <!-- and we're returning the result, rather than this.set(...)
-      });
+    
   },
   data() {
     return {
@@ -26,3 +27,4 @@ export default {
   }
 };
 </script>
+

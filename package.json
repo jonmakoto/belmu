@@ -10,8 +10,7 @@
     "cy:run": "cypress run",
     "cy:open": "cypress open",
     "styleguide": "postcss assets/belmu.css -o assets/belmu.out.css --no-map -c ./",
-    "test": "run-p --race dev cy:run",
-    "build-svgs": "NODE_ENV=production node rollup-svgs/rollup.js"
+    "test": "run-p --race dev cy:run"
   },
   "dependencies": {
     "compression": "^1.7.1",
@@ -19,31 +18,30 @@
     "git-user-info": "^1.0.1",
     "inquirer": "^6.0.0",
     "mdcss": "^1.5.2",
-    "mdcss-theme-sapper": "github:cssandstuff/mdcss-theme-sapper",
+    "mdcss-theme-sapper": "^1.0.12",
     "polka": "^0.4.0",
     "postcss": "^6.0.22",
-    "postcss-cssnext": "^3.1.0",
-    "postcss-custom-media": "^6.0.0",
     "postcss-each": "^0.10.0",
     "postcss-math": "^0.0.10",
-    "postcss-media-minmax": "^3.0.0",
     "postcss-mixins": "^6.2.0",
     "postcss-partial-import": "^4.1.0",
+    "postcss-preset-env": "^5.1.0",
     "sapper": "^0.13.0",
     "sirv": "^0.1.1"
   },
   "devDependencies": {
     "@sveltejs/svelte-scroller": "^1.0.4",
+    "chalk": "^1.1.3",
+    "glob": "^7.1.2",
+    "node-xml-lite": "^0.0.7",
     "npm-run-all": "^4.1.2",
     "postcss-cli": "^5.0.0",
     "svelte": "^2.0.0",
     "svelte-loader": "^2.9.0",
     "svelte-preprocess": "^2.0.6",
-    "webpack": "^4.12.0",
-    "chalk": "^1.1.3",
-		"glob": "^7.1.2",
-		"node-xml-lite": "^0.0.7",
-		"rollup": "^0.42.0",
-		"rollup-plugin-json": "^2.3.0"
+    "svg-sprite-loader": "^3.8.0",
+    "svgo": "^1.0.5",
+    "svgo-loader": "^2.1.0",
+    "webpack": "^4.12.0"
   }
 }

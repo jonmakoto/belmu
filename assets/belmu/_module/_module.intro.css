@@ -18,7 +18,10 @@ I can write and include documentation for my modules right here in the comfort o
   </div>
 </div>
 
-<Svg objectfit="cover" bgcolor="#FE8822cc" largeSrc="iknow/guidelines-cover.png" on:loadingComplete="set({ p8: true })"/>
-
+<Svg icon='search' color='#fff'/>
+<Svg icon='copy' color='#ff0000'/>
+<Svg icon='add' color='#fff'/>
+<Svg icon='share' color='#fff'/>
+<Svg icon='info' color='#fff'/>
 */
 

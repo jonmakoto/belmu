@@ -15,8 +15,7 @@
 */
 
 *{
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -136,52 +135,99 @@ button {
   --core-white:           0, 100%;
   --core-black:           0, 0%;
   --core-grey:            220, 30%;
+  --white:                hsl( 0, 100%,     100% );
   --white:                hsl( var(--core-white),     100% );
+  --black:                hsl( 0, 0%,     0%   );
   --black:                hsl( var(--core-black),     0%   );
 
+  --grey:			            hsl( 220, 30%,      60%);
+
   --grey:			            hsl( var(--core-grey),      60%);
+  --grey-900:	            hsl( 220, 30%,      30%  );
   --grey-900:	            hsl( var(--core-grey),      30%  );
+  --grey-800:	            hsl( 220, 30%,      40%  );
   --grey-800:	            hsl( var(--core-grey),      40%  );
+  --grey-700:			        hsl( 220, 30%,      50%  );
   --grey-700:			        hsl( var(--core-grey),      50%  );
+  --grey-600:			        hsl( 220, 30%,      60%  );
   --grey-600:			        hsl( var(--core-grey),      60%  );
+  --grey-500:			        hsl( 220, 30%,      70%  );
   --grey-500:			        hsl( var(--core-grey),      70%  );
+  --grey-400:			        hsl( 220, 30%,      80%  );
   --grey-400:			        hsl( var(--core-grey),      80%  );
+  --grey-300:			        hsl( 220, 30%,      94%  );
   --grey-300:			        hsl( var(--core-grey),      94%  );
+  --grey-200:			        hsl( 220, 30%,      96%  );
   --grey-200:			        hsl( var(--core-grey),      96%  );
+  --grey-100:			        hsl( 220, 30%,      98%  );
   --grey-100:			        hsl( var(--core-grey),      98%  );
 
+  --black:			          hsl( 0, 0%,     0%   );
+
   --black:			          hsl( var(--core-black),     0%   );
+  --black-900:	          hsl( 0, 0%,     10%  );
   --black-900:	          hsl( var(--core-black),     10%  );
+  --black-800:	          hsl( 0, 0%,     20%  );
   --black-800:	          hsl( var(--core-black),     20%  );
+  --black-700:			      hsl( 0, 0%,     30%  );
   --black-700:			      hsl( var(--core-black),     30%  );
+  --black-600:			      hsl( 0, 0%,     40%  );
   --black-600:			      hsl( var(--core-black),     40%  );
+  --black-500:			      hsl( 0, 0%,     50%  );
   --black-500:			      hsl( var(--core-black),     50%  );
+  --black-400:			      hsl( 0, 0%,     60%  );
   --black-400:			      hsl( var(--core-black),     60%  );
+  --black-300:			      hsl( 0, 0%,     70%  );
   --black-300:			      hsl( var(--core-black),     70%  );
+  --black-200:			      hsl( 0, 0%,     80%  );
   --black-200:			      hsl( var(--core-black),     80%  );
+  --black-100:			      hsl( 0, 0%,     90%  );
   --black-100:			      hsl( var(--core-black),     90%  );
 
+  --black-900a:           hsla( 0, 0%, 0%, 0.9 );
+
   --black-900a:           hsla( var(--core-black), 0%, 0.9 );
+  --black-800a:           hsla( 0, 0%, 0%, 0.8 );
   --black-800a:           hsla( var(--core-black), 0%, 0.8 );
+  --black-700a:           hsla( 0, 0%, 0%, 0.7 );
   --black-700a:           hsla( var(--core-black), 0%, 0.7 );
+  --black-600a:           hsla( 0, 0%, 0%, 0.6 );
   --black-600a:           hsla( var(--core-black), 0%, 0.6 );
+  --black-500a:           hsla( 0, 0%, 0%, 0.5 );
   --black-500a:           hsla( var(--core-black), 0%, 0.5 );
+  --black-400a:           hsla( 0, 0%, 0%, 0.4 );
   --black-400a:           hsla( var(--core-black), 0%, 0.4 );
+  --black-300a:           hsla( 0, 0%, 0%, 0.3 );
   --black-300a:           hsla( var(--core-black), 0%, 0.3 );
+  --black-200a:           hsla( 0, 0%, 0%, 0.2 );
   --black-200a:           hsla( var(--core-black), 0%, 0.2 );
+  --black-100a:           hsla( 0, 0%, 0%, 0.1 );
   --black-100a:           hsla( var(--core-black), 0%, 0.1 );
   
+  --white-900a:           hsla( 0, 100%, 100%, 0.9 );
+  
   --white-900a:           hsla( var(--core-white), 100%, 0.9 );
+  --white-800a:           hsla( 0, 100%, 100%, 0.8 );
   --white-800a:           hsla( var(--core-white), 100%, 0.8 );
+  --white-700a:           hsla( 0, 100%, 100%, 0.7 );
   --white-700a:           hsla( var(--core-white), 100%, 0.7 );
+  --white-600a:           hsla( 0, 100%, 100%, 0.6 );
   --white-600a:           hsla( var(--core-white), 100%, 0.6 );
+  --white-500a:           hsla( 0, 100%, 100%, 0.5 );
   --white-500a:           hsla( var(--core-white), 100%, 0.5 );
+  --white-400a:           hsla( 0, 100%, 100%, 0.4 );
   --white-400a:           hsla( var(--core-white), 100%, 0.4 );
+  --white-300a:           hsla( 0, 100%, 100%, 0.3 );
   --white-300a:           hsla( var(--core-white), 100%, 0.3 );
+  --white-200a:           hsla( 0, 100%, 100%, 0.2 );
   --white-200a:           hsla( var(--core-white), 100%, 0.2 );
+  --white-100a:           hsla( 0, 100%, 100%, 0.1 );
   --white-100a:           hsla( var(--core-white), 100%, 0.1 );
 
+  --borders-dark:   hsla(hsl( 0, 0%,     0%   ), 0.1);
+
   --borders-dark:   hsla(var(--black), 0.1);
+  --borders-light:  hsla(hsl( 0, 100%,     100% ), 0.1);
   --borders-light:  hsla(var(--white), 0.1);
 
   /* FILTERS (Experimental) */
@@ -205,18 +251,25 @@ button {
    ––––––––– */
 
 .input{
+  font-family: 500;
   font-family: var(--bookweight);
-  font-size: var(--rem-1);
+  font-size: 1rem;
   font-size: var(--rem-1);
 
+  color: hsl( 220, 30%,      98%  );
+
   color: var(--grey-100);
+  background: hsl( 220, 30%,      94%  );
   background: var(--grey-300);
+
+  border-radius: 0.3rem;
 
   border-radius: var(--border-radius);
   border: 0;
-  padding: calc(var(--spacing) * 0.66667) var(--spacing);
+  padding: calc( 0.9375rem * 0.6666666 ) 0.9375rem;
+  padding: calc( var(--spacing) * 0.6666666 ) var(--spacing);
  
-  -webkit-transition: var(--transition-all);
+  transition: 0.36s all;
  
   transition: var(--transition-all);
 }
@@ -226,6 +279,7 @@ button {
 }
 
 .input:hover{
+  background: hsl( 220, 30%,      98%  );
   background: var(--grey-100);
 }
 
@@ -245,87 +299,91 @@ button {
   --extraboldweight: 800;
 
   /* Font size helpers */
-  --rem-2: 32px;
   --rem-2: 2rem;
-  --rem-1: 16px;
   --rem-1: 1rem;
-  --rem-1-2: 19.2px;
   --rem-1-2: 1.2rem;
-  --rem-09: 14.4px;
   --rem-09: 0.9rem;
-  --rem-085: 13.6px;
   --rem-085: 0.85rem;
-  --rem-08: 12.8px;
   --rem-08: 0.8rem;
-  --rem-075: 11.2px;
   --rem-075: 0.7rem;
-  --rem-07: 11.2px;
   --rem-07: 0.7rem;
-  --rem-06: 9.6px;
   --rem-06: 0.6rem;
 }
 
 body{
+  font-family: sans-serif;
   font-family: var(--sans);
+  font-weight: 500;
   font-weight: var(--bookweight);
 }
 
 h1, h2, h3, h4, h5, h6{
+  font-weight: 700;
   font-weight: var(--boldweight);
+  color: hsl( 0, 0%,     0%   );
   color: var(--black);
+  margin-bottom: 0.9375rem;
   margin-bottom: var(--spacing);
 }
 
 p{
+  margin: 0.9375rem 0;
   margin: var(--spacing) 0;
 }
 
 h1{
-  font-size: var(--rem-2);
+  font-size: 2rem;
   font-size: var(--rem-2);
 }
 
 h2{
-  font-size: var(--rem-1-2);
+  font-size: 1.2rem;
   font-size: var(--rem-1-2);
 }
 
 h3{
-  font-size: var(--rem-1);
+  font-size: 1rem;
   font-size: var(--rem-1);
 }
 
 h4{
-  font-size: var(--rem-08);
+  font-size: 0.8rem;
   font-size: var(--rem-08);
 }
 
 h5{
-  font-size: var(--rem-07);
+  font-size: 0.7rem;
   font-size: var(--rem-07);
 }
 
 h6{
-  font-size: var(--rem-07);
+  font-size: 0.7rem;
   font-size: var(--rem-07);
 }
 
 p{
+  font-family: sans-serif;
   font-family: var(--sans);
+  font-weight: 500;
   font-weight: var(--bookweight);
 }
 
 label{
   display: block;
+  font-family: sans-serif;
   font-family: var(--sans);
+  font-weight: 600;
   font-weight: var(--heavyweight);
+  font-size: 0.8rem;
   font-size: var(--rem-08);
-  font-size: var(--rem-08);
+  color: hsl( 0, 0%,     0%   );
   color: var(--black);
-  margin-bottom: calc(var(--spacing) * 0.5);
+  margin-bottom: calc(0.9375rem * 0.5 );
+  margin-bottom: calc(var(--spacing) * 0.5 );
 }
 
 a:link, a:active, a:link {
+  color: var(--primary);
   color: var(--primary);
 }
 
@@ -333,9 +391,7 @@ a:link, a:active, a:link {
    ––––––– */
 
 :root{
-  --spacing: 15px;
   --spacing: 0.9375rem;
-  --border-radius: 4.8px;
   --border-radius: 0.3rem;
   --transition-all: 0.36s all;
 }
@@ -415,8 +471,11 @@ I can write and include documentation for my modules right here in the comfort o
   </div>
 </div>
 
-<Svg objectfit="cover" bgcolor="#FE8822cc" largeSrc="iknow/guidelines-cover.png" on:loadingComplete="set({ p8: true })"/>
-
+<Svg icon='search' color='#fff'/>
+<Svg icon='copy' color='#ff0000'/>
+<Svg icon='add' color='#fff'/>
+<Svg icon='share' color='#fff'/>
+<Svg icon='info' color='#fff'/>
 */
 
 /* UTILITY 
@@ -729,29 +788,22 @@ section: Layout
    ––––––– */
 
 .flex{
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap
+  flex-wrap: wrap;
   /*padding-top: 1px;*/
-}
+  &.gutterless .item{
+    padding: 0;
+  }
 
-.flex.gutterless .item{
-  padding: 0;
-}
-
-.flex .item{
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -ms-flex-item-align: stretch;
-      align-self: stretch;
-  padding: calc(var(--spacing) * 0.5);
-}
-
-.flex .item.gutterless{
-  padding: 0;
+  & .item{
+    flex-grow: 1;
+    align-self: stretch;
+    padding: calc(0.9375rem * 0.5);
+    padding: calc(var(--spacing) * 0.5);
+    &.gutterless{
+      padding: 0;
+    }
+  }
 }
 
 /* --
@@ -800,38 +852,30 @@ section: Flex
 }
 
 .-d-flex{
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  -ms-flex-direction: row;
-      flex-direction: row;
+  flex-flow: row wrap;
+  align-items: baseline;
+  flex-direction: row;
 }
 
 /* -- Colours
    –––––––––– */
 
-.-white                         { color: var(--white);              }
+.-white                         { color: hsl( 0, 100%,     100% ); color: var(--white);              }
 
-.-bg-white                      { background: var(--white);         }
+.-bg-white                      { background: hsl( 0, 100%,     100% ); background: var(--white);         }
 
-.-bg-grey                       { background: var(--grey);          }
+.-bg-grey                       { background: hsl( 220, 30%,      60%); background: var(--grey);          }
 
-.-bg-grey-100                   { background: var(--grey-100);      }
+.-bg-grey-100                   { background: hsl( 220, 30%,      98%  ); background: var(--grey-100);      }
 
-.-bg-grey-200                   { background: var(--grey-200);      }
+.-bg-grey-200                   { background: hsl( 220, 30%,      96%  ); background: var(--grey-200);      }
 
-.-bg-grey-300                   { background: var(--grey-300);      }
+.-bg-grey-300                   { background: hsl( 220, 30%,      94%  ); background: var(--grey-300);      }
 
-.-bg-grey-500                   { background: var(--grey-500);      }
+.-bg-grey-500                   { background: hsl( 220, 30%,      70%  ); background: var(--grey-500);      }
 
-.-bg-grey-900                   { background: var(--grey-900);      }
+.-bg-grey-900                   { background: hsl( 220, 30%,      30%  ); background: var(--grey-900);      }
 
 /*---
 section: Utility 
@@ -863,21 +907,20 @@ Where are my Utilities?
 
 @supports (display: grid){
     .-w-10 {
-        width: 10% !important
+        width: 10% !important;
+        &.col:not(.-fixed){
+          width: auto !important;
+          grid-column-end: span 1;
+        }
       }
-    .-w-10.col:not(.-fixed){
-    width: auto !important;
-    grid-column-end: span 1;
-  }
     
     .-h-10 {
-      height: 10% !important
+      height: 10% !important;
+      &.col:not(.-fixed){
+        height: auto !important;
+        grid-row-end: span 1;
+      }
     }
-    
-    .-h-10.col:not(.-fixed){
-    height: auto !important;
-    grid-row-end: span 1;
-  }
   
     .-vw-10 {
       width: 10% !important;
@@ -917,21 +960,20 @@ Where are my Utilities?
 
 @supports (display: grid){
     .-w-12 {
-        width: 12% !important
+        width: 12% !important;
+        &.col:not(.-fixed){
+          width: auto !important;
+          grid-column-end: span 1.2000000000000002;
+        }
       }
-    .-w-12.col:not(.-fixed){
-    width: auto !important;
-    grid-column-end: span 1.2000000000000002;
-  }
     
     .-h-12 {
-      height: 12% !important
+      height: 12% !important;
+      &.col:not(.-fixed){
+        height: auto !important;
+        grid-row-end: span 1.2000000000000002;
+      }
     }
-    
-    .-h-12.col:not(.-fixed){
-    height: auto !important;
-    grid-row-end: span 1.2000000000000002;
-  }
   
     .-vw-12 {
       width: 12% !important;
@@ -971,21 +1013,20 @@ Where are my Utilities?
 
 @supports (display: grid){
     .-w-14 {
-        width: 14% !important
+        width: 14% !important;
+        &.col:not(.-fixed){
+          width: auto !important;
+          grid-column-end: span 1.4000000000000001;
+        }
       }
-    .-w-14.col:not(.-fixed){
-    width: auto !important;
-    grid-column-end: span 1.4000000000000001;
-  }
     
     .-h-14 {
-      height: 14% !important
+      height: 14% !important;
+      &.col:not(.-fixed){
+        height: auto !important;
+        grid-row-end: span 1.4000000000000001;
+      }
     }
-    
-    .-h-14.col:not(.-fixed){
-    height: auto !important;
-    grid-row-end: span 1.4000000000000001;
-  }
   
     .-vw-14 {
       width: 14% !important;
@@ -1025,21 +1066,20 @@ Where are my Utilities?
 
 @supports (display: grid){
     .-w-15 {
-        width: 15% !important
+        width: 15% !important;
+        &.col:not(.-fixed){
+          width: auto !important;
+          grid-column-end: span 1.5;
+        }
       }
-    .-w-15.col:not(.-fixed){
-    width: auto !important;
-    grid-column-end: span 1.5;
-  }
     
     .-h-15 {
-      height: 15% !important
+      height: 15% !important;
+      &.col:not(.-fixed){
+        height: auto !important;
+        grid-row-end: span 1.5;
+      }
     }
-    
-    .-h-15.col:not(.-fixed){
-    height: auto !important;
-    grid-row-end: span 1.5;
-  }
   
     .-vw-15 {
       width: 15% !important;
@@ -1079,21 +1119,20 @@ Where are my Utilities?
 
 @supports (display: grid){
     .-w-18 {
-        width: 18% !important
+        width: 18% !important;
+        &.col:not(.-fixed){
+          width: auto !important;
+          grid-column-end: span 1.8;
+        }
       }
-    .-w-18.col:not(.-fixed){
-    width: auto !important;
-    grid-column-end: span 1.8;
-  }
     
     .-h-18 {
-      height: 18% !important
+      height: 18% !important;
+      &.col:not(.-fixed){
+        height: auto !important;
+        grid-row-end: span 1.8;
+      }
     }
-    
-    .-h-18.col:not(.-fixed){
-    height: auto !important;
-    grid-row-end: span 1.8;
-  }
   
     .-vw-18 {
       width: 18% !important;
@@ -1133,21 +1172,20 @@ Where are my Utilities?
 
 @supports (display: grid){
     .-w-20 {
-        width: 20% !important
+        width: 20% !important;
+        &.col:not(.-fixed){
+          width: auto !important;
+          grid-column-end: span 2;
+        }
       }
-    .-w-20.col:not(.-fixed){
-    width: auto !important;
-    grid-column-end: span 2;
-  }
     
     .-h-20 {
-      height: 20% !important
+      height: 20% !important;
+      &.col:not(.-fixed){
+        height: auto !important;
+        grid-row-end: span 2;
+      }
     }
-    
-    .-h-20.col:not(.-fixed){
-    height: auto !important;
-    grid-row-end: span 2;
-  }
   
     .-vw-20 {
       width: 20% !important;
@@ -1187,21 +1225,20 @@ Where are my Utilities?
 
 @supports (display: grid){
     .-w-22 {
-        width: 22% !important
+        width: 22% !important;
+        &.col:not(.-fixed){
+          width: auto !important;
+          grid-column-end: span 2.2;
+        }
       }
-    .-w-22.col:not(.-fixed){
-    width: auto !important;
-    grid-column-end: span 2.2;
-  }
     
     .-h-22 {
-      height: 22% !important
+      height: 22% !important;
+      &.col:not(.-fixed){
+        height: auto !important;
+        grid-row-end: span 2.2;
+      }
     }
-    
-    .-h-22.col:not(.-fixed){
-    height: auto !important;
-    grid-row-end: span 2.2;
-  }
   
     .-vw-22 {
       width: 22% !important;
@@ -1241,21 +1278,20 @@ Where are my Utilities?
 
 @supports (display: grid){
     .-w-24 {
-        width: 24% !important
+        width: 24% !important;
+        &.col:not(.-fixed){
+          width: auto !important;
+          grid-column-end: span 2.4000000000000004;
+        }
       }
-    .-w-24.col:not(.-fixed){
-    width: auto !important;
-    grid-column-end: span 2.4000000000000004;
-  }
     
     .-h-24 {
-      height: 24% !important
+      height: 24% !important;
+      &.col:not(.-fixed){
+        height: auto !important;
+        grid-row-end: span 2.4000000000000004;
+      }
     }
-    
-    .-h-24.col:not(.-fixed){
-    height: auto !important;
-    grid-row-end: span 2.4000000000000004;
-  }
   
     .-vw-24 {
       width: 24% !important;
@@ -1295,21 +1331,20 @@ Where are my Utilities?
 
 @supports (display: grid){
     .-w-25 {
-        width: 25% !important
+        width: 25% !important;
+        &.col:not(.-fixed){
+          width: auto !important;
+          grid-column-end: span 2.5;
+        }
       }
-    .-w-25.col:not(.-fixed){
-    width: auto !important;
-    grid-column-end: span 2.5;
-  }
     
     .-h-25 {
-      height: 25% !important
+      height: 25% !important;
+      &.col:not(.-fixed){
+        height: auto !important;
+        grid-row-end: span 2.5;
+      }
     }
-    
-    .-h-25.col:not(.-fixed){
-    height: auto !important;
-    grid-row-end: span 2.5;
-  }
   
     .-vw-25 {
       width: 25% !important;
@@ -1349,21 +1384,20 @@ Where are my Utilities?
 
 @supports (display: grid){
     .-w-30 {
-        width: 30% !important
+        width: 30% !important;
+        &.col:not(.-fixed){
+          width: auto !important;
+          grid-column-end: span 3;
+        }
       }
-    .-w-30.col:not(.-fixed){
-    width: auto !important;
-    grid-column-end: span 3;
-  }
     
     .-h-30 {
-      height: 30% !important
+      height: 30% !important;
+      &.col:not(.-fixed){
+        height: auto !important;
+        grid-row-end: span 3;
+      }
     }
-    
-    .-h-30.col:not(.-fixed){
-    height: auto !important;
-    grid-row-end: span 3;
-  }
   
     .-vw-30 {
       width: 30% !important;
@@ -1403,21 +1437,20 @@ Where are my Utilities?
 
 @supports (display: grid){
     .-w-40 {
-        width: 40% !important
+        width: 40% !important;
+        &.col:not(.-fixed){
+          width: auto !important;
+          grid-column-end: span 4;
+        }
       }
-    .-w-40.col:not(.-fixed){
-    width: auto !important;
-    grid-column-end: span 4;
-  }
     
     .-h-40 {
-      height: 40% !important
+      height: 40% !important;
+      &.col:not(.-fixed){
+        height: auto !important;
+        grid-row-end: span 4;
+      }
     }
-    
-    .-h-40.col:not(.-fixed){
-    height: auto !important;
-    grid-row-end: span 4;
-  }
   
     .-vw-40 {
       width: 40% !important;
@@ -1457,21 +1490,20 @@ Where are my Utilities?
 
 @supports (display: grid){
     .-w-50 {
-        width: 50% !important
+        width: 50% !important;
+        &.col:not(.-fixed){
+          width: auto !important;
+          grid-column-end: span 5;
+        }
       }
-    .-w-50.col:not(.-fixed){
-    width: auto !important;
-    grid-column-end: span 5;
-  }
     
     .-h-50 {
-      height: 50% !important
+      height: 50% !important;
+      &.col:not(.-fixed){
+        height: auto !important;
+        grid-row-end: span 5;
+      }
     }
-    
-    .-h-50.col:not(.-fixed){
-    height: auto !important;
-    grid-row-end: span 5;
-  }
   
     .-vw-50 {
       width: 50% !important;
@@ -1511,21 +1543,20 @@ Where are my Utilities?
 
 @supports (display: grid){
     .-w-58 {
-        width: 58% !important
+        width: 58% !important;
+        &.col:not(.-fixed){
+          width: auto !important;
+          grid-column-end: span 5.800000000000001;
+        }
       }
-    .-w-58.col:not(.-fixed){
-    width: auto !important;
-    grid-column-end: span 5.800000000000001;
-  }
     
     .-h-58 {
-      height: 58% !important
+      height: 58% !important;
+      &.col:not(.-fixed){
+        height: auto !important;
+        grid-row-end: span 5.800000000000001;
+      }
     }
-    
-    .-h-58.col:not(.-fixed){
-    height: auto !important;
-    grid-row-end: span 5.800000000000001;
-  }
   
     .-vw-58 {
       width: 58% !important;
@@ -1565,21 +1596,20 @@ Where are my Utilities?
 
 @supports (display: grid){
     .-w-60 {
-        width: 60% !important
+        width: 60% !important;
+        &.col:not(.-fixed){
+          width: auto !important;
+          grid-column-end: span 6;
+        }
       }
-    .-w-60.col:not(.-fixed){
-    width: auto !important;
-    grid-column-end: span 6;
-  }
     
     .-h-60 {
-      height: 60% !important
+      height: 60% !important;
+      &.col:not(.-fixed){
+        height: auto !important;
+        grid-row-end: span 6;
+      }
     }
-    
-    .-h-60.col:not(.-fixed){
-    height: auto !important;
-    grid-row-end: span 6;
-  }
   
     .-vw-60 {
       width: 60% !important;
@@ -1619,21 +1649,20 @@ Where are my Utilities?
 
 @supports (display: grid){
     .-w-70 {
-        width: 70% !important
+        width: 70% !important;
+        &.col:not(.-fixed){
+          width: auto !important;
+          grid-column-end: span 7;
+        }
       }
-    .-w-70.col:not(.-fixed){
-    width: auto !important;
-    grid-column-end: span 7;
-  }
     
     .-h-70 {
-      height: 70% !important
+      height: 70% !important;
+      &.col:not(.-fixed){
+        height: auto !important;
+        grid-row-end: span 7;
+      }
     }
-    
-    .-h-70.col:not(.-fixed){
-    height: auto !important;
-    grid-row-end: span 7;
-  }
   
     .-vw-70 {
       width: 70% !important;
@@ -1673,21 +1702,20 @@ Where are my Utilities?
 
 @supports (display: grid){
     .-w-75 {
-        width: 75% !important
+        width: 75% !important;
+        &.col:not(.-fixed){
+          width: auto !important;
+          grid-column-end: span 7.5;
+        }
       }
-    .-w-75.col:not(.-fixed){
-    width: auto !important;
-    grid-column-end: span 7.5;
-  }
     
     .-h-75 {
-      height: 75% !important
+      height: 75% !important;
+      &.col:not(.-fixed){
+        height: auto !important;
+        grid-row-end: span 7.5;
+      }
     }
-    
-    .-h-75.col:not(.-fixed){
-    height: auto !important;
-    grid-row-end: span 7.5;
-  }
   
     .-vw-75 {
       width: 75% !important;
@@ -1727,21 +1755,20 @@ Where are my Utilities?
 
 @supports (display: grid){
     .-w-80 {
-        width: 80% !important
+        width: 80% !important;
+        &.col:not(.-fixed){
+          width: auto !important;
+          grid-column-end: span 8;
+        }
       }
-    .-w-80.col:not(.-fixed){
-    width: auto !important;
-    grid-column-end: span 8;
-  }
     
     .-h-80 {
-      height: 80% !important
+      height: 80% !important;
+      &.col:not(.-fixed){
+        height: auto !important;
+        grid-row-end: span 8;
+      }
     }
-    
-    .-h-80.col:not(.-fixed){
-    height: auto !important;
-    grid-row-end: span 8;
-  }
   
     .-vw-80 {
       width: 80% !important;
@@ -1781,21 +1808,20 @@ Where are my Utilities?
 
 @supports (display: grid){
     .-w-90 {
-        width: 90% !important
+        width: 90% !important;
+        &.col:not(.-fixed){
+          width: auto !important;
+          grid-column-end: span 9;
+        }
       }
-    .-w-90.col:not(.-fixed){
-    width: auto !important;
-    grid-column-end: span 9;
-  }
     
     .-h-90 {
-      height: 90% !important
+      height: 90% !important;
+      &.col:not(.-fixed){
+        height: auto !important;
+        grid-row-end: span 9;
+      }
     }
-    
-    .-h-90.col:not(.-fixed){
-    height: auto !important;
-    grid-row-end: span 9;
-  }
   
     .-vw-90 {
       width: 90% !important;
@@ -1835,21 +1861,20 @@ Where are my Utilities?
 
 @supports (display: grid){
     .-w-100 {
-        width: 100% !important
+        width: 100% !important;
+        &.col:not(.-fixed){
+          width: auto !important;
+          grid-column-end: span 10;
+        }
       }
-    .-w-100.col:not(.-fixed){
-    width: auto !important;
-    grid-column-end: span 10;
-  }
     
     .-h-100 {
-      height: 100% !important
+      height: 100% !important;
+      &.col:not(.-fixed){
+        height: auto !important;
+        grid-row-end: span 10;
+      }
     }
-    
-    .-h-100.col:not(.-fixed){
-    height: auto !important;
-    grid-row-end: span 10;
-  }
   
     .-vw-100 {
       width: 100% !important;
@@ -2146,62 +2171,112 @@ Where are my Utilities?
   left: 0;
 }
 
-.-top-half: calc(var(--spacing) * 0.5);
+.-top-half: calc( 0.9375rem * 0.5 );
 
-.-top-1: calc(var(--spacing) * 1);
+.-top-half: calc( var(--spacing) * 0.5 );
 
-.-top-2: calc(var(--spacing) * 2);
+.-top-1: calc( 0.9375rem * 1 );
 
-.-top-3: calc(var(--spacing) * 3);
+.-top-1: calc( var(--spacing) * 1 );
 
-.-top-4: calc(var(--spacing) * 4);
+.-top-2: calc( 0.9375rem * 2 );
 
-.-top-5: calc(var(--spacing) * 5);
+.-top-2: calc( var(--spacing) * 2 );
 
-.-right-half: calc(var(--spacing) * 0.5);
+.-top-3: calc( 0.9375rem * 3 );
 
-.-right-1: calc(var(--spacing) * 1);
+.-top-3: calc( var(--spacing) * 3 );
 
-.-right-2: calc(var(--spacing) * 2);
+.-top-4: calc( 0.9375rem * 4 );
 
-.-right-3: calc(var(--spacing) * 3);
+.-top-4: calc( var(--spacing) * 4 );
 
-.-right-4: calc(var(--spacing) * 4);
+.-top-5: calc( 0.9375rem * 5 );
 
-.-right-5: calc(var(--spacing) * 5);
+.-top-5: calc( var(--spacing) * 5 );
 
-.-bottom-half: calc(var(--spacing) * 0.5);
+.-right-half: calc( 0.9375rem * 0.5 );
 
-.-bottom-1: calc(var(--spacing) * 1);
+.-right-half: calc( var(--spacing) * 0.5 );
 
-.-bottom-2: calc(var(--spacing) * 2);
+.-right-1: calc( 0.9375rem * 1 );
 
-.-bottom-3: calc(var(--spacing) * 3);
+.-right-1: calc( var(--spacing) * 1 );
 
-.-bottom-4: calc(var(--spacing) * 4);
+.-right-2: calc( 0.9375rem * 2 );
 
-.-bottom-5: calc(var(--spacing) * 5);
+.-right-2: calc( var(--spacing) * 2 );
 
-.-left-half: calc(var(--spacing) * 0.5);
+.-right-3: calc( 0.9375rem * 3 );
 
-.-left-1: calc(var(--spacing) * 1);
+.-right-3: calc( var(--spacing) * 3 );
 
-.-left-2: calc(var(--spacing) * 2);
+.-right-4: calc( 0.9375rem * 4 );
 
-.-left-3: calc(var(--spacing) * 3);
+.-right-4: calc( var(--spacing) * 4 );
 
-.-left-4: calc(var(--spacing) * 4);
+.-right-5: calc( 0.9375rem * 5 );
 
-.-left-5: calc(var(--spacing) * 5);
+.-right-5: calc( var(--spacing) * 5 );
+
+.-bottom-half: calc( 0.9375rem * 0.5 );
+
+.-bottom-half: calc( var(--spacing) * 0.5 );
+
+.-bottom-1: calc( 0.9375rem * 1 );
+
+.-bottom-1: calc( var(--spacing) * 1 );
+
+.-bottom-2: calc( 0.9375rem * 2 );
+
+.-bottom-2: calc( var(--spacing) * 2 );
+
+.-bottom-3: calc( 0.9375rem * 3 );
+
+.-bottom-3: calc( var(--spacing) * 3 );
+
+.-bottom-4: calc( 0.9375rem * 4 );
+
+.-bottom-4: calc( var(--spacing) * 4 );
+
+.-bottom-5: calc( 0.9375rem * 5 );
+
+.-bottom-5: calc( var(--spacing) * 5 );
+
+.-left-half: calc( 0.9375rem * 0.5 );
+
+.-left-half: calc( var(--spacing) * 0.5 );
+
+.-left-1: calc( 0.9375rem * 1 );
+
+.-left-1: calc( var(--spacing) * 1 );
+
+.-left-2: calc( 0.9375rem * 2 );
+
+.-left-2: calc( var(--spacing) * 2 );
+
+.-left-3: calc( 0.9375rem * 3 );
+
+.-left-3: calc( var(--spacing) * 3 );
+
+.-left-4: calc( 0.9375rem * 4 );
+
+.-left-4: calc( var(--spacing) * 4 );
+
+.-left-5: calc( 0.9375rem * 5 );
+
+.-left-5: calc( var(--spacing) * 5 );
 
 /* -- Spacing
    –––––––––– */
 
 .-m-all{
+  margin: 0.9375rem;
   margin: var(--spacing);
 }
 
 .-p-all{
+  padding: 0.9375rem;
   padding: var(--spacing);
 }
 
@@ -2217,252 +2292,304 @@ Where are my Utilities?
     margin: auto;
 }
 
-.-p-top-half {padding-top:  calc(var(--spacing) * 0.5);}
+.-p-top-half {padding-top:  calc(0.9375rem * 0.5       );padding-top:  calc(var(--spacing) * 0.5       );}
 
-.-m-top-half {margin-top:   calc(var(--spacing) * 0.5);}
+.-m-top-half {margin-top:   calc(0.9375rem * 0.5       );margin-top:   calc(var(--spacing) * 0.5       );}
 
-.-p-top-1 {padding-top:     calc(var(--spacing) * 1);}
+.-p-top-1 {padding-top:     calc(0.9375rem * 1         );padding-top:     calc(var(--spacing) * 1         );}
 
-.-m-top-1 {margin-top:      calc(var(--spacing) * 1);}
+.-m-top-1 {margin-top:      calc(0.9375rem * 1         );margin-top:      calc(var(--spacing) * 1         );}
 
-.-p-top-2 {padding-top:     calc(var(--spacing) * 2);}
+.-p-top-2 {padding-top:     calc(0.9375rem * 2         );padding-top:     calc(var(--spacing) * 2         );}
 
-.-m-top-2 {margin-top:      calc(var(--spacing) * 2);}
+.-m-top-2 {margin-top:      calc(0.9375rem * 2         );margin-top:      calc(var(--spacing) * 2         );}
 
-.-p-top-3 {padding-top:     calc(var(--spacing) * 3);}
+.-p-top-3 {padding-top:     calc(0.9375rem * 3         );padding-top:     calc(var(--spacing) * 3         );}
 
-.-m-top-3 {margin-top:      calc(var(--spacing) * 3);}
+.-m-top-3 {margin-top:      calc(0.9375rem * 3         );margin-top:      calc(var(--spacing) * 3         );}
 
-.-p-top-4 {padding-top:     calc(var(--spacing) * 4);}
+.-p-top-4 {padding-top:     calc(0.9375rem * 4         );padding-top:     calc(var(--spacing) * 4         );}
 
-.-m-top-4 {margin-top:      calc(var(--spacing) * 4);}
+.-m-top-4 {margin-top:      calc(0.9375rem * 4         );margin-top:      calc(var(--spacing) * 4         );}
 
-.-p-top-5 {padding-top:     calc(var(--spacing) * 5);}
+.-p-top-5 {padding-top:     calc(0.9375rem * 5         );padding-top:     calc(var(--spacing) * 5         );}
 
-.-m-top-5 {margin-top:      calc(var(--spacing) * 5);}
+.-m-top-5 {margin-top:      calc(0.9375rem * 5         );margin-top:      calc(var(--spacing) * 5         );}
 
-.-p-right-half {padding-right:  calc(var(--spacing) * 0.5);}
+.-p-right-half {padding-right:  calc(0.9375rem * 0.5       );padding-right:  calc(var(--spacing) * 0.5       );}
 
-.-m-right-half {margin-right:   calc(var(--spacing) * 0.5);}
+.-m-right-half {margin-right:   calc(0.9375rem * 0.5       );margin-right:   calc(var(--spacing) * 0.5       );}
 
-.-p-right-1 {padding-right:     calc(var(--spacing) * 1);}
+.-p-right-1 {padding-right:     calc(0.9375rem * 1         );padding-right:     calc(var(--spacing) * 1         );}
 
-.-m-right-1 {margin-right:      calc(var(--spacing) * 1);}
+.-m-right-1 {margin-right:      calc(0.9375rem * 1         );margin-right:      calc(var(--spacing) * 1         );}
 
-.-p-right-2 {padding-right:     calc(var(--spacing) * 2);}
+.-p-right-2 {padding-right:     calc(0.9375rem * 2         );padding-right:     calc(var(--spacing) * 2         );}
 
-.-m-right-2 {margin-right:      calc(var(--spacing) * 2);}
+.-m-right-2 {margin-right:      calc(0.9375rem * 2         );margin-right:      calc(var(--spacing) * 2         );}
 
-.-p-right-3 {padding-right:     calc(var(--spacing) * 3);}
+.-p-right-3 {padding-right:     calc(0.9375rem * 3         );padding-right:     calc(var(--spacing) * 3         );}
 
-.-m-right-3 {margin-right:      calc(var(--spacing) * 3);}
+.-m-right-3 {margin-right:      calc(0.9375rem * 3         );margin-right:      calc(var(--spacing) * 3         );}
 
-.-p-right-4 {padding-right:     calc(var(--spacing) * 4);}
+.-p-right-4 {padding-right:     calc(0.9375rem * 4         );padding-right:     calc(var(--spacing) * 4         );}
 
-.-m-right-4 {margin-right:      calc(var(--spacing) * 4);}
+.-m-right-4 {margin-right:      calc(0.9375rem * 4         );margin-right:      calc(var(--spacing) * 4         );}
 
-.-p-right-5 {padding-right:     calc(var(--spacing) * 5);}
+.-p-right-5 {padding-right:     calc(0.9375rem * 5         );padding-right:     calc(var(--spacing) * 5         );}
 
-.-m-right-5 {margin-right:      calc(var(--spacing) * 5);}
+.-m-right-5 {margin-right:      calc(0.9375rem * 5         );margin-right:      calc(var(--spacing) * 5         );}
 
-.-p-bottom-half {padding-bottom:  calc(var(--spacing) * 0.5);}
+.-p-bottom-half {padding-bottom:  calc(0.9375rem * 0.5       );padding-bottom:  calc(var(--spacing) * 0.5       );}
 
-.-m-bottom-half {margin-bottom:   calc(var(--spacing) * 0.5);}
+.-m-bottom-half {margin-bottom:   calc(0.9375rem * 0.5       );margin-bottom:   calc(var(--spacing) * 0.5       );}
 
-.-p-bottom-1 {padding-bottom:     calc(var(--spacing) * 1);}
+.-p-bottom-1 {padding-bottom:     calc(0.9375rem * 1         );padding-bottom:     calc(var(--spacing) * 1         );}
 
-.-m-bottom-1 {margin-bottom:      calc(var(--spacing) * 1);}
+.-m-bottom-1 {margin-bottom:      calc(0.9375rem * 1         );margin-bottom:      calc(var(--spacing) * 1         );}
 
-.-p-bottom-2 {padding-bottom:     calc(var(--spacing) * 2);}
+.-p-bottom-2 {padding-bottom:     calc(0.9375rem * 2         );padding-bottom:     calc(var(--spacing) * 2         );}
 
-.-m-bottom-2 {margin-bottom:      calc(var(--spacing) * 2);}
+.-m-bottom-2 {margin-bottom:      calc(0.9375rem * 2         );margin-bottom:      calc(var(--spacing) * 2         );}
 
-.-p-bottom-3 {padding-bottom:     calc(var(--spacing) * 3);}
+.-p-bottom-3 {padding-bottom:     calc(0.9375rem * 3         );padding-bottom:     calc(var(--spacing) * 3         );}
 
-.-m-bottom-3 {margin-bottom:      calc(var(--spacing) * 3);}
+.-m-bottom-3 {margin-bottom:      calc(0.9375rem * 3         );margin-bottom:      calc(var(--spacing) * 3         );}
 
-.-p-bottom-4 {padding-bottom:     calc(var(--spacing) * 4);}
+.-p-bottom-4 {padding-bottom:     calc(0.9375rem * 4         );padding-bottom:     calc(var(--spacing) * 4         );}
 
-.-m-bottom-4 {margin-bottom:      calc(var(--spacing) * 4);}
+.-m-bottom-4 {margin-bottom:      calc(0.9375rem * 4         );margin-bottom:      calc(var(--spacing) * 4         );}
 
-.-p-bottom-5 {padding-bottom:     calc(var(--spacing) * 5);}
+.-p-bottom-5 {padding-bottom:     calc(0.9375rem * 5         );padding-bottom:     calc(var(--spacing) * 5         );}
 
-.-m-bottom-5 {margin-bottom:      calc(var(--spacing) * 5);}
+.-m-bottom-5 {margin-bottom:      calc(0.9375rem * 5         );margin-bottom:      calc(var(--spacing) * 5         );}
 
-.-p-left-half {padding-left:  calc(var(--spacing) * 0.5);}
+.-p-left-half {padding-left:  calc(0.9375rem * 0.5       );padding-left:  calc(var(--spacing) * 0.5       );}
 
-.-m-left-half {margin-left:   calc(var(--spacing) * 0.5);}
+.-m-left-half {margin-left:   calc(0.9375rem * 0.5       );margin-left:   calc(var(--spacing) * 0.5       );}
 
-.-p-left-1 {padding-left:     calc(var(--spacing) * 1);}
+.-p-left-1 {padding-left:     calc(0.9375rem * 1         );padding-left:     calc(var(--spacing) * 1         );}
 
-.-m-left-1 {margin-left:      calc(var(--spacing) * 1);}
+.-m-left-1 {margin-left:      calc(0.9375rem * 1         );margin-left:      calc(var(--spacing) * 1         );}
 
-.-p-left-2 {padding-left:     calc(var(--spacing) * 2);}
+.-p-left-2 {padding-left:     calc(0.9375rem * 2         );padding-left:     calc(var(--spacing) * 2         );}
 
-.-m-left-2 {margin-left:      calc(var(--spacing) * 2);}
+.-m-left-2 {margin-left:      calc(0.9375rem * 2         );margin-left:      calc(var(--spacing) * 2         );}
 
-.-p-left-3 {padding-left:     calc(var(--spacing) * 3);}
+.-p-left-3 {padding-left:     calc(0.9375rem * 3         );padding-left:     calc(var(--spacing) * 3         );}
 
-.-m-left-3 {margin-left:      calc(var(--spacing) * 3);}
+.-m-left-3 {margin-left:      calc(0.9375rem * 3         );margin-left:      calc(var(--spacing) * 3         );}
 
-.-p-left-4 {padding-left:     calc(var(--spacing) * 4);}
+.-p-left-4 {padding-left:     calc(0.9375rem * 4         );padding-left:     calc(var(--spacing) * 4         );}
 
-.-m-left-4 {margin-left:      calc(var(--spacing) * 4);}
+.-m-left-4 {margin-left:      calc(0.9375rem * 4         );margin-left:      calc(var(--spacing) * 4         );}
 
-.-p-left-5 {padding-left:     calc(var(--spacing) * 5);}
+.-p-left-5 {padding-left:     calc(0.9375rem * 5         );padding-left:     calc(var(--spacing) * 5         );}
 
-.-m-left-5 {margin-left:      calc(var(--spacing) * 5);}
+.-m-left-5 {margin-left:      calc(0.9375rem * 5         );margin-left:      calc(var(--spacing) * 5         );}
 
 /* padding */
 
 .-p-all-half{
-  padding: calc(var(--spacing) * 0.5);
+  padding: calc(0.9375rem*0.5);
+  padding: calc(var(--spacing)*0.5);
 }
 
 .-p-all-1{
+  padding: 0.9375rem;
   padding: var(--spacing);
 }
 
 .-p-all-2{
-  padding: calc(var(--spacing) * 2);
+  padding: calc(0.9375rem *2);
+  padding: calc(var(--spacing) *2);
 }
 
 .-p-all-3{
-  padding: calc(var(--spacing) * 3);
+  padding: calc(0.9375rem *3);
+  padding: calc(var(--spacing) *3);
 }
 
 .-p-all-4{
-  padding: calc(var(--spacing) * 4);
+  padding: calc(0.9375rem *4);
+  padding: calc(var(--spacing) *4);
 }
 
 .-p-all-5{
-  padding: calc(var(--spacing) * 5);
+  padding: calc(0.9375rem *5);
+  padding: calc(var(--spacing) *5);
 }
 
 .-p-x-half{
-  padding-left:  calc(var(--spacing) * 0.5);
-  padding-right: calc(var(--spacing) * 0.5);
+  padding-left:  calc(0.9375rem *0.5);
+  padding-left:  calc(var(--spacing) *0.5);
+  padding-right: calc(0.9375rem *0.5);
+  padding-right: calc(var(--spacing) *0.5);
 }
 
 .-p-x-1{
-  padding-left:  calc(var(--spacing) * 1);
-  padding-right: calc(var(--spacing) * 1);
+  padding-left:  calc(0.9375rem *1);
+  padding-left:  calc(var(--spacing) *1);
+  padding-right: calc(0.9375rem *1);
+  padding-right: calc(var(--spacing) *1);
 }
 
 .-p-x-2{
-  padding-left:  calc(var(--spacing) * 2);
-  padding-right: calc(var(--spacing) * 2);
+  padding-left:  calc(0.9375rem *2);
+  padding-left:  calc(var(--spacing) *2);
+  padding-right: calc(0.9375rem *2);
+  padding-right: calc(var(--spacing) *2);
 }
 
 .-p-x-3{
-  padding-left:  calc(var(--spacing) * 3);
-  padding-right: calc(var(--spacing) * 3);
+  padding-left:  calc(0.9375rem *3);
+  padding-left:  calc(var(--spacing) *3);
+  padding-right: calc(0.9375rem *3);
+  padding-right: calc(var(--spacing) *3);
 }
 
 .-p-x-4{
-  padding-left:  calc(var(--spacing) * 4);
-  padding-right: calc(var(--spacing) * 4);
+  padding-left:  calc(0.9375rem *4);
+  padding-left:  calc(var(--spacing) *4);
+  padding-right: calc(0.9375rem *4);
+  padding-right: calc(var(--spacing) *4);
 }
 
 .-p-y-half{
-  padding-top:    calc(var(--spacing) * 0.5);
-  padding-bottom: calc(var(--spacing) * 0.5);
+  padding-top:    calc(0.9375rem *0.5);
+  padding-top:    calc(var(--spacing) *0.5);
+  padding-bottom: calc(0.9375rem *0.5);
+  padding-bottom: calc(var(--spacing) *0.5);
 }
 
 .-p-y-1{
-  padding-top:    calc(var(--spacing) * 1);
-  padding-bottom: calc(var(--spacing) * 1);
+  padding-top:    calc(0.9375rem *1);
+  padding-top:    calc(var(--spacing) *1);
+  padding-bottom: calc(0.9375rem *1);
+  padding-bottom: calc(var(--spacing) *1);
 }
 
 .-p-y-2{
-  padding-top:    calc(var(--spacing) * 2);
-  padding-bottom: calc(var(--spacing) * 2);
+  padding-top:    calc(0.9375rem *2);
+  padding-top:    calc(var(--spacing) *2);
+  padding-bottom: calc(0.9375rem *2);
+  padding-bottom: calc(var(--spacing) *2);
 }
 
 .-p-y-3{
-  padding-top:    calc(var(--spacing) * 3);
-  padding-bottom: calc(var(--spacing) * 3);
+  padding-top:    calc(0.9375rem *3);
+  padding-top:    calc(var(--spacing) *3);
+  padding-bottom: calc(0.9375rem *3);
+  padding-bottom: calc(var(--spacing) *3);
 }
 
 .-p-y-4{
-  padding-top:    calc(var(--spacing) * 4);
-  padding-bottom: calc(var(--spacing) * 4);
+  padding-top:    calc(0.9375rem *4);
+  padding-top:    calc(var(--spacing) *4);
+  padding-bottom: calc(0.9375rem *4);
+  padding-bottom: calc(var(--spacing) *4);
 }
 
 /* margin */
 
 .-m-all-half{
-  margin: calc(var(--spacing) * 0.5);
+  margin: calc(0.9375rem*0.5);
+  margin: calc(var(--spacing)*0.5);
 }
 
 .-m-all-1{
+  margin: 0.9375rem;
   margin: var(--spacing);
 }
 
 .-m-all-2{
-  margin: calc(var(--spacing) * 2);
+  margin: calc(0.9375rem *2);
+  margin: calc(var(--spacing) *2);
 }
 
 .-m-all-3{
-  margin: calc(var(--spacing) * 3);
+  margin: calc(0.9375rem *3);
+  margin: calc(var(--spacing) *3);
 }
 
 .-m-all-4{
-  margin: calc(var(--spacing) * 4);
+  margin: calc(0.9375rem *4);
+  margin: calc(var(--spacing) *4);
 }
 
 .-m-all-5{
-  margin: calc(var(--spacing) * 5);
+  margin: calc(0.9375rem *5);
+  margin: calc(var(--spacing) *5);
 }
 
 .-m-x-half{
-  margin-left:  calc(var(--spacing) * 0.5);
-  margin-right: calc(var(--spacing) * 0.5);
+  margin-left:  calc(0.9375rem *0.5);
+  margin-left:  calc(var(--spacing) *0.5);
+  margin-right: calc(0.9375rem *0.5);
+  margin-right: calc(var(--spacing) *0.5);
 }
 
 .-m-x-1{
-  margin-left:  calc(var(--spacing) * 1);
-  margin-right: calc(var(--spacing) * 1);
+  margin-left:  calc(0.9375rem *1);
+  margin-left:  calc(var(--spacing) *1);
+  margin-right: calc(0.9375rem *1);
+  margin-right: calc(var(--spacing) *1);
 }
 
 .-m-x-2{
-  margin-left:  calc(var(--spacing) * 2);
-  margin-right: calc(var(--spacing) * 2);
+  margin-left:  calc(0.9375rem *2);
+  margin-left:  calc(var(--spacing) *2);
+  margin-right: calc(0.9375rem *2);
+  margin-right: calc(var(--spacing) *2);
 }
 
 .-m-x-3{
-  margin-left:  calc(var(--spacing) * 3);
-  margin-right: calc(var(--spacing) * 3);
+  margin-left:  calc(0.9375rem *3);
+  margin-left:  calc(var(--spacing) *3);
+  margin-right: calc(0.9375rem *3);
+  margin-right: calc(var(--spacing) *3);
 }
 
 .-m-x-4{
-  margin-left:  calc(var(--spacing) * 4);
-  margin-right: calc(var(--spacing) * 4);
+  margin-left:  calc(0.9375rem *4);
+  margin-left:  calc(var(--spacing) *4);
+  margin-right: calc(0.9375rem *4);
+  margin-right: calc(var(--spacing) *4);
 }
 
 .-m-y-half{
-  margin-top:    calc(var(--spacing) * 0.5);
-  margin-bottom: calc(var(--spacing) * 0.5);
+  margin-top:    calc(0.9375rem *0.5);
+  margin-top:    calc(var(--spacing) *0.5);
+  margin-bottom: calc(0.9375rem *0.5);
+  margin-bottom: calc(var(--spacing) *0.5);
 }
 
 .-m-y-1{
-  margin-top:    calc(var(--spacing) * 1);
-  margin-bottom: calc(var(--spacing) * 1);
+  margin-top:    calc(0.9375rem *1);
+  margin-top:    calc(var(--spacing) *1);
+  margin-bottom: calc(0.9375rem *1);
+  margin-bottom: calc(var(--spacing) *1);
 }
 
 .-m-y-2{
-  margin-top:    calc(var(--spacing) * 2);
-  margin-bottom: calc(var(--spacing) * 2);
+  margin-top:    calc(0.9375rem *2);
+  margin-top:    calc(var(--spacing) *2);
+  margin-bottom: calc(0.9375rem *2);
+  margin-bottom: calc(var(--spacing) *2);
 }
 
 .-m-y-3{
-  margin-top:    calc(var(--spacing) * 3);
-  margin-bottom: calc(var(--spacing) * 3);
+  margin-top:    calc(0.9375rem *3);
+  margin-top:    calc(var(--spacing) *3);
+  margin-bottom: calc(0.9375rem *3);
+  margin-bottom: calc(var(--spacing) *3);
 }
 
 .-m-y-4{
-  margin-top:    calc(var(--spacing) * 4);
-  margin-bottom: calc(var(--spacing) * 4);
+  margin-top:    calc(0.9375rem *4);
+  margin-top:    calc(var(--spacing) *4);
+  margin-bottom: calc(0.9375rem *4);
+  margin-bottom: calc(var(--spacing) *4);
 }
 
 /* Text classes
@@ -2515,7 +2642,6 @@ Where are my Utilities?
 }
 
 .-lineheight-1-5{
-  line-height: 24px;
   line-height: 1.5rem;
 }
 
@@ -2535,62 +2661,50 @@ Where are my Utilities?
    –––––––––––– */
 
 .-rem-3 {
-  font-size: 48px;
   font-size: 3rem;
 }
 
 .-rem-2 {
-  font-size: 32px;
   font-size: 2rem;
 }
 
 .-rem-1-75 {
-  font-size: 28px;
   font-size: 1.75rem;
 }
 
 .-rem-1-5 {
-  font-size: 24px;
   font-size: 1.5rem;
 }
 
 .-rem-1-2 {
-  font-size: 19.2px;
   font-size: 1.2rem;
 }
 
 .-rem-1 {
-  font-size: 16px;
   font-size: 1rem;
 }
 
 .-rem-09 {
-  font-size: 14.4px;
   font-size: 0.9rem;
 }
 
 .-rem-085 {
-  font-size: 13.6px;
   font-size: 0.85rem;
 }
 
 .-rem-08 {
-  font-size: 12.8px;
   font-size: 0.8rem;
 }
 
 .-rem-075 {
-  font-size: 11.2px;
   font-size: 0.7rem;
 }
 
 .-rem-07 {
-  font-size: 11.2px;
   font-size: 0.7rem;
 }
 
 .-rem-06 {
-  font-size: 9.6px;
   font-size: 0.6rem;
 }
 
