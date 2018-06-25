@@ -25,10 +25,16 @@ module.exports = {
 			},
 			{
 				test: /\.svg$/,
-				loader: 'svg-sprite-loader',
-				options: {
-					extract: true
-				}
+				use: [
+					{ 
+						loader: 
+						'svg-sprite-loader',
+						options: {
+							extract: true
+						}
+					},
+					'svgo-loader'
+				]
 			}
 		]
 	},

@@ -1,5 +1,5 @@
-<svg class="icon" width={width} height={height}>
-  <use xlink:href="/client/sprite.svg#{icon}" style="--color: {color}"/>
+<svg class="icon" width={width} height={height} on:mouseenter="set({color: hovercolor, hovering: true})" on:mouseleave="set({color: startcolor, hovering: false})">
+  <use xlink:href="/client/sprite.svg#{icon}" style="fill: {hovering ? hovercolor : color}"  ref:svg/>
 </svg>
 
 <script>
@@ -22,9 +22,18 @@ export default {
     return {
       width: '32px',
       height: '32px',
-      css: ''
+      startcolor: '#fff',
+      css: '', 
+      hovering: false,
+      hovercolor: 'yellow'
     }
   }
 };
 </script>
 
+
+<style>
+ref:svg{
+  transition: 1s all;
+}
+</style>
