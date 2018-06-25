@@ -1,4 +1,4 @@
-<div role="switch" aria-checked="true" class="-text-center -d-block -m-auto -m-top-half switch is-{check}">
+<div role="switch" aria-checked="true" class="-text-center -d-block -m-auto -m-top-half switch is-{check}" ref:switch>
   <input type='checkbox' on:click='letsGo()' >
   <span class="switch--core"></span>
 </div>
@@ -37,22 +37,26 @@ export default {
 </script>
 
 <style>
+ref:switch{
+  --size: 30px;
+  --radius: 10em;
+}
 .switch{
 	align-items: center;
 	position: relative;
 	font-size: 14px;
-	line-height: 20px;
-	height: 20px;
+	line-height: var(--size);
+	height: var(--size);
 	vertical-align: middle;
 }
 .switch--core{
 	margin: 0;
 	display: inline-block;
 	position: relative;
-	width: 40px;
-	height: 20px;
+	width: calc(var(--size) * 2);
+	height: var(--size);
 	outline: none;
-	border-radius: 10px;
+	border-radius: var(--radius);
 	box-sizing: border-box;
 	background: var(--grey-400);
 	cursor: pointer;
@@ -71,27 +75,27 @@ export default {
 }
 .switch.is-true .switch--core:after {
     left: 100%;
-    margin-left: -18px;
+    margin-left: calc(var(--size) * -0.9);
 }
 .switch--core:after {
     content: "";
     position: absolute;
-    top: 2px;
-    left: 2px;
+    top: calc(var(--size) * 0.09);
+    left: calc(var(--size) * 0.1);
     border-radius: 100%;
     transition: all .3s;
-    width: 16px;
-    height: 16px;
+    width: calc(var(--size) * 0.8);
+    height: calc(var(--size) * 0.8);
     background-color: #fff;
 }
 .switch input{
 	border: none;
 	position: absolute;
-	height: 20px;
+	height: calc(var(--size) * 1.44);
 	margin: 0;
 	width: 100%;
-	left: 0px;
-	top: 0px;
+	left: 0;
+	top: 0;
 	background: none;
 	z-index: 10;
 	cursor: pointer;

@@ -1,13 +1,7 @@
+<svelte:window bind:scrollY='sy'/>
+ 	<div class="logo-container -text-center" style='transform: translate(0,{-sy * -0.55}px)'>
+		<img src="belmu-svg.svg" />
+	</div>
 <main>
-	<svelte:component this={Page} {...props}/>
+	<svelte:component this={Page} {...props} />
 </main>
-
-
-<style>
-main{
-	width: 90vw;
-	max-width: 900px;
-	margin: auto;
-	color: #fff;
-}
-</style>
