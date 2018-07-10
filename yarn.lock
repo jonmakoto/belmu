@@ -2093,9 +2093,9 @@ mdcss-theme-github@^2.1.0:
     ejs "^2.4.1"
     object-assign "^4.0.1"
 
-mdcss-theme-sapper@^1.0.12:
-  version "1.0.12"
-  resolved "https://registry.yarnpkg.com/mdcss-theme-sapper/-/mdcss-theme-sapper-1.0.12.tgz#22b9e2ca0c6d2e986c6d5be07de1b545c869ed45"
+mdcss-theme-sapper@^1.0.131:
+  version "1.0.131"
+  resolved "https://registry.yarnpkg.com/mdcss-theme-sapper/-/mdcss-theme-sapper-1.0.131.tgz#0374c7fda6bae691004c22608029e84d469463e4"
   dependencies:
     ejs "^2.3.4"
     fs-extra "^0.26.1"

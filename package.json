@@ -18,7 +18,7 @@
     "git-user-info": "^1.0.1",
     "inquirer": "^6.0.0",
     "mdcss": "^1.5.2",
-    "mdcss-theme-sapper": "^1.0.12",
+    "mdcss-theme-sapper": "^1.0.131",
     "polka": "^0.4.0",
     "postcss": "^6.0.22",
     "postcss-each": "^0.10.0",
