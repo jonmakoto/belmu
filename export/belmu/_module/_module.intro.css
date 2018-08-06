@@ -1,0 +1,27 @@
+/*---
+section: Module 
+---
+
+I can write and include documentation for my modules right here in the comfort of CSS!
+<div class="grid">
+  <div class="col">
+    <Switch on:switched='set({ inAgreement: true })'/>
+  </div>
+  <div class="col">
+    <Switch on:switched='set({ inAgreement: true })'/>
+  </div>
+  <div class="col">
+    <Switch on:switched='set({ inAgreement: true })'/>
+  </div>
+  <div class="col">
+    <Switch on:switched='set({ inAgreement: true })'/>
+  </div>
+</div>
+
+<Svg icon='search' color='#999' hovercolor="#222"/>
+<Svg icon='copy' color='#ff0000' hovercolor="#222"/>
+<Svg icon='add' color='#999' hovercolor="#222"/>
+<Svg icon='share' color='#999' hovercolor="#222"/>
+<Svg icon='info' color='#999' hovercolor="#222"/>
+*/
+

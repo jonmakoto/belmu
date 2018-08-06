@@ -1,0 +1,58 @@
+/* -- Colours (HSL Colours are good)
+   ––––––––––––––––––––––––––––––––– */
+
+:root{
+  --core-white:           0, 100%;
+  --core-black:           0, 0%;
+  --core-grey:            220, 30%;
+  --white:                hsl( var(--core-white),     100% );
+  --black:                hsl( var(--core-black),     0%   );
+
+  --grey:			            hsl( var(--core-grey),      60%);
+  --grey-900:	            hsl( var(--core-grey),      30%  );
+  --grey-800:	            hsl( var(--core-grey),      40%  );
+  --grey-700:			        hsl( var(--core-grey),      50%  );
+  --grey-600:			        hsl( var(--core-grey),      60%  );
+  --grey-500:			        hsl( var(--core-grey),      70%  );
+  --grey-400:			        hsl( var(--core-grey),      80%  );
+  --grey-300:			        hsl( var(--core-grey),      94%  );
+  --grey-200:			        hsl( var(--core-grey),      96%  );
+  --grey-100:			        hsl( var(--core-grey),      98%  );
+
+  --black:			          hsl( var(--core-black),     0%   );
+  --black-900:	          hsl( var(--core-black),     10%  );
+  --black-800:	          hsl( var(--core-black),     20%  );
+  --black-700:			      hsl( var(--core-black),     30%  );
+  --black-600:			      hsl( var(--core-black),     40%  );
+  --black-500:			      hsl( var(--core-black),     50%  );
+  --black-400:			      hsl( var(--core-black),     60%  );
+  --black-300:			      hsl( var(--core-black),     70%  );
+  --black-200:			      hsl( var(--core-black),     80%  );
+  --black-100:			      hsl( var(--core-black),     90%  );
+
+  --black-900a:           hsla( var(--core-black), 0%, 0.9 );
+  --black-800a:           hsla( var(--core-black), 0%, 0.8 );
+  --black-700a:           hsla( var(--core-black), 0%, 0.7 );
+  --black-600a:           hsla( var(--core-black), 0%, 0.6 );
+  --black-500a:           hsla( var(--core-black), 0%, 0.5 );
+  --black-400a:           hsla( var(--core-black), 0%, 0.4 );
+  --black-300a:           hsla( var(--core-black), 0%, 0.3 );
+  --black-200a:           hsla( var(--core-black), 0%, 0.2 );
+  --black-100a:           hsla( var(--core-black), 0%, 0.1 );
+  
+  --white-900a:           hsla( var(--core-white), 100%, 0.9 );
+  --white-800a:           hsla( var(--core-white), 100%, 0.8 );
+  --white-700a:           hsla( var(--core-white), 100%, 0.7 );
+  --white-600a:           hsla( var(--core-white), 100%, 0.6 );
+  --white-500a:           hsla( var(--core-white), 100%, 0.5 );
+  --white-400a:           hsla( var(--core-white), 100%, 0.4 );
+  --white-300a:           hsla( var(--core-white), 100%, 0.3 );
+  --white-200a:           hsla( var(--core-white), 100%, 0.2 );
+  --white-100a:           hsla( var(--core-white), 100%, 0.1 );
+
+  --borders-dark:   hsla(var(--black), 0.1);
+  --borders-light:  hsla(var(--white), 0.1);
+
+  /* FILTERS (Experimental) */
+  --filterwhite: grayscale(100%) brightness(10);
+}

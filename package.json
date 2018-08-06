@@ -26,7 +26,7 @@
     "postcss-mixins": "^6.2.0",
     "postcss-partial-import": "^4.1.0",
     "postcss-preset-env": "^5.1.0",
-    "sapper": "^0.13.0",
+    "sapper": "^0.15.0",
     "sirv": "^0.1.1"
   },
   "devDependencies": {

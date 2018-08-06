@@ -1,0 +1,78 @@
+
+/* To learn how to use BELMU refer to the guide at -----  */
+
+/*---
+<p class="-m-auto -m-top-1 -lightweight -lineheight-1-4">B.E.L.M.U (Base, Element, Layout, Module, Utility) is a an organizational method for writing CSS, together with some layout helpers for grid and flexbox &amp; a collection of utility classes. Think tachyons CSS with a faster learning curve (simply because there's not as much to learn) </p>
+*/
+
+/* BASE 
+   –––– */
+@import 'belmu/_base/_base.fix.css';
+@import 'belmu/_base/_base.colours.css';
+@import 'belmu/_base/_base.fonts.css';
+@import 'belmu/_base/_base.forms.css';
+@import 'belmu/_base/_base.typography.css';
+@import 'belmu/_base/_base.vars.css';
+
+/* ELEMENT 
+   ––––––- */
+@import 'belmu/_element/_element.icons.css';
+@import 'belmu/_element/_element.triangles.css';
+
+/* LAYOUT 
+   –––––– */
+@import 'belmu/_layout/_layout.intro.css';
+
+/* MODULE 
+   –––––– */
+@import 'belmu/_module/_module.intro.css';
+
+
+/* UTILITY 
+   ––––––– */
+@import 'belmu/_utility/_utility.layout.grid.css';
+@import 'belmu/_utility/_utility.layout.flex.css';
+@import 'belmu/_utility/_utility.display.css';
+@import 'belmu/_utility/_utility.colours.css';
+@import 'belmu/_utility/_utility.floats.css';
+@import 'belmu/_utility/_utility.percentages.css';
+@import 'belmu/_utility/_utility.positioning.css';
+@import 'belmu/_utility/_utility.spacing.css';
+@import 'belmu/_utility/_utility.text.css';
+@import 'belmu/_utility/_utility.typesizes.css';
+@import 'belmu/_utility/_utility.shame.css';
+
+
+/* Trying to group css properties like this */
+/* T C D L I 
+
+// Type/text 
+   font-family: sans-serif;
+   font-size: 16px;
+   line-height: 1.4;
+   text-align: right;
+
+// Color 
+   background: #000;
+   color: #fff
+  
+// Display & Box Model
+   display: inline-block;
+   overflow: hidden;
+   box-sizing: border-box;
+   width: 100px;
+   height: 100px;
+   padding: 10px;
+   border: 10px solid #333;
+   margin: 10px;
+
+// Layout & Positioning 
+   position: absolute;
+   z-index: 10;
+   top: 0;
+   right: 0;
+
+// Interactive/ Other 
+   cursor: pointer;
+
+*/

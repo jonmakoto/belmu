@@ -1,0 +1,15 @@
+/* -- Vars
+   ––––––– */
+
+:root{
+  --spacing: 0.9375rem;
+  --border-radius: 0.3rem;
+  --transition-all: 0.36s all;
+}
+
+/*---
+section: Base 
+---
+
+Base contains a normalize in the form of fix (https://github.com/jaydenseric/Fix). Base typography, forms and variables declared here.
+*/

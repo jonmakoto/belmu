@@ -2777,37 +2777,3 @@ Where are my Utilities?
     .ie678 {display: block;}
 }
 
-/* Trying to group css properties like this */
-
-/* T C D L I 
-
-// Type/text 
-   font-family: sans-serif;
-   font-size: 16px;
-   line-height: 1.4;
-   text-align: right;
-
-// Color 
-   background: #000;
-   color: #fff
-  
-// Display & Box Model
-   display: inline-block;
-   overflow: hidden;
-   box-sizing: border-box;
-   width: 100px;
-   height: 100px;
-   padding: 10px;
-   border: 10px solid #333;
-   margin: 10px;
-
-// Layout & Positioning 
-   position: absolute;
-   z-index: 10;
-   top: 0;
-   right: 0;
-
-// Interactive/ Other 
-   cursor: pointer;
-
-*/

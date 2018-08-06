@@ -1,0 +1,302 @@
+/* -- Grid
+   ––––––– */
+
+.grid{
+  display: block;
+  clear: both;
+}
+.grid .col{
+  float: left;
+  border: 0.5em solid #fff;
+}
+
+@supports (display: grid){
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(calc(10% - 1em), 1fr));
+    grid-gap: 1em 1em;
+    grid-auto-flow: dense;
+  }
+  .grid .col{
+    float: none;
+    border: 0;
+  }
+  .grid.gutterless{
+    grid-template-columns: repeat(auto-fit, minmax(10%, 1fr));
+    grid-gap: 0;
+  }
+
+  .grid-12{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(calc(8.3333% - 1em), 1fr));
+    grid-gap: 1em 1em;
+    grid-auto-flow: dense;
+  }
+  .grid-12s.gutterless{
+    grid-template-columns: repeat(auto-fit, minmax(8.3333%, 1fr));
+    grid-gap: 0;
+  }
+
+  .grid-16{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(calc(6.25% - 1em), 1fr));
+    grid-gap: 1em 1em;
+    grid-auto-flow: dense;
+  }
+  .grid-16.gutterless{
+    grid-template-columns: repeat(auto-fit, minmax(6.25%, 1fr));
+    grid-gap: 0;
+  }
+
+  .grid-auto{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 1em 1em;
+    grid-auto-flow: dense;
+  }
+
+  /* experimental features */
+  @media (max-width: 34em) {
+    .grid.mq-small-full > .col, 
+    .grid-12.mq-small-full > .col, 
+    .grid-16.mq-small-full > .col{
+      grid-column: 1 / -1 !important;
+      width: auto !important;
+      margin: 0 !important;
+    }
+
+    .grid.mq-small-half > .col{
+      grid-column: span 5 !important;
+    } 
+    .grid-12.mq-small-half > .col{
+      grid-column: span 6 !important;
+    }
+    .grid-16.mq-small-half > .col{
+      grid-column: span 8 !important;
+    }
+    .grid.mq-small-full > .col, 
+    .grid-12.mq-small-full > .col, 
+    .grid-16.mq-small-full > .col{
+      width: auto !important;
+      margin: 0 !important;
+    }
+  }
+}
+
+
+/*---
+section: Layout 
+---
+
+# Layout Grid
+<div class="grid mq-small-half">
+  <div class="col">
+    <div class="-bg-grey-300 -p-all-1">Hi I'm a column!</div>
+  </div>
+  <div class="col">
+    <div class="-bg-grey-300 -p-all-1">Hi I'm a column!</div>
+  </div>
+  <div class="col">
+    <div class="-bg-grey-300 -p-all-1">Hi I'm a column!</div>
+  </div>
+  <div class="col">
+    <div class="-bg-grey-300 -p-all-1">Hi I'm a column!</div>
+  </div>
+</div> 
+<div class="grid -m-top-3 mq-small-full">
+  <div class="col -span-cols-8">
+    <div class="-bg-grey-300 -h-100 -p-all-1">Hi I'm an 80% column!</div>
+  </div>
+  <div class="col -span-cols-2">
+    <div class="-bg-grey-300 -h-100 -p-all-1">Hi I'm a 20% column!</div>
+  </div>
+  <div class="col -w-100 m-top-1">
+    <div class="-bg-grey-300 -p-all-1">Hi I'm a 100% column!</div>
+  </div>
+  <div class="col -w-80 -offset-left-20 m-top-1">
+    <div class="-bg-grey-300 -p-all-1">Hi I'm an offset colum</div>
+  </div>
+</div>
+
+
+## 12 column grid
+
+<div class="grid-12 mq-small-full">
+  <div class="col -span-cols-9">
+    <div class="-bg-grey-300 -h-100 -p-all-1">9 cols</div>
+  </div>
+  <div class="col -span-cols-3">
+    <div class="-bg-grey-300 -h-100 -p-all-1">3 cols!</div>
+  </div>
+</div>
+
+## 16 column grid
+<div class="grid-16 mq-small-full">
+  <div class="col -span-cols-4">
+    <div class="-bg-grey-300 -h-100 -p-all-1">4 cols</div>
+  </div>
+  <div class="col -span-cols-4">
+    <div class="-bg-grey-300 -h-100 -p-all-1">4 cols</div>
+  </div>
+  <div class="col -span-cols-4">
+    <div class="-bg-grey-300 -h-100 -p-all-1">4 cols</div>
+  </div>
+  <div class="col -span-cols-1">
+    <div class="-bg-grey-300 -h-100 -p-all-1">1 col</div>
+  </div>
+   <div class="col -span-cols-1">
+    <div class="-bg-grey-300 -h-100 -p-all-1">1 col</div>
+  </div>
+   <div class="col -span-cols-1">
+    <div class="-bg-grey-300 -h-100 -p-all-1">1 col</div>
+  </div>
+   <div class="col -span-cols-1">
+    <div class="-bg-grey-300 -h-100 -p-all-1">1 col</div>
+  </div>
+  <div class="col -span-cols-2">
+    <div class="-bg-grey-300 -h-100 -p-all-1">2 cols</div>
+  </div>
+  <div class="col -span-cols-2">
+    <div class="-bg-grey-300 -h-100 -p-all-1">2 cols</div>
+  </div>
+  <div class="col -span-cols-2">
+    <div class="-bg-grey-300 -h-100 -p-all-1">2 cols</div>
+  </div>
+  <div class="col -span-cols-2">
+    <div class="-bg-grey-300 -h-100 -p-all-1">2 cols</div>
+  </div>
+  <div class="col -span-cols-2">
+    <div class="-bg-grey-300 -h-100 -p-all-1">2 cols</div>
+  </div>
+  <div class="col -span-cols-2">
+    <div class="-bg-grey-300 -h-100 -p-all-1">2 cols</div>
+  </div>
+  <div class="col -span-cols-2">
+    <div class="-bg-grey-300 -h-100 -p-all-1">2 cols</div>
+  </div>
+  <div class="col -span-cols-2">
+    <div class="-bg-grey-300 -h-100 -p-all-1">2 cols</div>
+  </div>
+</div>
+
+## Fixed Width
+<div class="grid">
+  <div class="col -w-100">
+    <div class="-bg-grey-300 -p-all-1 grid mq-small-full">
+      <div class="col -w-10">
+        <div class="-bg-grey-100 -p-all-1">1</div>
+      </div>
+      <div class="col -w-10">
+        <div class="-bg-grey-100 -p-all-1">2</div>
+      </div>
+      <div class="col -w-10">
+        <div class="-bg-grey-100 -p-all-1">3</div>
+      </div>
+      <div class="col -w-10">
+        <div class="-bg-grey-100 -p-all-1">4</div>
+      </div>
+      <div class="col -w-10">
+        <div class="-bg-grey-100 -p-all-1">5</div>
+      </div>
+      <div class="col -w-10">
+        <div class="-bg-grey-100 -p-all-1">6</div>
+      </div>
+      <div class="col -w-10">
+        <div class="-bg-grey-100 -p-all-1">7</div>
+      </div>
+      <div class="col -w-10">
+        <div class="-bg-grey-100 -p-all-1">8</div>
+      </div>
+      <div class="col -w-10">
+        <div class="-bg-grey-100 -p-all-1">9</div>
+      </div>
+      <div class="col -w-10">
+        <div class="-bg-grey-100 -p-all-1">10</div>
+      </div>
+    </div>
+  </div>
+  <div class="col -w-10">
+    <div class="-bg-grey-300 -p-all-1">1</div>
+  </div>
+  <div class="col -w-10">
+    <div class="-bg-grey-300 -p-all-1">2</div>
+  </div>
+  <div class="col -w-10">
+    <div class="-bg-grey-300 -p-all-1">3</div>
+  </div>
+  <div class="col -w-10">
+    <div class="-bg-grey-300 -p-all-1">4</div>
+  </div>
+  <div class="col -w-10">
+    <div class="-bg-grey-300 -p-all-1">5</div>
+  </div>
+  <div class="col -w-10">
+    <div class="-bg-grey-300 -p-all-1">6</div>
+  </div>
+  <div class="col -w-10">
+    <div class="-bg-grey-300 -p-all-1">7</div>
+  </div>
+  <div class="col -w-10">
+    <div class="-bg-grey-300 -p-all-1">8</div>
+  </div>
+  <div class="col -w-10">
+    <div class="-bg-grey-300 -p-all-1">9</div>
+  </div>
+  <div class="col -w-10">
+    <div class="-bg-grey-300 -p-all-1">10</div>
+  </div>
+</div>
+
+## Auto Width
+<div class="grid-auto">
+  <div class="col">
+    <div class="-bg-grey-300 -p-all-1">1</div>
+  </div>
+  <div class="col">
+    <div class="-bg-grey-300 -p-all-1">2</div>
+  </div>
+  <div class="col">
+    <div class="-bg-grey-300 -p-all-1">3</div>
+  </div>
+  <div class="col">
+    <div class="-bg-grey-300 -p-all-1">4</div>
+  </div>
+  <div class="col">
+    <div class="-bg-grey-300 -p-all-1">5</div>
+  </div>
+  <div class="col">
+    <div class="-bg-grey-300 -p-all-1">6</div>
+  </div>
+  <div class="col">
+    <div class="-bg-grey-300 -p-all-1">7</div>
+  </div>
+  <div class="col">
+    <div class="-bg-grey-300 -p-all-1">8</div>
+  </div>
+  <div class="col">
+    <div class="-bg-grey-300 -p-all-1">9</div>
+  </div>
+  <div class="col">
+    <div class="-bg-grey-300 -p-all-1">10</div>
+  </div>
+  <div class="col">
+    <div class="-bg-grey-300 -p-all-1">11</div>
+  </div>
+  <div class="col">
+    <div class="-bg-grey-300 -p-all-1">12</div>
+  </div>
+</div>
+
+## Gutterless Grid
+<div class="grid gutterless">
+  <div class="col -w-80">
+    <div class="-bg-grey-300 -p-all-1">Hi I'm an 80% column!</div>
+  </div>
+  <div class="col -w-20">
+    <div class="-bg-grey-100 -p-all-1">Hi I'm a 20% column!</div>
+  </div>
+  <div class="col -w-100">
+    <div class="-bg-grey-500 -p-all-1">Hi I'm a 100% column!</div>
+  </div>
+</div>
+*/ 

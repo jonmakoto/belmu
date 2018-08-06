@@ -1,0 +1,103 @@
+/* -- Percentages
+   –––––––––––––– */
+
+/* WIDTHS, HEIGHTS & OFFSETS */
+@each $size in 
+10,
+12,
+14,
+15,
+18,
+20,
+22,
+24,
+25,
+30,
+40,
+50,
+58,
+60,
+70,
+75,
+80,
+90,
+100{
+  .-w-$(size) {
+    width: $(size)%;
+  }
+  @supports (display: grid){
+    .-w-$(size) {
+        width: $(size)% !important;
+        &.col:not(.-fixed){
+          width: auto !important;
+          grid-column-end: span resolve( $(size) * 0.1);
+        }
+      }
+    
+    .-h-$(size) {
+      height: $(size)% !important;
+      &.col:not(.-fixed){
+        height: auto !important;
+        grid-row-end: span resolve( $(size) * 0.1);
+      }
+    }
+  
+    .-vw-$(size) {
+      width: $(size)% !important;
+    }
+    .-vh-$(size) {
+      height: $(size)% !important;
+    }
+
+    @each $direction in 
+      top,
+      right,
+      bottom,
+      left{
+        .-offset-$(direction)-$(size) {
+          grid-column-start: resolve( $(size) * 0.1);
+        }
+        .-m-offset-$(direction)-$(size) {
+          margin-$(direction): $(size)%;
+        }
+      }
+    }
+}
+
+@supports (display: grid){
+  .-w-100{
+    grid-column: 1 / -1 !important;
+  }
+}
+
+
+@each $size in 
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16{
+  .-span-cols-$(size){
+    width: resolve($(size) * 10)%;
+  }
+  @supports (display: grid){
+    .-span-cols-$(size){
+      width: auto;
+      grid-column-end: span $(size);
+    }
+    .-span-rows-$(size){
+      grid-row-end: span span $(size);
+    }
+  }
+}
